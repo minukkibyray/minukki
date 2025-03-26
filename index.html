@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minukki - Jewellry Redefined</title>
+    <link rel="icon" href="assets/img/minukki-logo-png.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- QuickSand Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid">
+                <!-- Logo on the left -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/Minukki-Logo-01.png" alt="Logo" height="40" class="ms-2">
+                </a>
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarExampleOnHover" aria-controls="navbarExampleOnHover" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarExampleOnHover">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Regular link</a>
+                    </li> -->
+                        <!-- Minimal -->
+                        <li class="nav-item dropdown position-static px-lg-5">
+                            <a class="nav-link dropdown-toggle" href="#" id="minimal" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Minimal
+                            </a>
+                            <!-- Dropdown menu -->
+                            <div class="dropdown-menu w-100 mt-0 mega-menu" aria-labelledby="minimal">
+                                <div class="container-fluid ray-navbar-border-top">
+                                    <div class="row my-4">
+                                        <div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
+                                            <div class="ray-megamenu-heading px-3 mb-2">Shop By Category</div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Women's
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Men's
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Couple
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">All Fine
+                                                    Watches</a>
+                                            </div>
+                                            <div class="ray-megamenu-heading px-3 mb-2 mt-3">Shop By Strap</div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Bracelet
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Leather
+                                                    Watches</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
+                                            <div class="ray-megamenu-heading px-3 mb-2">Curated Shops</div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Blue
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Diamond
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Gold
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Stainless
+                                                    Steel
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Time
+                                                    Objects</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-2 mb-3 mb-md-0">
+                                            <div class="ray-megamenu-heading px-3 mb-2">Shop By Collection</div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Minukki
+                                                    Hardwear</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Minukki
+                                                    Eternity</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Gold Plated
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Atlas</a>
+                                                <a href="#" class="list-group-item list-group-item-action">High
+                                                    Jewelry</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                            <div class="">
+                                                <img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                    class="img-fluid px-3 mb-2" alt="high-jewellry">
+                                            </div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Minukki
+                                                    Jewelry</a>
+                                            </div>
+                                            <div class="ray-megamenu-heading px-3 mb-2 mt-1">Shop Now</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- High Jewelry -->
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle" href="#" id="highJewelry" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                High Jewelry
+                            </a>
+                            <!-- Dropdown menu -->
+                            <div class="dropdown-menu w-100 mt-0 mega-menu" aria-labelledby="highJewelry">
+                                <div class="container-fluid ray-navbar-border-top">
+                                    <div class="row my-4">
+                                        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0 border-end">
+                                            <div class="ray-megamenu-heading px-3 mb-2">High Jewelry</div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Earrings</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Double
+                                                    Chain</a>
+                                                <a href="#"
+                                                    class="list-group-item list-group-item-action">Combinational</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="">
+                                                <img src="assets/img/megamenu-img/jewellry.jpg"
+                                                    class="img-fluid px-3 mb-2" alt="high-jewellry">
+                                            </div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#"
+                                                    class="list-group-item list-group-item-action text-center">EARRINGS</a>
+                                            </div>
+                                            <!-- <div class="ray-megamenu-heading px-3 mb-2 mt-1">Shop Now</div> -->
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="">
+                                                <img src="assets/img/megamenu-img/jewellry.jpg"
+                                                    class="img-fluid px-3 mb-2" alt="high-jewellry">
+                                            </div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#"
+                                                    class="list-group-item list-group-item-action text-center">DOUBLE
+                                                    CHAIN</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="">
+                                                <img src="assets/img/megamenu-img/jewellry.jpg"
+                                                    class="img-fluid px-3 mb-2" alt="high-jewellry">
+                                            </div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#"
+                                                    class="list-group-item list-group-item-action text-center">COMBINATIONAL</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Statement -->
+                        <li class="nav-item dropdown position-static px-lg-5">
+                            <a class="nav-link dropdown-toggle" href="#" id="statement" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Statement
+                            </a>
+                            <!-- Dropdown menu -->
+                            <div class="dropdown-menu w-100 mt-0 mega-menu" aria-labelledby="statement">
+                                <div class="container-fluid ray-navbar-border-top">
+                                    <div class="row my-4">
+                                        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                            <div class="ray-megamenu-heading px-3 mb-2">Shop By Category</div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Women's
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Men's
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Couple
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">All Fine
+                                                    Watches</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                            <div class="ray-megamenu-heading px-3 mb-2">Curated Shops</div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Blue
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Diamond
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Gold
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Stainless
+                                                    Steel
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Time
+                                                    Objects</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                                            <div class="ray-megamenu-heading px-3 mb-2">Shop By Collection</div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Minukki
+                                                    Hardwear</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Minukki
+                                                    Eternity</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Gold Plated
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Atlas</a>
+                                                <a href="#" class="list-group-item list-group-item-action">High
+                                                    Jewelry</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="">
+                                                <img src="assets/img/megamenu-img/jewellry.jpg"
+                                                    class="img-fluid px-3 mb-2" alt="high-jewellry">
+                                            </div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Minukki
+                                                    Jewelry</a>
+                                            </div>
+                                            <div class="ray-megamenu-heading px-3 mb-2 mt-1">Shop Now</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Social -->
+                        <li class="nav-item dropdown position-static pe-lg-5">
+                            <a class="nav-link dropdown-toggle" href="#" id="socil" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Social
+                            </a>
+                            <!-- Dropdown menu -->
+                            <div class="dropdown-menu w-100 mt-0 mega-menu" aria-labelledby="socil">
+                                <div class="container-fluid ray-navbar-border-top">
+                                    <div class="row my-4">
+                                        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                            <div class="ray-megamenu-heading px-3 mb-2">Shop By Category</div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Women's
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Men's
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Couple
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">All Fine
+                                                    Watches</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6 ps-lg-4">
+                                            <div class="">
+                                                <img src="https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                    class="ray-img-500-250 px-3 mb-2" alt="high-jewellry">
+                                            </div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Minukki
+                                                    Jewelry</a>
+                                            </div>
+                                            <div class="ray-megamenu-heading px-3 mb-2 mt-1">Shop Now</div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                                            <div class="ray-megamenu-heading px-3 mb-2">Shop By Collection</div>
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action">Minukki
+                                                    Hardwear</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Minukki
+                                                    Eternity</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Gold Plated
+                                                    Watches</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Atlas</a>
+                                                <a href="#" class="list-group-item list-group-item-action">High
+                                                    Jewelry</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid d-none">
+        <div class="row my-4">
+            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0 border-end">
+                <div class="ray-megamenu-heading px-3 mb-2">High Jewelry</div>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action">Earrings</a>
+                    <a href="#" class="list-group-item list-group-item-action">Double
+                        Chain</a>
+                    <a href="#" class="list-group-item list-group-item-action">Combinational</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="">
+                    <img src="assets/img/megamenu-img/jewellry.jpg" class="img-fluid px-3 mb-2" alt="high-jewellry">
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action text-center">EARRINGS</a>
+                </div>
+                <!-- <div class="ray-megamenu-heading px-3 mb-2 mt-1">Shop Now</div> -->
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="">
+                    <img src="assets/img/megamenu-img/jewellry.jpg" class="img-fluid px-3 mb-2" alt="high-jewellry">
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action text-center">DOUBLE
+                        CHAIN</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="">
+                    <img src="assets/img/megamenu-img/jewellry.jpg" class="img-fluid px-3 mb-2" alt="high-jewellry">
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action text-center">COMBINATIONAL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Banner Carousal -->
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 px-0">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade"
+                            data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        class="d-block w-100 ray-banner-carousal-img" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        class="d-block w-100 ray-banner-carousal-img" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        class="d-block w-100 ray-banner-carousal-img" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop By Category -->
+        <section class="pt-5">
+            <div class="container-fluid">
+                <div class="row mb-4 pb-2">
+                    <div class="col-12 ray-section-heading text-center mb-2">
+                        Shop By Category
+                    </div>
+                    <div class="col-12 ray-section-desc text-center">
+                        Minukki designs feature the world’s finest diamonds and unparalleled craftsmanship—signatures of
+                        the House for almost all women.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-2 text-center">
+                        <img src="https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="img-fluid mb-2 ray-section-img" alt="high-jewellry">
+                        <div class="ray-section-subheading">EARRINGS</div>
+                    </div>
+                    <div class="col-2 text-center">
+                        <img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="img-fluid mb-2 ray-section-img" alt="high-jewellry">
+                        <div class="ray-section-subheading">CHAINS</div>
+                    </div>
+                    <div class="col-2 text-center">
+                        <img src="https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="img-fluid mb-2 ray-section-img" alt="high-jewellry">
+                        <div class="ray-section-subheading">BRACELETS</div>
+                    </div>
+                    <div class="col-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- <div class="container mt-5">
+        <h2>Scroll Down to Test Sticky Navbar</h2>
+        <p>Keep scrolling to check if the navbar remains fixed at the top.</p>
+    </div> -->
+    <div style="height: 1500px;"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+        integrity="sha384-vLzyMw4ACv3XAvs2bk6J1VMIK/HiWBVOB/UN3GnYhTHlNDbSpjAzFkUEK8IfD4qz"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- MDB --><!-- MDB -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"></script>
+</body>
+
+</html>
