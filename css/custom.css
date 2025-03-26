@@ -91,10 +91,6 @@ html {
     border-top: 1px solid #DFA149 !important;
 }
 
-.ray-banner-carousal-img {
-    height: 520px;
-}
-
 /* Scrollbar */
 
 ::-webkit-scrollbar {
@@ -155,4 +151,35 @@ html {
 
 .ray-section-img {
     height: 150px;
+}
+
+
+@media (min-width: 300px) {
+    .ray-banner-carousal-img {
+        height: 250px;
+    }
+}
+
+@media (min-width: 700px) {
+    .ray-banner-carousal-img {
+        height: 375px;
+    }
+}
+
+@media (min-width: 1020px) {
+    .ray-banner-carousal-img {
+        height: 520px;
+    }
+}
+
+@media (min-width: 1370px) {
+    .ray-banner-carousal-img {
+        height: 700px;
+    }
+}
+
+@media (max-width: 430px) {
+    .ray-section-img-width {
+        width: 185px;
+    }
 }
