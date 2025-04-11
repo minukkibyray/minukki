@@ -1,0 +1,150 @@
+/* Color variables */
+
+:root {
+    --primary-color: #783413;
+    --secondary-color: #C26518;
+}
+
+.ray-product-card {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.ray-product-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.ray-selling-price-text {
+    font-size: 18px;
+    font-family: "Quicksand", sans-serif;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.ray-card-title {
+    font-size: 16px !important;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+}
+
+.ray-card-text {
+    font-size: 12px !important;
+    font-family: "Montserrat", sans-serif !important;
+    color: #949494;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.tag {
+    font-size: 12px;
+    background-color: #e0e0e0;
+    padding: 2px 8px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.tag1 {
+    font-size: 12px;
+    font-weight: 400;
+    background-color: var(--primary-color);
+    font-family: "Quicksand", sans-serif !important;
+    color: #ffff;
+    padding: 2px 8px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding-top: 3px;
+}
+
+.carousel-control-prev-icon::after {
+    font-size: .8rem !important;
+}
+
+.carousel-control-next-icon::after {
+    font-size: .8rem !important;
+}
+
+.modal-img-zoom {
+    transition: transform 0.3s ease;
+    /* cursor: zoom-in; */
+    height: 525px
+}
+
+/* .modal-img-zoom:hover {
+    transform: scale(1.2);
+  } */
+
+.tag {
+    background: #f0c040;
+    padding: 2px 6px;
+    margin-right: 4px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.thumbnail-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin: 4px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.thumbnail-img.active {
+    border-color: #000;
+}
+
+#modalThumbnails::-webkit-scrollbar {
+    height: 6px;
+}
+
+#modalThumbnails::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+#modalThumbnails img:hover {
+    opacity: 0.8;
+    border: 2px solid #fff;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    /* Change this for other colors */
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #dedede;
+    /* Active dot color */
+}
+
+.carousel-indicators {
+    bottom: 0px;
+    /* Position can be adjusted as needed */
+}
