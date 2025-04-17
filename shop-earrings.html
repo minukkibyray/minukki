@@ -316,6 +316,25 @@
                         A curated collection of elegant and timeless earrings to elevate every look.
                     </div>
                 </div>
+                <div class="row mb-4 pb-3">
+                    <div class="col-12 col-lg-2 mb-2 mb-lg-0">
+                        <div class="ray-secondary-heading pt-lg-1">
+                            Search Filter:
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-5">
+                        <input type="text" id="searchInput" class="form-control"
+                            placeholder="Search by product title...">
+                    </div>
+                    <div class="col-6 col-lg-5">
+                        <select id="priceRange" class="form-select">
+                            <option value="">All Prices</option>
+                            <option value="0-499">Under ₹500</option>
+                            <option value="500-999">₹500 - ₹999</option>
+                            <option value="1000-2000">₹1000 - ₹2000</option>
+                        </select>
+                    </div>
+                </div>
                 <div class="row d-none">
                     <div class="col-md-3">
                         <div class="card ray-product-card position-relative">
@@ -363,7 +382,7 @@
 
                 <!-- Modal with Carousel, Thumbnails, and Product Details -->
                 <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
                         <div class="modal-content p-0">
                             <div class="modal-body p-0">
                                 <!-- Close Button -->
@@ -393,7 +412,8 @@
                                     </div>
 
                                     <!-- Product Details Column -->
-                                    <div class="col-md-4 p-3" id="modalProductDetails">
+                                    <div class="col-md-4 p-3 d-flex flex-column justify-content-between"
+                                        id="modalProductDetails">
                                         <!-- Filled via JS -->
                                     </div>
                                 </div>
@@ -430,7 +450,7 @@
                 "sellingPrice": 349,
                 "images": [
                     "https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "assets/img/megamenu-img/jewellry.jpg"
+                    "https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 ]
             },
             {
@@ -442,7 +462,7 @@
                 "sellingPrice": 699,
                 "images": [
                     "https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "assets/img/megamenu-img/jewellry.jpg"
+                    "https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 ]
             },
             {
@@ -454,7 +474,7 @@
                 "sellingPrice": 599,
                 "images": [
                     "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2V8ZW58MHx8MHx8fDA%3D",
-                    "assets/img/megamenu-img/jewellry.jpg"
+                    "https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 ]
             },
             {
@@ -466,7 +486,7 @@
                 "sellingPrice": 299,
                 "images": [
                     "https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "assets/img/megamenu-img/jewellry.jpg"
+                    "https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 ]
             },
             {
@@ -478,7 +498,7 @@
                 "sellingPrice": 1249,
                 "images": [
                     "https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "assets/img/megamenu-img/jewellry.jpg"
+                    "https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 ]
             },
             {
@@ -490,7 +510,7 @@
                 "sellingPrice": 1899,
                 "images": [
                     "https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "assets/img/megamenu-img/jewellry.jpg"
+                    "https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 ]
             }
         ];
@@ -539,9 +559,37 @@
               `;
         }
 
-        function renderProducts() {
-            container.innerHTML = products.map((p, i) => createProductCard(p, i)).join("");
+        function renderProducts(filteredProducts = products) {
+            container.innerHTML = filteredProducts.map((p, i) => createProductCard(p, i)).join("");
         }
+
+        function filterProducts() {
+            const searchInput = document.getElementById("searchInput");
+            const priceRangeInput = document.getElementById("priceRange");
+
+            const searchTerm = searchInput ? searchInput.value.toLowerCase() : "";
+            const priceRange = priceRangeInput ? priceRangeInput.value : "";
+
+            const filtered = products.filter(product => {
+                const matchTitle = product.title.toLowerCase().includes(searchTerm);
+                let matchPrice = true;
+
+                if (priceRange) {
+                    const [min, max] = priceRange.split("-").map(Number);
+                    matchPrice = product.sellingPrice >= min && product.sellingPrice <= max;
+                }
+
+                return matchTitle && matchPrice;
+            });
+
+            renderProducts(filtered);
+        }
+
+        const searchInput = document.getElementById("searchInput");
+        const priceRangeInput = document.getElementById("priceRange");
+
+        if (searchInput) searchInput.addEventListener("input", filterProducts);
+        if (priceRangeInput) priceRangeInput.addEventListener("change", filterProducts);
 
         function openModal(index) {
             const modalInner = document.getElementById("modalCarouselInner");
@@ -560,14 +608,20 @@
                      onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">`).join("");
 
             productDetails.innerHTML = `
-                <h5>${product.title}</h5>
-                <div class="text-muted mb-2">Product Code: ${product.code}</div>
-                <div class="mb-2"><strong>Collection:</strong> ${product.collection}</div>
-                <div>
-                  <span class="text-decoration-line-through">₹${product.price}</span>
-                  <span class="text-success fs-5 ms-2">₹${product.sellingPrice}</span>
+                <div class="ray-card-title">${product.title}</div>
+                <div class="ray-card-text my-1"><span class="fw-600">Product Code:</span> ${product.code}</div>
+                <div class="f-14px mb-1"><strong class="secondary-color">Collection:</strong> ${product.collection}</div>
+                <div class="my-1">${product.tags.map(tag => `<span class="tag me-1">${tag}</span>`).join("")}</div>
+                <div class="mt-2">
+                  <span class="text-decoration-line-through f-14px">₹${product.price}</span>
+                  <span class="primary-color fs-5 fw-bold ms-1">₹${product.sellingPrice}</span>
                 </div>
-                <div class="mt-3">${product.tags.map(tag => `<span class="tag me-1">${tag}</span>`).join("")}</div>
+                <div class="mt-3">
+                <a type="button" class="btn btn-ray-primary ray-shop-now-btn">Shop Now</a>
+                </div>
+                <div class="mt-auto text-center d-none d-md-block">
+                     <img src="assets/img/mbyray-removebg-preview.png" class="ray-modal-logo-img" alt="Minukki">
+                </div>
               `;
 
             const modal = new bootstrap.Modal(document.getElementById('imageModal'));
