@@ -5,6 +5,21 @@
     --secondary-color: #C26518;
 }
 
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+    background-color: #3c180f !important;
+}
+
+.nav-link {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    font-family: "Quicksand", sans-serif !important;
+    color: #ffffff !important;
+}
+
 .btn-ray-primary {
     background-color: var(--secondary-color);
     color: #ffffff !important;
@@ -209,6 +224,22 @@
     box-shadow: none !important;
 }
 
+.minimal:hover {
+    color: #f3d294 !important;
+}
+
+.highJewelry:hover {
+    color: #f3d294 !important;
+}
+
+.statement:hover {
+    color: #f3d294 !important;
+}
+
+.social:hover {
+    color: #f3d294 !important;
+}
+
 
 @media (min-width: 576px) {
     .modal-dialog {
@@ -242,5 +273,426 @@
 
     .ray-shop-now-btn {
         width: 100%;
+    }
+}
+
+
+@media (min-width: 1020px) {
+    .ray-banner-carousal-img {
+        height: 520px;
+    }
+
+    /* Navbar Hover Semicircle */
+
+    /* Minimal */
+    .nav-item.dropdown.minimal {
+        position: relative;
+    }
+
+    .nav-item.dropdown.minimal::after {
+        content: "";
+        position: absolute;
+        left: 51.2%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.minimal:hover::after {
+        opacity: 1;
+    }
+
+    /* High Jewellry */
+    .nav-item.dropdown.highJewelry {
+        position: relative;
+    }
+
+    .nav-item.dropdown.highJewelry::after {
+        content: "";
+        position: absolute;
+        left: 64.5%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.highJewelry:hover::after {
+        opacity: 1;
+    }
+
+    /* Statement */
+    .nav-item.dropdown.statement {
+        position: relative;
+    }
+
+    .nav-item.dropdown.statement::after {
+        content: "";
+        position: absolute;
+        left: 79.2%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.statement:hover::after {
+        opacity: 1;
+    }
+
+    /* Social */
+    .nav-item.dropdown.social {
+        position: relative;
+    }
+
+    .nav-item.dropdown.social::after {
+        content: "";
+        position: absolute;
+        left: 91.3%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.social:hover::after {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1280px) {
+    .ray-banner-carousal-img {
+        height: 520px;
+    }
+
+    /* Navbar Hover Semicircle */
+
+    /* Minimal */
+    .nav-item.dropdown.minimal {
+        position: relative;
+    }
+
+    .nav-item.dropdown.minimal::after {
+        content: "";
+        position: absolute;
+        left: 61%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.minimal:hover::after {
+        opacity: 1;
+    }
+
+    /* High Jewellry */
+    .nav-item.dropdown.highJewelry {
+        position: relative;
+    }
+
+    .nav-item.dropdown.highJewelry::after {
+        content: "";
+        position: absolute;
+        left: 71.5%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.highJewelry:hover::after {
+        opacity: 1;
+    }
+
+    /* Statement */
+    .nav-item.dropdown.statement {
+        position: relative;
+    }
+
+    .nav-item.dropdown.statement::after {
+        content: "";
+        position: absolute;
+        left: 83.2%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.statement:hover::after {
+        opacity: 1;
+    }
+
+    /* Social */
+    .nav-item.dropdown.social {
+        position: relative;
+    }
+
+    .nav-item.dropdown.social::after {
+        content: "";
+        position: absolute;
+        left: 93%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.social:hover::after {
+        opacity: 1;
+    }
+}
+
+
+
+@media (min-width: 1360px) {
+    .ray-banner-carousal-img {
+        height: 520px;
+    }
+
+    /* Navbar Hover Semicircle */
+
+    /* Minimal */
+    .nav-item.dropdown.minimal {
+        position: relative;
+    }
+
+    .nav-item.dropdown.minimal::after {
+        content: "";
+        position: absolute;
+        left: 63.5%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.minimal:hover::after {
+        opacity: 1;
+    }
+
+    /* High Jewellry */
+    .nav-item.dropdown.highJewelry {
+        position: relative;
+    }
+
+    .nav-item.dropdown.highJewelry::after {
+        content: "";
+        position: absolute;
+        left: 73.5%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.highJewelry:hover::after {
+        opacity: 1;
+    }
+
+    /* Statement */
+    .nav-item.dropdown.statement {
+        position: relative;
+    }
+
+    .nav-item.dropdown.statement::after {
+        content: "";
+        position: absolute;
+        left: 84.2%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.statement:hover::after {
+        opacity: 1;
+    }
+
+    /* Social */
+    .nav-item.dropdown.social {
+        position: relative;
+    }
+
+    .nav-item.dropdown.social::after {
+        content: "";
+        position: absolute;
+        left: 93.5%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.social:hover::after {
+        opacity: 1;
+    }
+}
+
+
+
+@media (min-width: 1500px) {
+    .ray-banner-carousal-img {
+        height: 520px;
+    }
+
+    /* Navbar Hover Semicircle */
+
+    /* Minimal */
+    .nav-item.dropdown.minimal {
+        position: relative;
+    }
+
+    .nav-item.dropdown.minimal::after {
+        content: "";
+        position: absolute;
+        left: 67.5%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.minimal:hover::after {
+        opacity: 1;
+    }
+
+    /* High Jewellry */
+    .nav-item.dropdown.highJewelry {
+        position: relative;
+    }
+
+    .nav-item.dropdown.highJewelry::after {
+        content: "";
+        position: absolute;
+        left: 76%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.highJewelry:hover::after {
+        opacity: 1;
+    }
+
+    /* Statement */
+    .nav-item.dropdown.statement {
+        position: relative;
+    }
+
+    .nav-item.dropdown.statement::after {
+        content: "";
+        position: absolute;
+        left: 85.9%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.statement:hover::after {
+        opacity: 1;
+    }
+
+    /* Social */
+    .nav-item.dropdown.social {
+        position: relative;
+    }
+
+    .nav-item.dropdown.social::after {
+        content: "";
+        position: absolute;
+        left: 94.2%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: #ffffff !important;
+        border-radius: 50% 50% 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-item.dropdown.social:hover::after {
+        opacity: 1;
     }
 }
