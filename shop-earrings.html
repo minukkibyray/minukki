@@ -31,11 +31,11 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar navbar-expand-lg py-1">
             <div class="container-fluid">
                 <!-- Logo on the left -->
                 <a class="navbar-brand" href="index.html" target="_blank">
-                    <img src="assets/img/minukki_white.png" alt="Logo" height="40" class="ms-2">
+                    <img src="assets/img/logo/minukki_logo_white.png" alt="Logo" height="40" class="ms-2">
                 </a>
                 <!-- Toggle button -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -368,7 +368,7 @@
                                 <span class="tag">BESTSELLER</span>
                                 <span class="tag1">Preminum Collection</span>
                                 <div class="ray-card-title mt-2">Minukki - Minimal Earring</div>
-                                <div class="ray-card-text mt-1 mb-2"> <span class="fw-bold">Product Code:</span>
+                                <div class="ray-card-text mt-1 mb-2"> <span class="fw-bold">Code:</span>
                                     MIN-E-001
                                 </div>
                                 <span class="mb-0 text-decoration-line-through f-14px">₹499</span> <span
@@ -407,7 +407,7 @@
                                         </div>
 
                                         <!-- Thumbnail Overlay -->
-                                        <div class="position-absolute bottom-0 start-50 translate-middle-x bg-dark bg-opacity-50 p-2 rounded d-flex gap-2 overflow-auto z-2"
+                                        <div class="position-absolute bottom-0 start-50 translate-middle-x bg-dark bg-opacity-50 p-2 rounded d-flex gap-2 overflow-auto z-2 mb-2"
                                             style="max-width: 90%; white-space: nowrap;" id="modalThumbnails"></div>
                                     </div>
 
@@ -440,206 +440,359 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        const products = [
-            {
-                "tags": ["BESTSELLER"],
-                "collection": "Premium Collection",
-                "title": "Minukki - Minimal Earring",
-                "code": "MIN-E-001",
-                "price": 499,
-                "sellingPrice": 349,
-                "images": [
-                    "assets/img/products/earrings/WebP/IMG_4984.webp",
-                    "assets/img/products/earrings/WebP/IMG_4978.webp"
-                ]
-            },
-            {
-                "tags": ["NEW"],
-                "collection": "Luxury Collection",
-                "title": "Aurora Gem Ring",
-                "code": "AUR-R-002",
-                "price": 999,
-                "sellingPrice": 699,
-                "images": [
-                    "assets/img/products/earrings/WebP/IMG_4982.webp",
-                    "assets/img/products/earrings/WebP/IMG_4975.webp"
-                ]
-            },
-            {
-                "tags": ["LIMITED"],
-                "collection": "Vintage Vibes",
-                "title": "Serenity Stone Bracelet",
-                "code": "SER-B-003",
-                "price": 799,
-                "sellingPrice": 599,
-                "images": [
-                    "assets/img/products/earrings/WebP/IMG_4980.webp",
-                    "assets/img/products/earrings/WebP/IMG_4974.webp",
-                ]
-            },
-            {
-                "tags": ["TRENDING"],
-                "collection": "Daily Wear",
-                "title": "Ziva Hoop Earrings",
-                "code": "ZIV-E-004",
-                "price": 449,
-                "sellingPrice": 299,
-                "images": [
-                    "assets/img/products/earrings/WebP/IMG_4977.webp",
-                    "assets/img/products/earrings/WebP/IMG_4976.webp",
-                ]
-            },
-            {
-                "tags": ["HOT"],
-                "collection": "Festive Special",
-                "title": "Noor Pearl Necklace",
-                "code": "NOO-N-005",
-                "price": 1599,
-                "sellingPrice": 1249,
-                "images": [
-                    "assets/img/products/earrings/WebP/IMG_4982.webp",
-                    "assets/img/products/earrings/WebP/IMG_4982.webp"
-                ]
-            },
-            {
-                "tags": ["EXCLUSIVE"],
-                "collection": "Royal Edition",
-                "title": "Aarya Antique Set",
-                "code": "AAR-S-006",
-                "price": 2499,
-                "sellingPrice": 1899,
-                "images": [
-                     "assets/img/products/earrings/WebP/IMG_4975.webp",
-                     "assets/img/products/earrings/WebP/IMG_4980.webp"
-                ]
-            }
-        ];
+    const products = [
+        {
+            tags: ["BESTSELLER"],
+            collection: "Premium Collection",
+            title: "Minukki - Minimal Earring",
+            code: "MIN-E-001",
+            price: 499,
+            sellingPrice: 349,
+            offprice: '40%',
+            images: [
+                "assets/img/products/earrings/MIN-E-023/IMG_9505.jpg",
+                "assets/img/products/earrings/MIN-E-002/ash/IMG_0295.jpg",
+                "assets/img/products/earrings/MIN-E-023/IMG_9507.jpg",
+                "assets/img/products/earrings/MIN-E-023/IMG_9508.jpg",
+                "assets/img/products/earrings/MIN-E-023/IMG_9511.jpg",
+                "assets/img/products/earrings/MIN-E-023/IMG_9512.jpg",
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/fc7f55a9-805e-4557-b7a0-6a178bd03af1?slug=kaku-candles"
+        },
+        {
+            tags: ["NEW"],
+            collection: "Luxury Collection",
+            title: "Aurora Gem Ring",
+            code: "AUR-R-002",
+            price: 999,
+            sellingPrice: 699,
+            offprice: '60%',
+            images: [
+                "assets/img/products/earrings/WebP/IMG_4982.webp",
+                "assets/img/products/earrings/WebP/IMG_4975.webp"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/dd0c7fbe-7f65-4f7f-aae7-1f1dd46a604a?slug=kaku-candles"
+        },
+        {
+            tags: ["LIMITED"],
+            collection: "Vintage Vibes",
+            title: "Serenity Stone Bracelet",
+            code: "SER-B-003",
+            price: 799,
+            sellingPrice: 599,
+            offprice: '30%',
+            images: [
+                "assets/img/products/earrings/WebP/IMG_4980.webp",
+                "assets/img/products/earrings/WebP/IMG_4974.webp"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        },
+        {
+            tags: ["TRENDING"],
+            collection: "Daily Wear",
+            title: "Ziva Hoop Earrings",
+            code: "ZIV-E-004",
+            price: 449,
+            sellingPrice: 299,
+            offprice: '50%',
+            images: [
+                "assets/img/products/earrings/WebP/IMG_4977.webp",
+                "assets/img/products/earrings/WebP/IMG_4976.webp"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles-1"
+        },
+        {
+            tags: ["HOT"],
+            collection: "Festive Special",
+            title: "Noor Pearl Necklace",
+            code: "NOO-N-005",
+            price: 1599,
+            sellingPrice: 1249,
+            offprice: '25%',
+            images: [
+                "assets/img/products/earrings/WebP/IMG_4982.webp",
+                "assets/img/products/earrings/WebP/IMG_4982.webp"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        },
+        {
+            tags: ["EXCLUSIVE"],
+            collection: "Royal Edition",
+            title: "Aarya Antique Set",
+            code: "AAR-S-006",
+            price: 2499,
+            sellingPrice: 1899,
+            offprice: '65%',
+            images: [
+                "assets/img/products/earrings/WebP/IMG_4975.webp",
+                "assets/img/products/earrings/WebP/IMG_4980.webp"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/dd0c7fbe-7f65-4f7f-aae7-1f1dd46a604a?slug=kaku-candles"
+        },
+        {
+            tags: ["TRENDING"],
+            collection: "Statement",
+            title: "Ziva Hoop Earrings",
+            code: "ZIV-E-004",
+            price: 449,
+            sellingPrice: 299,
+            offprice: '20%',
+            images: [
+                "assets/img/products/earrings/img-5423.jpg",
+                "assets/img/products/earrings/img-5424.jpg"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/dd0c7fbe-7f65-4f7f-aae7-1f1dd46a604a?slug=kaku-candles"
+        },
+        {
+            tags: ["BESTSELLER"],
+            collection: "Premium Collection",
+            title: "Minukki - Minimal Earring",
+            code: "MIN-E-001",
+            price: 499,
+            sellingPrice: 349,
+            offprice: '40%',
+            images: [
+                "assets/img/products/earrings/WebP/IMG_4984.webp",
+                "assets/img/products/earrings/WebP/IMG_4983.webm"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/fc7f55a9-805e-4557-b7a0-6a178bd03af1?slug=kaku-candles"
+        },
+        {
+            tags: ["NEW"],
+            collection: "Luxury Collection",
+            title: "Aurora Gem Ring",
+            code: "AUR-R-002",
+            price: 999,
+            sellingPrice: 699,
+            offprice: '60%',
+            images: [
+                "assets/img/products/earrings/WebP/IMG_4982.webp",
+                "assets/img/products/earrings/WebP/IMG_4975.webp"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/dd0c7fbe-7f65-4f7f-aae7-1f1dd46a604a?slug=kaku-candles"
+        },
+        {
+            tags: ["LIMITED"],
+            collection: "Vintage Vibes",
+            title: "Serenity Stone Bracelet",
+            code: "SER-B-003",
+            price: 799,
+            sellingPrice: 599,
+            offprice: '30%',
+            images: [
+                "assets/img/products/earrings/WebP/IMG_4980.webp",
+                "assets/img/products/earrings/WebP/IMG_4974.webp"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        },
+        {
+            tags: ["TRENDING"],
+            collection: "Daily Wear",
+            title: "Ziva Hoop Earrings",
+            code: "ZIV-E-004",
+            price: 449,
+            sellingPrice: 299,
+            offprice: '50%',
+            images: [
+                "assets/img/products/earrings/WebP/IMG_4977.webp",
+                "assets/img/products/earrings/WebP/IMG_4976.webp"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles-1"
+        },
+        {
+            tags: ["HOT"],
+            collection: "Festive Special",
+            title: "Noor Pearl Necklace",
+            code: "NOO-N-005",
+            price: 1599,
+            sellingPrice: 1249,
+            offprice: '25%',
+            images: [
+                "assets/img/products/earrings/WebP/IMG_4982.webp",
+                "assets/img/products/earrings/WebP/IMG_4982.webp"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        },
+        {
+            tags: ["EXCLUSIVE"],
+            collection: "Royal Edition",
+            title: "Aarya Antique Set",
+            code: "AAR-S-006",
+            price: 2499,
+            sellingPrice: 1899,
+            offprice: '65%',
+            images: [
+                "assets/img/products/earrings/WebP/IMG_4975.webp",
+                "assets/img/products/earrings/WebP/IMG_4980.webp"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/dd0c7fbe-7f65-4f7f-aae7-1f1dd46a604a?slug=kaku-candles"
+        },
+        {
+            tags: ["TRENDING"],
+            collection: "Statement",
+            title: "Ziva Hoop Earrings",
+            code: "ZIV-E-004",
+            price: 449,
+            sellingPrice: 299,
+            offprice: '20%',
+            images: [
+                "assets/img/products/earrings/img-5423.jpg",
+                "assets/img/products/earrings/img-5424.jpg"
+            ],
+            shopnow: "https://kaku-candles.mini.site/products/dd0c7fbe-7f65-4f7f-aae7-1f1dd46a604a?slug=kaku-candles"
+        }
+    ];
 
-        const container = document.getElementById("product-container");
+    const container = document.getElementById("product-container");
 
-        function createProductCard(product, index) {
-            const carouselId = `carousel-${index}`;
-            const carouselItems = product.images.map((img, i) => `
-                <div class="carousel-item ${i === 0 ? 'active' : ''}">
-                  <img src="${img}" class="d-block w-100 ray-product-img" alt="">
-                </div>`).join("");
+    let currentRenderedProducts = [...products]; // Holds filtered products
 
-            const indicators = product.images.map((_, i) => `
-                <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${i}" ${i === 0 ? 'class="active"' : ''} aria-label="Slide ${i + 1}"></button>
-              `).join("");
+    function createProductCard(product, index) {
+        const carouselId = `carousel-${index}`;
+        // const carouselItems = product.images.map((img, i) => `
+        //     <div class="carousel-item ${i === 0 ? 'active' : ''}">
+        //       <img src="${img}" class="d-block w-100 ray-product-img" alt="">
+        //     </div>`).join("");
 
-            const tags = product.tags.map(tag => `<span class="tag">${tag}</span>`).join("");
+        const carouselItems = product.images.map((img, i) => `
+    <div class="carousel-item ${i === 0 ? 'active' : ''}">
+      ${img.endsWith('.webm') || img.endsWith('.mp4')
+        ? `<video class="d-block w-100 ray-product-img" autoplay muted loop playsinline>
+             <source src="${img}" type="video/webm">
+             Your browser does not support the video tag.
+           </video>`
+        : `<img src="${img}" class="d-block w-100 ray-product-img" alt="">`}
+    </div>`).join("");
 
-            return `
-                <div class="col-md-4 col-lg-3 mb-4">
-                  <div class="card ray-product-card" onclick="openModal(${index})">
-                    <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel">
-                     <div class="carousel-indicators">
-        ${product.images.map((_, i) =>
-                `<button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${i}" class="${i === 0 ? 'active' : ''}" aria-current="${i === 0 ? 'true' : ''}" aria-label="Slide ${i + 1}"></button>`
-            ).join("")}
-      </div>
-                      <div class="carousel-inner">${carouselItems}</div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                      </button>
-                    </div>
-                    <div class="card-body p-2">
-                      ${tags}
-                      <div class="ray-card-title mt-2">${product.title}</div>
-                      <div class="ray-card-text mb-2"><span class="fw-600">Product Code:</span> ${product.code}</div>
-                      <span class="mb-0 text-decoration-line-through f-14px">₹${product.price}</span>
-                      <span class="ray-selling-price-text ps-1">₹${product.sellingPrice}</span>
-                    </div>
+        const indicators = product.images.map((_, i) => `
+            <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${i}" ${i === 0 ? 'class="active"' : ''} aria-label="Slide ${i + 1}"></button>
+          `).join("");
+
+        const tags = product.tags.map(tag => `<span class="tag">${tag}</span>`).join("");
+
+        return `
+            <div class="col-md-4 col-lg-3 mb-4">
+              <div class="card ray-product-card" onclick="openModal(${index})">
+                <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    ${indicators}
                   </div>
+                  <div class="carousel-inner">${carouselItems}</div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
                 </div>
-              `;
-        }
+                <div class="card-body p-2">
+                  ${tags}
+                  <div class="ray-card-title mt-2">${product.title}</div>
+                  <div class="ray-card-text mb-2"><span class="fw-600">Code:</span> ${product.code}</div>
+                  <span class="mb-0 text-decoration-line-through f-14px">₹${product.price}</span>
+                  <span class="ray-selling-price-text ps-1">₹${product.sellingPrice}</span>
+                  <span class="mb-0 text-success f-12x">(${product.offprice} off)</span>
+                </div>
+              </div>
+            </div>
+          `;
+    }
 
-        function renderProducts(filteredProducts = products) {
-            container.innerHTML = filteredProducts.map((p, i) => createProductCard(p, i)).join("");
-        }
+    function renderProducts(filteredProducts = products) {
+        currentRenderedProducts = filteredProducts; // ✅ Save current filtered products
+        container.innerHTML = filteredProducts.map((p, i) => createProductCard(p, i)).join("");
+    }
 
-        function filterProducts() {
-            const searchInput = document.getElementById("searchInput");
-            const priceRangeInput = document.getElementById("priceRange");
-
-            const searchTerm = searchInput ? searchInput.value.toLowerCase() : "";
-            const priceRange = priceRangeInput ? priceRangeInput.value : "";
-
-            const filtered = products.filter(product => {
-                const matchTitle = product.title.toLowerCase().includes(searchTerm);
-                let matchPrice = true;
-
-                if (priceRange) {
-                    const [min, max] = priceRange.split("-").map(Number);
-                    matchPrice = product.sellingPrice >= min && product.sellingPrice <= max;
-                }
-
-                return matchTitle && matchPrice;
-            });
-
-            renderProducts(filtered);
-        }
-
+    function filterProducts() {
         const searchInput = document.getElementById("searchInput");
         const priceRangeInput = document.getElementById("priceRange");
 
-        if (searchInput) searchInput.addEventListener("input", filterProducts);
-        if (priceRangeInput) priceRangeInput.addEventListener("change", filterProducts);
+        const searchTerm = searchInput ? searchInput.value.toLowerCase() : "";
+        const priceRange = priceRangeInput ? priceRangeInput.value : "";
 
-        function openModal(index) {
-            const modalInner = document.getElementById("modalCarouselInner");
-            const thumbnailContainer = document.getElementById("modalThumbnails");
-            const productDetails = document.getElementById("modalProductDetails");
-            const product = products[index];
-            const images = product.images;
+        const filtered = products.filter(product => {
+            const matchTitle = product.title.toLowerCase().includes(searchTerm);
+            let matchPrice = true;
 
-            modalInner.innerHTML = images.map((img, i) => `
-                <div class="carousel-item ${i === 0 ? 'active' : ''}">
-                  <img src="${img}" class="d-block w-100 modal-img-zoom" alt="Image ${i + 1}">
-                </div>`).join("");
+            if (priceRange) {
+                const [min, max] = priceRange.split("-").map(Number);
+                matchPrice = product.sellingPrice >= min && product.sellingPrice <= max;
+            }
 
-            thumbnailContainer.innerHTML = images.map((img, i) => `
-                <img src="${img}" class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;"
-                     onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">`).join("");
+            return matchTitle && matchPrice;
+        });
 
-            productDetails.innerHTML = `
-                <div class="ray-card-title">${product.title}</div>
-                <div class="ray-card-text my-1"><span class="fw-600">Product Code:</span> ${product.code}</div>
-                <div class="f-14px mb-1"><strong class="secondary-color">Collection:</strong> ${product.collection}</div>
-                <div class="my-1">${product.tags.map(tag => `<span class="tag me-1">${tag}</span>`).join("")}</div>
-                <div class="mt-2">
-                  <span class="text-decoration-line-through f-14px">₹${product.price}</span>
-                  <span class="primary-color fs-5 fw-bold ms-1">₹${product.sellingPrice}</span>
-                </div>
-                <div class="mt-3">
-                <a type="button" href="https://minukki.mini.site/" target="_blank" class="btn btn-ray-primary ray-shop-now-btn">Shop Now</a>
-                </div>
-                <div class="mt-auto text-center d-none d-md-block">
-                     <img src="assets/img/mbyray-removebg-preview.png" class="ray-modal-logo-img" alt="Minukki">
-                </div>
-              `;
+        renderProducts(filtered);
+    }
 
-            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-            modal.show();
-        }
+    const searchInput = document.getElementById("searchInput");
+    const priceRangeInput = document.getElementById("priceRange");
 
-        function jumpToSlide(index) {
-            const carousel = document.querySelector('#modalCarousel');
-            const bsCarousel = bootstrap.Carousel.getInstance(carousel) || new bootstrap.Carousel(carousel);
-            bsCarousel.to(index);
+    if (searchInput) searchInput.addEventListener("input", filterProducts);
+    if (priceRangeInput) priceRangeInput.addEventListener("change", filterProducts);
 
-            document.querySelectorAll('.thumbnail-img').forEach((thumb, i) => {
-                thumb.classList.toggle('active', i === index);
-            });
-        }
+    function openModal(index) {
+        const product = currentRenderedProducts[index]; // ✅ Now uses filtered list
+        const modalInner = document.getElementById("modalCarouselInner");
+        const thumbnailContainer = document.getElementById("modalThumbnails");
+        const productDetails = document.getElementById("modalProductDetails");
 
-        renderProducts();
-    </script>
+        // modalInner.innerHTML = product.images.map((img, i) => `
+        //     <div class="carousel-item ${i === 0 ? 'active' : ''}">
+        //       <img src="${img}" class="d-block w-100 modal-img-zoom" alt="Image ${i + 1}">
+        //     </div>`).join("");
+
+        modalInner.innerHTML = product.images.map((img, i) => `
+    <div class="carousel-item ${i === 0 ? 'active' : ''}">
+      ${img.endsWith('.webm') || img.endsWith('.mp4')
+        ? `<video class="d-block w-100 modal-img-zoom" autoplay muted loop playsinline>
+             <source src="${img}" type="video/webm">
+             Your browser does not support the video tag.
+           </video>`
+        : `<img src="${img}" class="d-block w-100 modal-img-zoom" alt="Image ${i + 1}">`}
+    </div>`).join("");
+
+        // thumbnailContainer.innerHTML = product.images.map((img, i) => `
+        //     <img src="${img}" class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;"
+        //          onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">`).join("");
+
+            // <div class="f-14px mb-1"><strong class="secondary-color">Collection:</strong> ${product.collection}</div>
+
+
+        thumbnailContainer.innerHTML = product.images.map((img, i) => `
+    ${img.endsWith('.webm') || img.endsWith('.mp4')
+                ? `<video class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;" 
+                muted playsinline autoplay loop onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">
+             <source src="${img}" type="video/webm">
+         </video>`
+                : `<img src="${img}" class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;"
+               onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">`}
+`).join("");
+
+        productDetails.innerHTML = `
+            <div class="ray-card-title">${product.title}</div>
+            <div class="ray-card-text my-1"><span class="fw-600">Code:</span> ${product.code}</div>
+            <div class="my-1">${product.tags.map(tag => `<span class="tag me-1">${tag}</span>`).join("")}</div>
+            <div class="mt-2">
+              <span class="text-decoration-line-through f-14px">₹${product.price}</span>
+              <span class="primary-color fs-5 fw-bold ms-1">₹${product.sellingPrice}</span>
+                  <span class="mb-0 text-success f-12x">(${product.offprice} off)</span>
+            </div>
+            <div class="mt-3">
+            <a type="button" href="${product.shopnow}" target="_blank" class="btn btn-ray-primary ray-shop-now-btn">Shop Now</a>
+            </div>
+            <div class="mt-auto text-center d-none d-md-block">
+                 <img src="assets/img/logo/minukki_logo-color.png" class="ray-modal-logo-img" alt="Minukki">
+            </div>
+          `;
+
+        const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+        modal.show();
+    }
+
+    renderProducts(); // Initial load
+</script>
+
 
 </body>
 

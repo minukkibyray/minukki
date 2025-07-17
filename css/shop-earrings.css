@@ -58,7 +58,7 @@
 }
 
 .ray-card-text {
-    font-size: 12px !important;
+    font-size: 11px !important;
     font-family: "Montserrat", sans-serif !important;
     color: #949494;
 }
@@ -121,7 +121,7 @@
   } */
 
 .tag {
-    background: #f0c040;
+    background: #f7d899;
     padding: 2px 6px;
     margin-right: 4px;
     border-radius: 3px;
@@ -257,7 +257,7 @@
     }
 
     .ray-modal-logo-img {
-        height: 100px;
+        height: 60px;
     }
 
     .ray-shop-now-btn {
