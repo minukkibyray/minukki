@@ -1,674 +1,1638 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minukki - Earrings</title>
-    <link rel="icon" href="assets/img/minukki-logo-png.png" type="image/x-icon" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <!-- Bootstrap 5 CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- QuickSand Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
+      rel="icon"
+      href="assets/img/minukki-logo-png.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- QuickSand Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Montserrat Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.min.css"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/shop-earrings.css">
-</head>
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/shop-earrings.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg py-1">
-            <div class="container-fluid">
-                <!-- Logo on the left -->
-                <a class="navbar-brand" href="index.html" target="_blank">
-                    <img src="assets/img/logo/minukki_logo_white.png" alt="Logo" height="40" class="ms-2">
-                </a>
-                <!-- Toggle button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarExampleOnHover" aria-controls="navbarExampleOnHover" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
+      <nav class="navbar navbar-expand-lg py-1">
+        <div class="container-fluid">
+          <!-- Logo on the left -->
+          <a class="navbar-brand" href="index.html" target="_blank">
+            <img
+              src="assets/img/logo/minukki_logo_white.png"
+              alt="Logo"
+              height="40"
+              class="ms-2"
+            />
+          </a>
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarExampleOnHover"
+            aria-controls="navbarExampleOnHover"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
 
-                <!-- Collapsible wrapper -->
-                <div class="collapse navbar-collapse" id="navbarExampleOnHover">
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Minimal -->
-                        <li class="nav-item dropdown minimal position-static px-lg-5">
-                            <a class="nav-link dropdown-toggle minimal" href="#" id="minimal" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Minimal
-                            </a>
-                            <!-- Dropdown menu -->
-                            <div class="dropdown-menu w-100 mt-0 mega-menu pt-0" aria-labelledby="minimal">
-                                <div class="container-fluid ray-navbar-border-top">
-                                    <div class="row my-4">
-                                        <div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
-                                            <div class="ray-megamenu-heading px-3 mb-2">Shop By Category</div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#" class="list-group-item list-group-item-action">Women's
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Men's
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Couple
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">All Fine
-                                                    Watches</a>
-                                            </div>
-                                            <div class="ray-megamenu-heading px-3 mb-2 mt-3">Shop By Strap</div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#" class="list-group-item list-group-item-action">Bracelet
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Leather
-                                                    Watches</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
-                                            <div class="ray-megamenu-heading px-3 mb-2">Curated Shops</div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#" class="list-group-item list-group-item-action">Blue
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Diamond
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Gold
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Stainless
-                                                    Steel
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Time
-                                                    Objects</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-2 mb-3 mb-md-0">
-                                            <div class="ray-megamenu-heading px-3 mb-2">Shop By Collection</div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#" class="list-group-item list-group-item-action">Minukki
-                                                    Hardwear</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Minukki
-                                                    Eternity</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Gold Plated
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Atlas</a>
-                                                <a href="#" class="list-group-item list-group-item-action">High
-                                                    Jewelry</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6">
-                                            <div class="">
-                                                <img src="assets/img/products/earrings/WebP/IMG_4984.webp"
-                                                    class="img-fluid px-3 mb-2" alt="high-jewellry">
-                                            </div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#" class="list-group-item list-group-item-action">Minukki
-                                                    Jewelry</a>
-                                            </div>
-                                            <div class="ray-megamenu-heading px-3 mb-2 mt-1">Shop Now</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- High Jewelry -->
-                        <li class="nav-item dropdown highJewelry position-static">
-                            <a class="nav-link dropdown-toggle highJewelry" href="#" id="highJewelry" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                High Jewelry
-                            </a>
-                            <!-- Dropdown menu -->
-                            <div class="dropdown-menu w-100 mt-0 mega-menu pt-0" aria-labelledby="highJewelry">
-                                <div class="container-fluid ray-navbar-border-top">
-                                    <div class="row my-4">
-                                        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0 border-end">
-                                            <div class="ray-megamenu-heading px-3 mb-2">High Jewelry</div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="shop-earrings.html" target="_blank"
-                                                    class="list-group-item list-group-item-action">Earrings</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Double
-                                                    Chain</a>
-                                                <a href="#"
-                                                    class="list-group-item list-group-item-action">Combinational</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3">
-                                            <div class="">
-                                                <img src="assets/img/products/earrings/WebP/IMG_4980.webp"
-                                                    class="img-fluid px-3 mb-2" alt="high-jewellry">
-                                            </div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#"
-                                                    class="list-group-item list-group-item-action text-center">EARRINGS</a>
-                                            </div>
-                                            <!-- <div class="ray-megamenu-heading px-3 mb-2 mt-1">Shop Now</div> -->
-                                        </div>
-                                        <div class="col-md-6 col-lg-3">
-                                            <div class="">
-                                                <img src="assets/img/products/earrings/WebP/IMG_4978.webp"
-                                                    class="img-fluid px-3 mb-2" alt="high-jewellry">
-                                            </div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#"
-                                                    class="list-group-item list-group-item-action text-center">DOUBLE
-                                                    CHAIN</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3">
-                                            <div class="">
-                                                <img src="assets/img/products/earrings/WebP/IMG_4975.webp"
-                                                    class="img-fluid px-3 mb-2" alt="high-jewellry">
-                                            </div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#"
-                                                    class="list-group-item list-group-item-action text-center">COMBINATIONAL</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- Statement -->
-                        <li class="nav-item dropdown statement position-static px-lg-5">
-                            <a class="nav-link dropdown-toggle statement" href="#" id="statement" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Statement
-                            </a>
-                            <!-- Dropdown menu -->
-                            <div class="dropdown-menu w-100 mt-0 mega-menu pt-0" aria-labelledby="statement">
-                                <div class="container-fluid">
-                                    <div class="row my-4">
-                                        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                                            <div class="ray-megamenu-heading px-3 mb-2">Shop By Category</div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#" class="list-group-item list-group-item-action">Women's
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Men's
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Couple
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">All Fine
-                                                    Watches</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                                            <div class="ray-megamenu-heading px-3 mb-2">Curated Shops</div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#" class="list-group-item list-group-item-action">Blue
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Diamond
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Gold
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Stainless
-                                                    Steel
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Time
-                                                    Objects</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
-                                            <div class="ray-megamenu-heading px-3 mb-2">Shop By Collection</div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#" class="list-group-item list-group-item-action">Minukki
-                                                    Hardwear</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Minukki
-                                                    Eternity</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Gold Plated
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Atlas</a>
-                                                <a href="#" class="list-group-item list-group-item-action">High
-                                                    Jewelry</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3">
-                                            <div class="">
-                                                <img src="assets/img/megamenu-img/jewellry.jpg"
-                                                    class="img-fluid px-3 mb-2" alt="high-jewellry">
-                                            </div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#" class="list-group-item list-group-item-action">Minukki
-                                                    Jewelry</a>
-                                            </div>
-                                            <div class="ray-megamenu-heading px-3 mb-2 mt-1">Shop Now</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- Social -->
-                        <li class="nav-item dropdown social position-static pe-lg-5">
-                            <a class="nav-link dropdown-toggle social" href="#" id="socil" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Social
-                            </a>
-                            <!-- Dropdown menu -->
-                            <div class="dropdown-menu w-100 mt-0 mega-menu pt-0" aria-labelledby="socil">
-                                <div class="container-fluid">
-                                    <div class="row my-4">
-                                        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                                            <div class="ray-megamenu-heading px-3 mb-2">Shop By Category</div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#" class="list-group-item list-group-item-action">Women's
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Men's
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Couple
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">All Fine
-                                                    Watches</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 ps-lg-4">
-                                            <div class="">
-                                                <img src="https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                    class="ray-img-500-250 px-3 mb-2" alt="high-jewellry">
-                                            </div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#" class="list-group-item list-group-item-action">Minukki
-                                                    Jewelry</a>
-                                            </div>
-                                            <div class="ray-megamenu-heading px-3 mb-2 mt-1">Shop Now</div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
-                                            <div class="ray-megamenu-heading px-3 mb-2">Shop By Collection</div>
-                                            <div class="list-group list-group-flush">
-                                                <a href="#" class="list-group-item list-group-item-action">Minukki
-                                                    Hardwear</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Minukki
-                                                    Eternity</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Gold Plated
-                                                    Watches</a>
-                                                <a href="#" class="list-group-item list-group-item-action">Atlas</a>
-                                                <a href="#" class="list-group-item list-group-item-action">High
-                                                    Jewelry</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarExampleOnHover">
+            <ul class="navbar-nav ms-auto">
+              <!-- Minimal -->
+              <li class="nav-item dropdown minimal position-static px-lg-5">
+                <a
+                  class="nav-link dropdown-toggle minimal"
+                  href="#"
+                  id="minimal"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Minimal
+                </a>
+                <!-- Dropdown menu -->
+                <div
+                  class="dropdown-menu w-100 mt-0 mega-menu pt-0"
+                  aria-labelledby="minimal"
+                >
+                  <div class="container-fluid ray-navbar-border-top">
+                    <div class="row my-4">
+                      <div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
+                        <div class="ray-megamenu-heading px-3 mb-2">
+                          Shop By Category
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Women's Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Men's Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Couple Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >All Fine Watches</a
+                          >
+                        </div>
+                        <div class="ray-megamenu-heading px-3 mb-2 mt-3">
+                          Shop By Strap
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Bracelet Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Leather Watches</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
+                        <div class="ray-megamenu-heading px-3 mb-2">
+                          Curated Shops
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Blue Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Diamond Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Gold Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Stainless Steel Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Time Objects</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-2 mb-3 mb-md-0">
+                        <div class="ray-megamenu-heading px-3 mb-2">
+                          Shop By Collection
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Minukki Hardwear</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Minukki Eternity</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Gold Plated Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Atlas</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >High Jewelry</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-6">
+                        <div class="">
+                          <img
+                            src="assets/img/products/earrings/WebP/IMG_4984.webp"
+                            class="img-fluid px-3 mb-2"
+                            alt="high-jewellry"
+                          />
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Minukki Jewelry</a
+                          >
+                        </div>
+                        <div class="ray-megamenu-heading px-3 mb-2 mt-1">
+                          Shop Now
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </nav>
+              </li>
+              <!-- High Jewelry -->
+              <li class="nav-item dropdown highJewelry position-static">
+                <a
+                  class="nav-link dropdown-toggle highJewelry"
+                  href="#"
+                  id="highJewelry"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  High Jewelry
+                </a>
+                <!-- Dropdown menu -->
+                <div
+                  class="dropdown-menu w-100 mt-0 mega-menu pt-0"
+                  aria-labelledby="highJewelry"
+                >
+                  <div class="container-fluid ray-navbar-border-top">
+                    <div class="row my-4">
+                      <div class="col-md-6 col-lg-3 mb-3 mb-lg-0 border-end">
+                        <div class="ray-megamenu-heading px-3 mb-2">
+                          High Jewelry
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="shop-earrings.html"
+                            target="_blank"
+                            class="list-group-item list-group-item-action"
+                            >Earrings</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Double Chain</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Combinational</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                        <div class="">
+                          <img
+                            src="assets/img/products/earrings/WebP/IMG_4980.webp"
+                            class="img-fluid px-3 mb-2"
+                            alt="high-jewellry"
+                          />
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action text-center"
+                            >EARRINGS</a
+                          >
+                        </div>
+                        <!-- <div class="ray-megamenu-heading px-3 mb-2 mt-1">Shop Now</div> -->
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                        <div class="">
+                          <img
+                            src="assets/img/products/earrings/WebP/IMG_4978.webp"
+                            class="img-fluid px-3 mb-2"
+                            alt="high-jewellry"
+                          />
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action text-center"
+                            >DOUBLE CHAIN</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                        <div class="">
+                          <img
+                            src="assets/img/products/earrings/WebP/IMG_4975.webp"
+                            class="img-fluid px-3 mb-2"
+                            alt="high-jewellry"
+                          />
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action text-center"
+                            >COMBINATIONAL</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- Statement -->
+              <li class="nav-item dropdown statement position-static px-lg-5">
+                <a
+                  class="nav-link dropdown-toggle statement"
+                  href="#"
+                  id="statement"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Statement
+                </a>
+                <!-- Dropdown menu -->
+                <div
+                  class="dropdown-menu w-100 mt-0 mega-menu pt-0"
+                  aria-labelledby="statement"
+                >
+                  <div class="container-fluid">
+                    <div class="row my-4">
+                      <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                        <div class="ray-megamenu-heading px-3 mb-2">
+                          Shop By Category
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Women's Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Men's Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Couple Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >All Fine Watches</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                        <div class="ray-megamenu-heading px-3 mb-2">
+                          Curated Shops
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Blue Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Diamond Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Gold Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Stainless Steel Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Time Objects</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                        <div class="ray-megamenu-heading px-3 mb-2">
+                          Shop By Collection
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Minukki Hardwear</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Minukki Eternity</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Gold Plated Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Atlas</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >High Jewelry</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                        <div class="">
+                          <img
+                            src="assets/img/megamenu-img/jewellry.jpg"
+                            class="img-fluid px-3 mb-2"
+                            alt="high-jewellry"
+                          />
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Minukki Jewelry</a
+                          >
+                        </div>
+                        <div class="ray-megamenu-heading px-3 mb-2 mt-1">
+                          Shop Now
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- Social -->
+              <li class="nav-item dropdown social position-static pe-lg-5">
+                <a
+                  class="nav-link dropdown-toggle social"
+                  href="#"
+                  id="socil"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Social
+                </a>
+                <!-- Dropdown menu -->
+                <div
+                  class="dropdown-menu w-100 mt-0 mega-menu pt-0"
+                  aria-labelledby="socil"
+                >
+                  <div class="container-fluid">
+                    <div class="row my-4">
+                      <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                        <div class="ray-megamenu-heading px-3 mb-2">
+                          Shop By Category
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Women's Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Men's Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Couple Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >All Fine Watches</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-6 ps-lg-4">
+                        <div class="">
+                          <img
+                            src="https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="ray-img-500-250 px-3 mb-2"
+                            alt="high-jewellry"
+                          />
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Minukki Jewelry</a
+                          >
+                        </div>
+                        <div class="ray-megamenu-heading px-3 mb-2 mt-1">
+                          Shop Now
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                        <div class="ray-megamenu-heading px-3 mb-2">
+                          Shop By Collection
+                        </div>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Minukki Hardwear</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Minukki Eternity</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Gold Plated Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >Atlas</a
+                          >
+                          <a
+                            href="#"
+                            class="list-group-item list-group-item-action"
+                            >High Jewelry</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section>
-            <div class="container my-5">
-                <div class="row mb-4 pb-3">
-                    <div class="col-12 ray-section-heading primary-color text-center mb-0">
-                        Minukki's Earrings Catalog
-                    </div>
-                    <div class="col-12 ray-section-desc text-center">
-                        A curated collection of elegant and timeless earrings to elevate every look.
-                    </div>
-                </div>
-                <div class="row mb-4 pb-3">
-                    <div class="col-12 col-lg-2 mb-2 mb-lg-0">
-                        <div class="ray-secondary-heading pt-lg-1">
-                            Search Filter:
-                        </div>
-                    </div>
-                    <div class="col-6 col-lg-5">
-                        <input type="text" id="searchInput" class="form-control"
-                            placeholder="Search by product title...">
-                    </div>
-                    <div class="col-6 col-lg-5">
-                        <select id="priceRange" class="form-select">
-                            <option value="">All Prices</option>
-                            <option value="0-499">Under ₹500</option>
-                            <option value="500-999">₹500 - ₹999</option>
-                            <option value="1000-2000">₹1000 - ₹2000</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row d-none">
-                    <div class="col-md-3">
-                        <div class="card ray-product-card position-relative">
-                            <!-- Wishlist Icon -->
-                            <!-- <div class="wishlist-icon">
+      <section>
+        <div class="container my-5">
+          <div class="row mb-4 pb-3">
+            <div
+              class="col-12 ray-section-heading primary-color text-center mb-0"
+            >
+              Minukki's Earrings Catalog
+            </div>
+            <div class="col-12 ray-section-desc text-center">
+              A curated collection of elegant and timeless earrings to elevate
+              every look.
+            </div>
+          </div>
+          <div class="row mb-4 pb-3">
+            <div class="col-12 col-lg-2 mb-2 mb-lg-0">
+              <div class="ray-secondary-heading pt-lg-1">Search Filter:</div>
+            </div>
+            <div class="col-6 col-lg-5">
+              <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                placeholder="Search by product title..."
+              />
+            </div>
+            <div class="col-6 col-lg-5">
+              <select id="priceRange" class="form-select">
+                <option value="">All Prices</option>
+                <option value="0-499">Under ₹500</option>
+                <option value="500-999">₹500 - ₹999</option>
+                <option value="1000-2000">₹1000 - ₹2000</option>
+              </select>
+            </div>
+          </div>
+          <div class="row d-none">
+            <div class="col-md-3">
+              <div class="card ray-product-card position-relative">
+                <!-- Wishlist Icon -->
+                <!-- <div class="wishlist-icon">
                             <i class="bi bi-heart"></i>
                         </div> -->
-                            <!-- Carousel -->
-                            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="d-block w-100 ray-product-img" alt="Product 1">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="d-block w-100 ray-product-img" alt="Product 2">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </button>
-                            </div>
-                            <!-- Product Info -->
-                            <div class="card-body p-2">
-                                <span class="tag">BESTSELLER</span>
-                                <span class="tag1">Preminum Collection</span>
-                                <div class="ray-card-title mt-2">Minukki - Minimal Earring</div>
-                                <div class="ray-card-text mt-1 mb-2"> <span class="fw-bold">Code:</span>
-                                    MIN-E-001
-                                </div>
-                                <span class="mb-0 text-decoration-line-through f-14px">₹499</span> <span
-                                    class="ray-selling-price-text ps-1">₹349</span>
-                            </div>
-                        </div>
+                <!-- Carousel -->
+                <div
+                  id="productCarousel"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="d-block w-100 ray-product-img"
+                        alt="Product 1"
+                      />
                     </div>
-                </div>
-                <div class="row" id="product-container">
-                </div>
-
-                <!-- Modal with Carousel, Thumbnails, and Product Details -->
-                <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-xl modal-dialog-centered">
-                        <div class="modal-content p-0">
-                            <div class="modal-body p-0">
-                                <!-- Close Button -->
-                                <button type="button" class="btn-close position-absolute top-0 end-0 m-2 z-3"
-                                    data-bs-dismiss="modal" aria-label="Close"></button>
-
-                                <div class="row g-0">
-                                    <!-- Carousel Column -->
-                                    <div class="col-md-8 position-relative">
-                                        <div id="modalCarousel" class="carousel slide" data-bs-ride="carousel">
-                                            <div class="carousel-inner" id="modalCarouselInner"></div>
-
-                                            <!-- Controls -->
-                                            <button class="carousel-control-prev" type="button"
-                                                data-bs-target="#modalCarousel" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon"></span>
-                                            </button>
-                                            <button class="carousel-control-next" type="button"
-                                                data-bs-target="#modalCarousel" data-bs-slide="next">
-                                                <span class="carousel-control-next-icon"></span>
-                                            </button>
-                                        </div>
-
-                                        <!-- Thumbnail Overlay -->
-                                        <div class="position-absolute bottom-0 start-50 translate-middle-x bg-dark bg-opacity-50 p-2 rounded d-flex gap-2 overflow-auto z-2 mb-2"
-                                            style="max-width: 90%; white-space: nowrap;" id="modalThumbnails"></div>
-                                    </div>
-
-                                    <!-- Product Details Column -->
-                                    <div class="col-md-4 p-3 d-flex flex-column justify-content-between"
-                                        id="modalProductDetails">
-                                        <!-- Filled via JS -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="d-block w-100 ray-product-img"
+                        alt="Product 2"
+                      />
                     </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#productCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#productCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
                 </div>
+                <!-- Product Info -->
+                <div class="card-body p-2">
+                  <span class="tag">BESTSELLER</span>
+                  <span class="tag1">Preminum Collection</span>
+                  <div class="ray-card-title mt-2">
+                    Minukki - Minimal Earring
+                  </div>
+                  <div class="ray-card-text mt-1 mb-2">
+                    <span class="fw-bold">Code:</span>
+                    MIN-E-001
+                  </div>
+                  <span class="mb-0 text-decoration-line-through f-14px"
+                    >₹499</span
+                  >
+                  <span class="ray-selling-price-text ps-1">₹349</span>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="row" id="product-container"></div>
+
+          <!-- Modal with Carousel, Thumbnails, and Product Details -->
+          <div
+            class="modal fade"
+            id="imageModal"
+            tabindex="-1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content p-0">
+                <div class="modal-body p-0">
+                  <!-- Close Button -->
+                  <button
+                    type="button"
+                    class="btn-close position-absolute top-0 end-0 m-2 z-3"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+
+                  <div class="row g-0">
+                    <!-- Carousel Column -->
+                    <div class="col-md-8 position-relative">
+                      <div
+                        id="modalCarousel"
+                        class="carousel slide"
+                        data-bs-ride="carousel"
+                      >
+                        <div
+                          class="carousel-inner"
+                          id="modalCarouselInner"
+                        ></div>
+
+                        <!-- Controls -->
+                        <button
+                          class="carousel-control-prev"
+                          type="button"
+                          data-bs-target="#modalCarousel"
+                          data-bs-slide="prev"
+                        >
+                          <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button
+                          class="carousel-control-next"
+                          type="button"
+                          data-bs-target="#modalCarousel"
+                          data-bs-slide="next"
+                        >
+                          <span class="carousel-control-next-icon"></span>
+                        </button>
+                      </div>
+
+                      <!-- Thumbnail Overlay -->
+                      <div
+                        class="position-absolute bottom-0 start-50 translate-middle-x bg-dark bg-opacity-50 p-2 rounded d-flex gap-2 overflow-auto z-2 mb-2"
+                        style="max-width: 90%; white-space: nowrap"
+                        id="modalThumbnails"
+                      ></div>
+                    </div>
+
+                    <!-- Product Details Column -->
+                    <div
+                      class="col-md-4 p-3 d-flex flex-column justify-content-between"
+                      id="modalProductDetails"
+                    >
+                      <!-- Filled via JS -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
         integrity="sha384-vLzyMw4ACv3XAvs2bk6J1VMIK/HiWBVOB/UN3GnYhTHlNDbSpjAzFkUEK8IfD4qz"
         crossorigin="anonymous"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
-        integrity="sha384-vLzyMw4ACv3XAvs2bk6J1VMIK/HiWBVOB/UN3GnYhTHlNDbSpjAzFkUEK8IfD4qz"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+      integrity="sha384-vLzyMw4ACv3XAvs2bk6J1VMIK/HiWBVOB/UN3GnYhTHlNDbSpjAzFkUEK8IfD4qz"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/custom.js"></script>
     <!-- MDB --><!-- MDB -->
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"
+    ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-    const products = [
+      const products = [
         {
-            tags: ["BESTSELLER"],
-            collection: "Premium Collection",
-            title: "Minukki - Minimal Earring",
-            code: "MIN-E-001",
-            price: 499,
-            sellingPrice: 349,
-            offprice: '40%',
-            images: [
-                "assets/img/products/earrings/MIN-E-023/IMG_9505.jpg",
-                "assets/img/products/earrings/MIN-E-002/ash/IMG_0295.jpg",
-                "assets/img/products/earrings/MIN-E-023/IMG_9507.jpg",
-                "assets/img/products/earrings/MIN-E-023/IMG_9508.jpg",
-                "assets/img/products/earrings/MIN-E-023/IMG_9511.jpg",
-                "assets/img/products/earrings/MIN-E-023/IMG_9512.jpg",
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/fc7f55a9-805e-4557-b7a0-6a178bd03af1?slug=kaku-candles"
+          tags: ["NEW"],
+          code: "MIN-E-002",
+          title: "Appealing - Daily wear Premimum Collections - Ash",
+          price: "309",
+          sellingPrice: "139",
+          offprice: "55%",
+          images: [
+            "assets/img/products/earrings/MIN-E-002/ash/IMG_0295.JPG",
+            "assets/img/products/earrings/MIN-E-002/ash/IMG_0296.JPG",
+            "assets/img/products/earrings/MIN-E-002/ash/IMG_0297.JPG",
+            "assets/img/products/earrings/MIN-E-002/ash/IMG_0299.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
         },
         {
-            tags: ["NEW"],
-            collection: "Luxury Collection",
-            title: "Aurora Gem Ring",
-            code: "AUR-R-002",
-            price: 999,
-            sellingPrice: 699,
-            offprice: '60%',
-            images: [
-                "assets/img/products/earrings/WebP/IMG_4982.webp",
-                "assets/img/products/earrings/WebP/IMG_4975.webp"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/dd0c7fbe-7f65-4f7f-aae7-1f1dd46a604a?slug=kaku-candles"
+          tags: ["NEW"],
+          code: "MIN-E-002",
+          title: "Appealing - Daily wear Premimum Collections - Beige",
+          price: "309",
+          sellingPrice: "139",
+          offprice: "55%",
+          images: [
+            "assets/img/products/earrings/MIN-E-002/beige/IMG_0278.JPG",
+            "assets/img/products/earrings/MIN-E-002/beige/IMG_0279.JPG",
+            "assets/img/products/earrings/MIN-E-002/beige/IMG_0280.JPG",
+            "assets/img/products/earrings/MIN-E-002/beige/IMG_0281.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
         },
         {
-            tags: ["LIMITED"],
-            collection: "Vintage Vibes",
-            title: "Serenity Stone Bracelet",
-            code: "SER-B-003",
-            price: 799,
-            sellingPrice: 599,
-            offprice: '30%',
-            images: [
-                "assets/img/products/earrings/WebP/IMG_4980.webp",
-                "assets/img/products/earrings/WebP/IMG_4974.webp"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+          tags: ["NEW"],
+          code: "MIN-E-002",
+          title: "Appealing - Daily wear Premimum Collections - Black",
+          price: "309",
+          sellingPrice: "139",
+          offprice: "55%",
+          images: [
+            "assets/img/products/earrings/MIN-E-002/black/IMG_0285.JPG",
+            "assets/img/products/earrings/MIN-E-002/black/IMG_0286.JPG",
+            "assets/img/products/earrings/MIN-E-002/black/IMG_0287.JPG",
+            "assets/img/products/earrings/MIN-E-002/black/IMG_0288.JPG",
+            "assets/img/products/earrings/MIN-E-002/black/IMG_0289.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
         },
         {
-            tags: ["TRENDING"],
-            collection: "Daily Wear",
-            title: "Ziva Hoop Earrings",
-            code: "ZIV-E-004",
-            price: 449,
-            sellingPrice: 299,
-            offprice: '50%',
-            images: [
-                "assets/img/products/earrings/WebP/IMG_4977.webp",
-                "assets/img/products/earrings/WebP/IMG_4976.webp"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles-1"
+          tags: ["NEW"],
+          code: "MIN-E-002",
+          title: "Appealing - Daily wear Premimum Collections - Chocolate",
+          price: "309",
+          sellingPrice: "139",
+          offprice: "55%",
+          images: [
+            "assets/img/products/earrings/MIN-E-002/chocolate_brown/IMG_0249.JPG",
+            "assets/img/products/earrings/MIN-E-002/chocolate_brown/IMG_0250.JPG",
+            "assets/img/products/earrings/MIN-E-002/chocolate_brown/IMG_0251.JPG",
+            "assets/img/products/earrings/MIN-E-002/chocolate_brown/IMG_0253.JPG",
+            "assets/img/products/earrings/MIN-E-002/chocolate_brown/IMG_0254.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
         },
         {
-            tags: ["HOT"],
-            collection: "Festive Special",
-            title: "Noor Pearl Necklace",
-            code: "NOO-N-005",
-            price: 1599,
-            sellingPrice: 1249,
-            offprice: '25%',
-            images: [
-                "assets/img/products/earrings/WebP/IMG_4982.webp",
-                "assets/img/products/earrings/WebP/IMG_4982.webp"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+          tags: ["NEW"],
+          code: "MIN-E-002",
+          title: "Appealing - Daily wear Premimum Collections - Green",
+          price: "309",
+          sellingPrice: "139",
+          offprice: "55%",
+          images: [
+            "assets/img/products/earrings/MIN-E-002/green/IMG_0275.JPG",
+            "assets/img/products/earrings/MIN-E-002/green/IMG_0276.JPG",
+            "assets/img/products/earrings/MIN-E-002/green/IMG_0277.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
         },
         {
-            tags: ["EXCLUSIVE"],
-            collection: "Royal Edition",
-            title: "Aarya Antique Set",
-            code: "AAR-S-006",
-            price: 2499,
-            sellingPrice: 1899,
-            offprice: '65%',
-            images: [
-                "assets/img/products/earrings/WebP/IMG_4975.webp",
-                "assets/img/products/earrings/WebP/IMG_4980.webp"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/dd0c7fbe-7f65-4f7f-aae7-1f1dd46a604a?slug=kaku-candles"
+          tags: ["NEW"],
+          code: "MIN-E-002",
+          title: "Appealing - Daily wear Premimum Collections - Off White",
+          price: "309",
+          sellingPrice: "139",
+          offprice: "55%",
+          images: [
+            "assets/img/products/earrings/MIN-E-002/half_white/IMG_0268.JPG",
+            "assets/img/products/earrings/MIN-E-002/half_white/IMG_0269.JPG",
+            "assets/img/products/earrings/MIN-E-002/half_white/IMG_0270.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
         },
         {
-            tags: ["TRENDING"],
-            collection: "Statement",
-            title: "Ziva Hoop Earrings",
-            code: "ZIV-E-004",
-            price: 449,
-            sellingPrice: 299,
-            offprice: '20%',
-            images: [
-                "assets/img/products/earrings/img-5423.jpg",
-                "assets/img/products/earrings/img-5424.jpg"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/dd0c7fbe-7f65-4f7f-aae7-1f1dd46a604a?slug=kaku-candles"
+          tags: ["NEW"],
+          code: "MIN-E-002",
+          title: "Appealing - Daily wear Premimum Collections - Orange",
+          price: "309",
+          sellingPrice: "139",
+          offprice: "55%",
+          images: [
+            "assets/img/products/earrings/MIN-E-002/orange/IMG_0261.JPG",
+            "assets/img/products/earrings/MIN-E-002/orange/IMG_0262.JPG",
+            "assets/img/products/earrings/MIN-E-002/orange/IMG_026.JPG",
+            "assets/img/products/earrings/MIN-E-002/orange/IMG_0266.JPG",
+            "assets/img/products/earrings/MIN-E-002/orange/IMG_0267.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
         },
         {
-            tags: ["BESTSELLER"],
-            collection: "Premium Collection",
-            title: "Minukki - Minimal Earring",
-            code: "MIN-E-001",
-            price: 499,
-            sellingPrice: 349,
-            offprice: '40%',
-            images: [
-                "assets/img/products/earrings/WebP/IMG_4984.webp",
-                "assets/img/products/earrings/WebP/IMG_4983.webm"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/fc7f55a9-805e-4557-b7a0-6a178bd03af1?slug=kaku-candles"
+          tags: ["NEW"],
+          code: "MIN-E-002",
+          title: "Appealing - Daily wear Premimum Collections - Red",
+          price: "309",
+          sellingPrice: "139",
+          offprice: "55%",
+          images: [
+            "assets/img/products/earrings/MIN-E-002/red/IMG_0255.JPG",
+            "assets/img/products/earrings/MIN-E-002/red/IMG_0256.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
         },
         {
-            tags: ["NEW"],
-            collection: "Luxury Collection",
-            title: "Aurora Gem Ring",
-            code: "AUR-R-002",
-            price: 999,
-            sellingPrice: 699,
-            offprice: '60%',
-            images: [
-                "assets/img/products/earrings/WebP/IMG_4982.webp",
-                "assets/img/products/earrings/WebP/IMG_4975.webp"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/dd0c7fbe-7f65-4f7f-aae7-1f1dd46a604a?slug=kaku-candles"
+          tags: ["NEW"],
+          code: "MIN-E-002",
+          title: "Appealing - Daily wear Premimum Collections - Teal",
+          price: "309",
+          sellingPrice: "139",
+          offprice: "55%",
+          images: [
+            "assets/img/products/earrings/MIN-E-002/teal/IMG_0290.JPG",
+            "assets/img/products/earrings/MIN-E-002/teal/IMG_0291.JPG",
+            "assets/img/products/earrings/MIN-E-002/teal/IMG_0292.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
         },
         {
-            tags: ["LIMITED"],
-            collection: "Vintage Vibes",
-            title: "Serenity Stone Bracelet",
-            code: "SER-B-003",
-            price: 799,
-            sellingPrice: 599,
-            offprice: '30%',
-            images: [
-                "assets/img/products/earrings/WebP/IMG_4980.webp",
-                "assets/img/products/earrings/WebP/IMG_4974.webp"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+          tags: ["NEW"],
+          code: "MIN-E-002",
+          title: "Appealing - Daily wear Premimum Collections - Yellow",
+          price: "309",
+          sellingPrice: "139",
+          offprice: "55%",
+          images: [
+            "assets/img/products/earrings/MIN-E-002/yellow/IMG_0258.JPG",
+            "assets/img/products/earrings/MIN-E-002/yellow/IMG_0259.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
         },
-        {
-            tags: ["TRENDING"],
-            collection: "Daily Wear",
-            title: "Ziva Hoop Earrings",
-            code: "ZIV-E-004",
-            price: 449,
-            sellingPrice: 299,
-            offprice: '50%',
-            images: [
-                "assets/img/products/earrings/WebP/IMG_4977.webp",
-                "assets/img/products/earrings/WebP/IMG_4976.webp"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles-1"
-        },
-        {
-            tags: ["HOT"],
-            collection: "Festive Special",
-            title: "Noor Pearl Necklace",
-            code: "NOO-N-005",
-            price: 1599,
-            sellingPrice: 1249,
-            offprice: '25%',
-            images: [
-                "assets/img/products/earrings/WebP/IMG_4982.webp",
-                "assets/img/products/earrings/WebP/IMG_4982.webp"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-        },
-        {
-            tags: ["EXCLUSIVE"],
-            collection: "Royal Edition",
-            title: "Aarya Antique Set",
-            code: "AAR-S-006",
-            price: 2499,
-            sellingPrice: 1899,
-            offprice: '65%',
-            images: [
-                "assets/img/products/earrings/WebP/IMG_4975.webp",
-                "assets/img/products/earrings/WebP/IMG_4980.webp"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/dd0c7fbe-7f65-4f7f-aae7-1f1dd46a604a?slug=kaku-candles"
-        },
-        {
-            tags: ["TRENDING"],
-            collection: "Statement",
-            title: "Ziva Hoop Earrings",
-            code: "ZIV-E-004",
-            price: 449,
-            sellingPrice: 299,
-            offprice: '20%',
-            images: [
-                "assets/img/products/earrings/img-5423.jpg",
-                "assets/img/products/earrings/img-5424.jpg"
-            ],
-            shopnow: "https://kaku-candles.mini.site/products/dd0c7fbe-7f65-4f7f-aae7-1f1dd46a604a?slug=kaku-candles"
-        }
-    ];
 
-    const container = document.getElementById("product-container");
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-003",
+          title: "Sweet - Daily wear Premimum Collections - Baby Pink",
+          price: "110",
+          sellingPrice: "69",
+          offprice: "38%",
+          images: [
+            "assets/img/products/earrings/MIN-E-003/baby_pink/IMG_9611.JPG",
+            "assets/img/products/earrings/MIN-E-003/baby_pink/IMG_9612.JPG",
+            "assets/img/products/earrings/MIN-E-003/baby_pink/IMG_9613.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-003",
+          title: "Sweet - Daily wear Premimum Collections - Black",
+          price: "110",
+          sellingPrice: "69",
+          offprice: "38%",
+          images: [
+            "assets/img/products/earrings/MIN-E-003/black/IMG_9622.JPG",
+            "assets/img/products/earrings/MIN-E-003/black/IMG_9623.JPG",
+            "assets/img/products/earrings/MIN-E-003/black/IMG_9624.JPG",
+            "assets/img/products/earrings/MIN-E-003/black/IMG_9625.JPG",
+            "assets/img/products/earrings/MIN-E-003/black/IMG_9626.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-003",
+          title: "Sweet - Daily wear Premimum Collections - Blue",
+          price: "110",
+          sellingPrice: "69",
+          offprice: "38%",
+          images: [
+            "assets/img/products/earrings/MIN-E-003/blue/IMG_9627.JPG",
+            "assets/img/products/earrings/MIN-E-003/blue/IMG_9628.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-003",
+          title: "Sweet - Daily wear Premimum Collections - Green",
+          price: "110",
+          sellingPrice: "69",
+          offprice: "38%",
+          images: [
+            "assets/img/products/earrings/MIN-E-003/green/IMG_9614.JPG",
+            "assets/img/products/earrings/MIN-E-003/green/IMG_9615.JPG",
+            "assets/img/products/earrings/MIN-E-003/green/IMG_9617.JPG",
+            "assets/img/products/earrings/MIN-E-003/green/IMG_9618.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-003",
+          title: "Sweet - Daily wear Premimum Collections - Off White",
+          price: "110",
+          sellingPrice: "69",
+          offprice: "38%",
+          images: [
+            "assets/img/products/earrings/MIN-E-003/half_white/IMG_9597.JPG",
+            "assets/img/products/earrings/MIN-E-003/half_white/IMG_9598.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-003",
+          title: "Sweet - Daily wear Premimum Collections - Light Green",
+          price: "110",
+          sellingPrice: "69",
+          offprice: "38%",
+          images: [
+            "assets/img/products/earrings/MIN-E-003/light_green/IMG_9602.JPG",
+            "assets/img/products/earrings/MIN-E-003/light_green/IMG_9603.JPG",
+            "assets/img/products/earrings/MIN-E-003/light_green/IMG_9604.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-003",
+          title: "Sweet - Daily wear Premimum Collections - Purple",
+          price: "110",
+          sellingPrice: "69",
+          offprice: "38%",
+          images: [
+            "assets/img/products/earrings/MIN-E-003/purple/IMG_9619.JPG",
+            "assets/img/products/earrings/MIN-E-003/purple/IMG_9621.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-003",
+          title: "Sweet - Daily wear Premimum Collections - Red",
+          price: "110",
+          sellingPrice: "69",
+          offprice: "38%",
+          images: [
+            "assets/img/products/earrings/MIN-E-003/red/IMG_9630.JPG",
+            "assets/img/products/earrings/MIN-E-003/red/IMG_9631.JPG",
+            "assets/img/products/earrings/MIN-E-003/red/IMG_9632.JPG",
+            "assets/img/products/earrings/MIN-E-003/red/IMG_9633.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-003",
+          title: "Sweet - Daily wear Premimum Collections - Yellow",
+          price: "110",
+          sellingPrice: "69",
+          offprice: "38%",
+          images: [
+            "assets/img/products/earrings/MIN-E-003/yellow/IMG_9605.JPG",
+            "assets/img/products/earrings/MIN-E-003/yellow/IMG_9606.JPG",
+            "assets/img/products/earrings/MIN-E-003/yellow/IMG_9608.JPG",
+            "assets/img/products/earrings/MIN-E-003/yellow/IMG_9609.JPG",
+            "assets/img/products/earrings/MIN-E-003/yellow/IMG_9610.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
 
-    let currentRenderedProducts = [...products]; // Holds filtered products
+        {
+          tags: ["TRENDING"],
+          code: "MIN-E-004",
+          title: "Adorable - Daily wear Premimum Collections - Black",
+          price: "93",
+          sellingPrice: "39",
+          offprice: "58%",
+          images: ["assets/img/products/earrings/MIN-E-004/black/IMG_9583.JPG"],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["TRENDING"],
+          code: "MIN-E-004",
+          title: "Adorable - Daily wear Premimum Collections - Dark Blue",
+          price: "93",
+          sellingPrice: "39",
+          offprice: "58%",
+          images: [
+            "assets/img/products/earrings/MIN-E-004/dark_blue/IMG_9593.JPG",
+            "assets/img/products/earrings/MIN-E-004/dark_blue/IMG_9594.JPG",
+            "assets/img/products/earrings/MIN-E-004/dark_blue/IMG_9596.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["TRENDING"],
+          code: "MIN-E-004",
+          title: "Adorable - Daily wear Premimum Collections - Green",
+          price: "93",
+          sellingPrice: "39",
+          offprice: "58%",
+          images: ["assets/img/products/earrings/MIN-E-004/green/IMG_9587.JPG"],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["TRENDING"],
+          code: "MIN-E-004",
+          title: "Adorable - Daily wear Premimum Collections - Light Blue",
+          price: "93",
+          sellingPrice: "39",
+          offprice: "58%",
+          images: [
+            "assets/img/products/earrings/MIN-E-004/light_blue/IMG_9590.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["TRENDING"],
+          code: "MIN-E-004",
+          title: "Adorable - Daily wear Premimum Collections - Maroon",
+          price: "93",
+          sellingPrice: "39",
+          offprice: "58%",
+          images: [
+            "assets/img/products/earrings/MIN-E-004/maroon/IMG_9584.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["TRENDING"],
+          code: "MIN-E-004",
+          title: "Adorable - Daily wear Premimum Collections - Red",
+          price: "93",
+          sellingPrice: "39",
+          offprice: "58%",
+          images: ["assets/img/products/earrings/MIN-E-004/red/IMG_9591.JPG"],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
 
-    function createProductCard(product, index) {
+        {
+          tags: ["LIMITED"],
+          code: "MIN-E-007",
+          title: "Cheerful - Daily wear Premimum Collections",
+          price: "103",
+          sellingPrice: "69",
+          offprice: "33%",
+          images: [
+            "assets/img/products/earrings/MIN-E-007/IMG_0193.JPG",
+            "assets/img/products/earrings/MIN-E-007/IMG_0194.JPG",
+            "assets/img/products/earrings/MIN-E-007/IMG_0200.JPG",
+            "assets/img/products/earrings/MIN-E-007/IMG_0201.JPG",
+            "assets/img/products/earrings/MIN-E-007/IMG_0204.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-009",
+          title: "Charms - Daily wear Premimum Collections - Beige",
+          price: "102",
+          sellingPrice: "49",
+          offprice: "52%",
+          images: [
+            "assets/img/products/earrings/MIN-E-009/beige/IMG_0244.JPG",
+            "assets/img/products/earrings/MIN-E-009/beige/IMG_0245.JPG",
+            "assets/img/products/earrings/MIN-E-009/beige/IMG_0246.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-009",
+          title: "Charms - Daily wear Premimum Collections - Off White",
+          price: "102",
+          sellingPrice: "49",
+          offprice: "52%",
+          images: [
+            "assets/img/products/earrings/MIN-E-009/half_white/IMG_0229.JPG",
+            "assets/img/products/earrings/MIN-E-009/half_white/IMG_0230.JPG",
+            "assets/img/products/earrings/MIN-E-009/half_white/IMG_0231.JPG",
+            "assets/img/products/earrings/MIN-E-009/half_white/IMG_0232.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-009",
+          title: "Charms - Daily wear Premimum Collections - Maroon",
+          price: "102",
+          sellingPrice: "49",
+          offprice: "52%",
+          images: [
+            "assets/img/products/earrings/MIN-E-009/maroon/IMG_0239.JPG",
+            "assets/img/products/earrings/MIN-E-009/maroon/IMG_0240.JPG",
+            "assets/img/products/earrings/MIN-E-009/maroon/IMG_0241.JPG",
+            "assets/img/products/earrings/MIN-E-009/maroon/IMG_0242.JPG",
+            "assets/img/products/earrings/MIN-E-009/maroon/IMG_0243.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-015",
+          title: "Ravish - Daily wear Premimum Hoops Collections",
+          price: "198",
+          sellingPrice: "99",
+          offprice: "50%",
+          images: [
+            "assets/img/products/earrings/MIN-E-015/IMG_0216.JPG",
+            "assets/img/products/earrings/MIN-E-015/IMG_0217.JPG",
+            "assets/img/products/earrings/MIN-E-015/IMG_0218.JPG",
+            "assets/img/products/earrings/MIN-E-015/IMG_0219.JPG",
+            "assets/img/products/earrings/MIN-E-015/IMG_0222.JPG",
+            "assets/img/products/earrings/MIN-E-015/IMG_0223.JPG",
+            "assets/img/products/earrings/MIN-E-015/IMG_0224.JPG",
+            "assets/img/products/earrings/MIN-E-015/IMG_0225.JPG",
+            "assets/img/products/earrings/MIN-E-015/IMG_0226.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["TRENDING"],
+          code: "MIN-E-016",
+          title: "Minimal Earrings - Premimum Collections",
+          price: "143",
+          sellingPrice: "99",
+          offprice: "31%",
+          images: [
+            "assets/img/products/earrings/MIN-E-002/ash/IMG_0295.JPG",
+            "assets/img/products/earrings/MIN-E-002/ash/IMG_0295.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["LIMITED"],
+          code: "MIN-E-017",
+          title: "Appealing Golden - Daily wear Premimum Collections",
+          price: "139",
+          sellingPrice: "79",
+          offprice: "43%",
+          images: [
+            "assets/img/products/earrings/MIN-E-017/IMG_9529.JPG",
+            "assets/img/products/earrings/MIN-E-017/IMG_9536.JPG",
+            "assets/img/products/earrings/MIN-E-017/IMG_9537.JPG",
+            "assets/img/products/earrings/MIN-E-017/IMG_9538.JPG",
+            "assets/img/products/earrings/MIN-E-017/IMG_9539.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["NEW"],
+          code: "MIN-E-018",
+          title: "Appealing Silver - Daily wear Premimum Collections",
+          price: "171",
+          sellingPrice: "79",
+          offprice: "54%",
+          images: [
+            "assets/img/products/earrings/MIN-E-018/IMG_9523.JPG",
+            "assets/img/products/earrings/MIN-E-018/IMG_9524.JPG",
+            "assets/img/products/earrings/MIN-E-018/IMG_9525.JPG",
+            "assets/img/products/earrings/MIN-E-018/IMG_9526.JPG",
+            "assets/img/products/earrings/MIN-E-018/IMG_9527.JPG",
+            "assets/img/products/earrings/MIN-E-018/IMG_9530.JPG",
+            "assets/img/products/earrings/MIN-E-018/IMG_9531.JPG",
+            "assets/img/products/earrings/MIN-E-018/IMG_9532.JPG",
+            "assets/img/products/earrings/MIN-E-018/IMG_9533.JPG",
+            "assets/img/products/earrings/MIN-E-018/IMG_9534.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["LIMITED"],
+          code: "MIN-E-019",
+          title: "Target Silver - Black",
+          price: "109",
+          sellingPrice: "49",
+          offprice: "55%",
+          images: [
+            "assets/img/products/earrings/MIN-E-019/black/IMG_0207.JPG",
+            "assets/img/products/earrings/MIN-E-019/black/IMG_0208.JPG",
+            "assets/img/products/earrings/MIN-E-019/black/IMG_0209.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["LIMITED"],
+          code: "MIN-E-019",
+          title: "Target Silver - White",
+          price: "109",
+          sellingPrice: "49",
+          offprice: "55%",
+          images: [
+            "assets/img/products/earrings/MIN-E-019/white/IMG_0212.JPG",
+            "assets/img/products/earrings/MIN-E-019/white/IMG_0213.JPG",
+            "assets/img/products/earrings/MIN-E-019/white/IMG_0214.JPG",
+            "assets/img/products/earrings/MIN-E-019/white/IMG_0215.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-020",
+          title: "Butterfly - Black",
+          price: "173",
+          sellingPrice: "79",
+          offprice: "54%",
+          images: [
+            "assets/img/products/earrings/MIN-E-020/black/IMG_9431.JPG",
+            "assets/img/products/earrings/MIN-E-020/black/IMG_9432.JPG",
+            "assets/img/products/earrings/MIN-E-020/black/IMG_9433.JPG",
+            "assets/img/products/earrings/MIN-E-020/black/IMG_9434.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-020",
+          title: "Butterfly - Blue",
+          price: "173",
+          sellingPrice: "79",
+          offprice: "54%",
+          images: [
+            "assets/img/products/earrings/MIN-E-020/blue/IMG_9480.JPG",
+            "assets/img/products/earrings/MIN-E-020/blue/IMG_9481.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-020",
+          title: "Butterfly - Green",
+          price: "173",
+          sellingPrice: "79",
+          offprice: "54%",
+          images: [
+            "assets/img/products/earrings/MIN-E-020/green/IMG_9473.JPG",
+            "assets/img/products/earrings/MIN-E-020/green/IMG_9474.JPG",
+            "assets/img/products/earrings/MIN-E-020/green/IMG_9475.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-020",
+          title: "Butterfly - Off White",
+          price: "173",
+          sellingPrice: "79",
+          offprice: "54%",
+          images: [
+            "assets/img/products/earrings/MIN-E-020/half_white/IMG_9468.JPG",
+            "assets/img/products/earrings/MIN-E-020/half_white/IMG_9469.JPG",
+            "assets/img/products/earrings/MIN-E-020/half_white/IMG_9470.JPG",
+            "assets/img/products/earrings/MIN-E-020/half_white/IMG_9471.JPG",
+            "assets/img/products/earrings/MIN-E-020/half_white/IMG_9472.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-020",
+          title: "Butterfly - Orange",
+          price: "173",
+          sellingPrice: "79",
+          offprice: "54%",
+          images: [
+            "assets/img/products/earrings/MIN-E-020/orange/IMG_9446.JPG",
+            "assets/img/products/earrings/MIN-E-020/orange/IMG_9447.JPG",
+            "assets/img/products/earrings/MIN-E-020/orange/IMG_9448.JPG",
+            "assets/img/products/earrings/MIN-E-020/orange/IMG_9449.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-020",
+          title: "Butterfly - Red",
+          price: "173",
+          sellingPrice: "79",
+          offprice: "54%",
+          images: [
+            "assets/img/products/earrings/MIN-E-020/red/IMG_9462.JPG",
+            "assets/img/products/earrings/MIN-E-020/red/IMG_9463.JPG",
+            "assets/img/products/earrings/MIN-E-020/red/IMG_9464.JPG",
+            "assets/img/products/earrings/MIN-E-020/red/IMG_9465.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-020",
+          title: "Butterfly - Rose",
+          price: "173",
+          sellingPrice: "79",
+          offprice: "54%",
+          images: [
+            "assets/img/products/earrings/MIN-E-020/rose/IMG_9439.JPG",
+            "assets/img/products/earrings/MIN-E-020/rose/IMG_9440.JPG",
+            "assets/img/products/earrings/MIN-E-020/rose/IMG_9441.JPG",
+            "assets/img/products/earrings/MIN-E-020/rose/IMG_9442.JPG",
+            "assets/img/products/earrings/MIN-E-020/rose/IMG_9443.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-020",
+          title: "Butterfly - Sky Blue",
+          price: "173",
+          sellingPrice: "79",
+          offprice: "54%",
+          images: [
+            "assets/img/products/earrings/MIN-E-020/sky_blue/IMG_9450.JPG",
+            "assets/img/products/earrings/MIN-E-020/sky_blue/IMG_9451.JPG",
+            "assets/img/products/earrings/MIN-E-020/sky_blue/IMG_9452.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-020",
+          title: "Butterfly - Yellow",
+          price: "173",
+          sellingPrice: "79",
+          offprice: "54%",
+          images: [
+            "assets/img/products/earrings/MIN-E-020/yellow/IMG_9456.JPG",
+            "assets/img/products/earrings/MIN-E-020/yellow/IMG_9457.JPG",
+            "assets/img/products/earrings/MIN-E-020/yellow/IMG_9458.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["NEW"],
+          code: "MIN-E-021",
+          title: "Pearly Golden",
+          price: "142",
+          sellingPrice: "99",
+          offprice: "30%",
+          images: [
+            "assets/img/products/earrings/MIN-E-021/IMG_9489.JPG",
+            "assets/img/products/earrings/MIN-E-021/IMG_9490.JPG",
+            "assets/img/products/earrings/MIN-E-021/IMG_9491.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-022",
+          title: "Pearly Silver",
+          price: "183",
+          sellingPrice: "99",
+          offprice: "46%",
+          images: [
+            "assets/img/products/earrings/MIN-E-022/IMG_9482.JPG",
+            "assets/img/products/earrings/MIN-E-022/IMG_9483.JPG",
+            "assets/img/products/earrings/MIN-E-022/IMG_9484.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["LIMITED"],
+          code: "MIN-E-023",
+          title: "Lotus Bud",
+          price: "198",
+          sellingPrice: "99",
+          offprice: "50%",
+          images: [
+            "assets/img/products/earrings/MIN-E-023/IMG_9505.JPG",
+            "assets/img/products/earrings/MIN-E-023/IMG_9506.JPG",
+            "assets/img/products/earrings/MIN-E-023/IMG_9507.JPG",
+            "assets/img/products/earrings/MIN-E-023/IMG_9508.JPG",
+            "assets/img/products/earrings/MIN-E-023/IMG_9511.JPG",
+            "assets/img/products/earrings/MIN-E-023/IMG_9512.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["TRENDING"],
+          code: "MIN-E-024",
+          title: "Red Tulips",
+          price: "165",
+          sellingPrice: "99",
+          offprice: "40%",
+          images: [
+            "assets/img/products/earrings/MIN-E-024/IMG_9513.JPG",
+            "assets/img/products/earrings/MIN-E-024/IMG_9514.JPG",
+            "assets/img/products/earrings/MIN-E-024/IMG_9515.JPG",
+            "assets/img/products/earrings/MIN-E-024/IMG_9516.JPG",
+            "assets/img/products/earrings/MIN-E-024/IMG_9517.JPG",
+            "assets/img/products/earrings/MIN-E-024/IMG_9518.JPG",
+            "assets/img/products/earrings/MIN-E-024/IMG_9519.JPG",
+            "assets/img/products/earrings/MIN-E-024/IMG_9520.JPG",
+            "assets/img/products/earrings/MIN-E-024/IMG_9521.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-037",
+          title: "Bud N Pearl",
+          price: "226",
+          sellingPrice: "119",
+          offprice: "47%",
+          images: [
+            "assets/img/products/earrings/MIN-E-037/IMG_9497.JPG",
+            "assets/img/products/earrings/MIN-E-037/IMG_9498.JPG",
+            "assets/img/products/earrings/MIN-E-037/IMG_9499.JPG",
+            "assets/img/products/earrings/MIN-E-037/IMG_9501.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["NEW"],
+          code: "MIN-E-044",
+          title: "Droplets - Double butterfly",
+          price: "382",
+          sellingPrice: "229",
+          offprice: "40%",
+          images: [
+            "assets/img/products/earrings/MIN-E-044/IMG_1816.JPG",
+            "assets/img/products/earrings/MIN-E-044/IMG_1817.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["EXCLUSIVE"],
+          code: "MIN-E-045",
+          title: "Droplets - Triplets",
+          price: "413",
+          sellingPrice: "229",
+          offprice: "45%",
+          images: [
+            "assets/img/products/earrings/MIN-E-045/IMG_1814.JPG",
+            "assets/img/products/earrings/MIN-E-045/IMG_1815.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["BEST SELLER"],
+          code: "MIN-E-046",
+          title: "Premium Diva",
+          price: "598",
+          sellingPrice: "349",
+          offprice: "42%",
+          images: [
+            "assets/img/products/earrings/MIN-E-046/IMG_1823.JPG",
+            "assets/img/products/earrings/MIN-E-046/IMG_1824.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+
+        {
+          tags: ["NEW"],
+          code: "MIN-E-052",
+          title: "Pearl Drops",
+          price: "106",
+          sellingPrice: "49",
+          offprice: "54%",
+          images: [
+            "assets/img/products/earrings/MIN-E-052/IMG_0324.JPG",
+            "assets/img/products/earrings/MIN-E-052/IMG_0325.JPG",
+            "assets/img/products/earrings/MIN-E-052/IMG_0326.JPG",
+            "assets/img/products/earrings/MIN-E-052/IMG_0327.JPG",
+            "assets/img/products/earrings/MIN-E-052/IMG_0328.JPG",
+          ],
+          shopnow:
+            "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles",
+        },
+      ];
+
+      const container = document.getElementById("product-container");
+
+      let currentRenderedProducts = [...products]; // Holds filtered products
+
+      function createProductCard(product, index) {
         const carouselId = `carousel-${index}`;
         // const carouselItems = product.images.map((img, i) => `
         //     <div class="carousel-item ${i === 0 ? 'active' : ''}">
         //       <img src="${img}" class="d-block w-100 ray-product-img" alt="">
         //     </div>`).join("");
 
-        const carouselItems = product.images.map((img, i) => `
-    <div class="carousel-item ${i === 0 ? 'active' : ''}">
-      ${img.endsWith('.webm') || img.endsWith('.mp4')
-        ? `<video class="d-block w-100 ray-product-img" autoplay muted loop playsinline>
+        const carouselItems = product.images
+          .map(
+            (img, i) => `
+    <div class="carousel-item ${i === 0 ? "active" : ""}">
+      ${
+        img.endsWith(".webm") || img.endsWith(".mp4")
+          ? `<video class="d-block w-100 ray-product-img" autoplay muted loop playsinline>
              <source src="${img}" type="video/webm">
              Your browser does not support the video tag.
            </video>`
-        : `<img src="${img}" class="d-block w-100 ray-product-img" alt="">`}
-    </div>`).join("");
+          : `<img src="${img}" class="d-block w-100 ray-product-img" alt="">`
+      }
+    </div>`
+          )
+          .join("");
 
-        const indicators = product.images.map((_, i) => `
-            <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${i}" ${i === 0 ? 'class="active"' : ''} aria-label="Slide ${i + 1}"></button>
-          `).join("");
+        const indicators = product.images
+          .map(
+            (_, i) => `
+            <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${i}" ${
+              i === 0 ? 'class="active"' : ""
+            } aria-label="Slide ${i + 1}"></button>
+          `
+          )
+          .join("");
 
-        const tags = product.tags.map(tag => `<span class="tag">${tag}</span>`).join("");
+        const tags = product.tags
+          .map((tag) => `<span class="tag">${tag}</span>`)
+          .join("");
 
         return `
             <div class="col-md-4 col-lg-3 mb-4">
@@ -696,42 +1660,46 @@
               </div>
             </div>
           `;
-    }
+      }
 
-    function renderProducts(filteredProducts = products) {
+      function renderProducts(filteredProducts = products) {
         currentRenderedProducts = filteredProducts; // ✅ Save current filtered products
-        container.innerHTML = filteredProducts.map((p, i) => createProductCard(p, i)).join("");
-    }
+        container.innerHTML = filteredProducts
+          .map((p, i) => createProductCard(p, i))
+          .join("");
+      }
 
-    function filterProducts() {
+      function filterProducts() {
         const searchInput = document.getElementById("searchInput");
         const priceRangeInput = document.getElementById("priceRange");
 
         const searchTerm = searchInput ? searchInput.value.toLowerCase() : "";
         const priceRange = priceRangeInput ? priceRangeInput.value : "";
 
-        const filtered = products.filter(product => {
-            const matchTitle = product.title.toLowerCase().includes(searchTerm);
-            let matchPrice = true;
+        const filtered = products.filter((product) => {
+          const matchTitle = product.title.toLowerCase().includes(searchTerm);
+          let matchPrice = true;
 
-            if (priceRange) {
-                const [min, max] = priceRange.split("-").map(Number);
-                matchPrice = product.sellingPrice >= min && product.sellingPrice <= max;
-            }
+          if (priceRange) {
+            const [min, max] = priceRange.split("-").map(Number);
+            matchPrice =
+              product.sellingPrice >= min && product.sellingPrice <= max;
+          }
 
-            return matchTitle && matchPrice;
+          return matchTitle && matchPrice;
         });
 
         renderProducts(filtered);
-    }
+      }
 
-    const searchInput = document.getElementById("searchInput");
-    const priceRangeInput = document.getElementById("priceRange");
+      const searchInput = document.getElementById("searchInput");
+      const priceRangeInput = document.getElementById("priceRange");
 
-    if (searchInput) searchInput.addEventListener("input", filterProducts);
-    if (priceRangeInput) priceRangeInput.addEventListener("change", filterProducts);
+      if (searchInput) searchInput.addEventListener("input", filterProducts);
+      if (priceRangeInput)
+        priceRangeInput.addEventListener("change", filterProducts);
 
-    function openModal(index) {
+      function openModal(index) {
         const product = currentRenderedProducts[index]; // ✅ Now uses filtered list
         const modalInner = document.getElementById("modalCarouselInner");
         const thumbnailContainer = document.getElementById("modalThumbnails");
@@ -742,58 +1710,82 @@
         //       <img src="${img}" class="d-block w-100 modal-img-zoom" alt="Image ${i + 1}">
         //     </div>`).join("");
 
-        modalInner.innerHTML = product.images.map((img, i) => `
-    <div class="carousel-item ${i === 0 ? 'active' : ''}">
-      ${img.endsWith('.webm') || img.endsWith('.mp4')
-        ? `<video class="d-block w-100 modal-img-zoom" autoplay muted loop playsinline>
+        modalInner.innerHTML = product.images
+          .map(
+            (img, i) => `
+    <div class="carousel-item ${i === 0 ? "active" : ""}">
+      ${
+        img.endsWith(".webm") || img.endsWith(".mp4")
+          ? `<video class="d-block w-100 modal-img-zoom" autoplay muted loop playsinline>
              <source src="${img}" type="video/webm">
              Your browser does not support the video tag.
            </video>`
-        : `<img src="${img}" class="d-block w-100 modal-img-zoom" alt="Image ${i + 1}">`}
-    </div>`).join("");
+          : `<img src="${img}" class="d-block w-100 modal-img-zoom" alt="Image ${
+              i + 1
+            }">`
+      }
+    </div>`
+          )
+          .join("");
 
         // thumbnailContainer.innerHTML = product.images.map((img, i) => `
         //     <img src="${img}" class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;"
         //          onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">`).join("");
 
-            // <div class="f-14px mb-1"><strong class="secondary-color">Collection:</strong> ${product.collection}</div>
+        // <div class="f-14px mb-1"><strong class="secondary-color">Collection:</strong> ${product.collection}</div>
 
-
-        thumbnailContainer.innerHTML = product.images.map((img, i) => `
-    ${img.endsWith('.webm') || img.endsWith('.mp4')
-                ? `<video class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;" 
+        thumbnailContainer.innerHTML = product.images
+          .map(
+            (img, i) => `
+    ${
+      img.endsWith(".webm") || img.endsWith(".mp4")
+        ? `<video class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;" 
                 muted playsinline autoplay loop onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">
              <source src="${img}" type="video/webm">
          </video>`
-                : `<img src="${img}" class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;"
-               onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">`}
-`).join("");
+        : `<img src="${img}" class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;"
+               onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">`
+    }
+`
+          )
+          .join("");
 
         productDetails.innerHTML = `
             <div class="ray-card-title">${product.title}</div>
-            <div class="ray-card-text my-1"><span class="fw-600">Code:</span> ${product.code}</div>
-            <div class="my-1">${product.tags.map(tag => `<span class="tag me-1">${tag}</span>`).join("")}</div>
+            <div class="ray-card-text my-1"><span class="fw-600">Code:</span> ${
+              product.code
+            }</div>
+            <div class="my-1">${product.tags
+              .map((tag) => `<span class="tag me-1">${tag}</span>`)
+              .join("")}</div>
             <div class="mt-2">
-              <span class="text-decoration-line-through f-14px">₹${product.price}</span>
-              <span class="primary-color fs-5 fw-bold ms-1">₹${product.sellingPrice}</span>
-                  <span class="mb-0 text-success f-12x">(${product.offprice} off)</span>
+              <span class="text-decoration-line-through f-14px">₹${
+                product.price
+              }</span>
+              <span class="primary-color fs-5 fw-bold ms-1">₹${
+                product.sellingPrice
+              }</span>
+                  <span class="mb-0 text-success f-12x">(${
+                    product.offprice
+                  } off)</span>
             </div>
             <div class="mt-3">
-            <a type="button" href="${product.shopnow}" target="_blank" class="btn btn-ray-primary ray-shop-now-btn">Shop Now</a>
+            <a type="button" href="${
+              product.shopnow
+            }" target="_blank" class="btn btn-ray-primary ray-shop-now-btn">Shop Now</a>
             </div>
             <div class="mt-auto text-center d-none d-md-block">
                  <img src="assets/img/logo/minukki_logo-color.png" class="ray-modal-logo-img" alt="Minukki">
             </div>
           `;
 
-        const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+        const modal = new bootstrap.Modal(
+          document.getElementById("imageModal")
+        );
         modal.show();
-    }
+      }
 
-    renderProducts(); // Initial load
-</script>
-
-
-</body>
-
+      renderProducts(); // Initial load
+    </script>
+  </body>
 </html>
