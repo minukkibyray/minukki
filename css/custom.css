@@ -162,7 +162,7 @@ a:hover {
 }
 
 .ray-section-subheading {
-    font-size: 15px !important;
+    font-size: 14px !important;
     font-weight: 600 !important;
     font-family: "Quicksand", sans-serif !important;
     text-transform: uppercase !important;
@@ -173,14 +173,20 @@ a:hover {
     width: 500px;
 }
 
-.ray-section-img {
-    height: 150px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ray-section-img:hover {
+/* .ray-section-img:hover {
     transform: scale(1.02);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+} */
+
+.ray-gift-text {
+    color: var(--primary-color);
+    font-weight: 800;
+    font-family: "Quicksand", sans-serif !important;
+}
+
+.ray-section-bg {
+    /* background-color: #f4e4d6; */
+    background-color: #f7eae0;
 }
 
 
@@ -188,11 +194,24 @@ a:hover {
     .ray-banner-carousal-img {
         height: 250px;
     }
+
+    .ray-giftbox-height {
+        height: 115px;
+    }
 }
 
 @media (min-width: 700px) {
     .ray-banner-carousal-img {
         height: 375px;
+    }
+
+    .ray-shop-border {
+        border: 1px solid rosybrown;
+        border-radius: 10px;
+    }
+
+    .ray-giftbox-height {
+        height: 150px;
     }
 }
 
@@ -305,6 +324,14 @@ a:hover {
         height: 520px;
     }
 
+    .ray-gift-right-border {
+        border-right: 1px solid #ccc;
+    }
+
+    .ray-giftbox-height {
+        height: 115px;
+    }
+
     /* Navbar Hover Semicircle */
 
     /* Minimal */
@@ -413,6 +440,15 @@ a:hover {
 @media (max-width: 430px) {
     .ray-section-img-width {
         width: 185px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .ray-section-img {
+        height: 175px;
+        border-radius: 10px;
+        /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
     }
 }
 
@@ -625,3 +661,24 @@ a:hover {
 }
 
 /*  background: #897358; */
+
+
+.category .image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* Maintain a square aspect ratio, or adjust as needed */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.category .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.9s ease;
+}
+
+.category:hover .image-wrapper img {
+    transform: scale(1.3);
+}
