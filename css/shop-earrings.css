@@ -114,6 +114,7 @@
   transition: transform 0.3s ease;
   /* cursor: zoom-in; */
   height: 525px;
+  object-fit: cover;
 }
 
 /* .modal-img-zoom:hover {
@@ -268,6 +269,7 @@
   .modal-img-zoom {
     transition: transform 0.3s ease !important;
     height: 365px !important;
+    object-fit: cover !important;
   }
 
   .ray-shop-now-btn {

@@ -793,6 +793,7 @@ a:hover {
     width: 95% !important;
     height: 155px !important;
     border-radius: 10px !important;
+    object-fit: cover;
 }
 
 .owl-carousel .owl-item img:hover {
