@@ -408,8 +408,8 @@
                                         </div>
 
                                         <!-- Thumbnail Overlay -->
-                                        <div class="position-absolute bottom-0 start-50 translate-middle-x bg-dark bg-opacity-50 p-2 rounded d-flex gap-2 overflow-auto z-2 mb-2"
-                                            style="max-width: 90%; white-space: nowrap;" id="modalThumbnails"></div>
+                                        <!-- <div class="position-absolute bottom-0 start-50 translate-middle-x bg-dark bg-opacity-50 p-2 rounded d-flex gap-2 overflow-auto z-2 mb-2"
+                                            style="max-width: 90%; white-space: nowrap;" id="modalThumbnails"></div> -->
                                     </div>
 
                                     <!-- Product Details Column -->
@@ -1035,7 +1035,7 @@
         function openModal(index) {
             const product = currentRenderedProducts[index]; // ✅ Now uses filtered list
             const modalInner = document.getElementById("modalCarouselInner");
-            const thumbnailContainer = document.getElementById("modalThumbnails");
+            // const thumbnailContainer = document.getElementById("modalThumbnails");
             const productDetails = document.getElementById("modalProductDetails");
 
             // modalInner.innerHTML = product.images.map((img, i) => `
@@ -1050,22 +1050,23 @@
              <source src="${img}" type="video/webm">
              Your browser does not support the video tag.
            </video>`
-                    : `<img src="${img}" class="d-block w-100 modal-img-zoom" alt="Image ${i + 1}">`}
+                    : `<img src="${img}" class="d-block w-100 modal-img-zoom" loading="lazy alt="Image ${i + 1}">`}
     </div>`).join("");
 
             // thumbnailContainer.innerHTML = product.images.map((img, i) => `
             //     <img src="${img}" class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;"
             //          onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">`).join("");
 
-            thumbnailContainer.innerHTML = product.images.map((img, i) => `
-    ${img.endsWith('.webm') || img.endsWith('.mp4')
-                    ? `<video class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;" 
-                muted playsinline autoplay loop onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">
-             <source src="${img}" type="video/webm">
-         </video>`
-                    : `<img src="${img}" class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;"
-               onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">`}
-`).join("");
+            // ---------------- Thumbnail --------------------
+            //             thumbnailContainer.innerHTML = product.images.map((img, i) => `
+            //     ${img.endsWith('.webm') || img.endsWith('.mp4')
+            //                     ? `<video class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;" 
+            //                 muted playsinline autoplay loop onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">
+            //              <source src="${img}" type="video/webm">
+            //          </video>`
+            //                     : `<img src="${img}" class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;"
+            //                onclick="bootstrap.Carousel.getInstance(document.getElementById('modalCarousel')).to(${i})">`}
+            // `).join("");
 
             productDetails.innerHTML = `
             <div class="ray-card-title">${product.title}</div>
