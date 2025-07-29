@@ -818,12 +818,6 @@ a:hover {
     padding: 1rem 2rem;
 }
 
-/* .video-carousel-container {
-    overflow-x: auto;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-} */
-
 .video-carousel-container {
     display: flex;
     flex-direction: row;
@@ -834,13 +828,6 @@ a:hover {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-
-/* .video-card {
-    display: inline-block;
-    width: 220px;
-    margin-right: 16px;
-    vertical-align: top;
-} */
 
 .video-card {
     flex: 0 0 auto;
@@ -865,7 +852,7 @@ a:hover {
 .video-wrapper {
     border-radius: 12px;
     overflow: hidden;
-    background-color: #f9f9f9;
+    background-color: transparent;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -905,6 +892,63 @@ video {
     display: none;
 }
 
+.shop-now-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 50px;
+    background-color: #783413;
+    color: white;
+    font-size: 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.video-wrapper a:hover {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 50px;
+    background-color: #C26518 !important;
+    color: white !important;
+    font-size: 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* For desktop/laptop: show button on hover */
+.video-wrapper {
+    position: relative;
+}
+
+.video-wrapper:hover .shop-now-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* .shop-now-btn {
+    opacity: 1;
+    pointer-events: auto;
+} */
+
+/* For tablets and mobile: always show the button */
+@media (max-width: 768px) {
+    .shop-now-btn {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
 @media (max-width: 600px) {
     .video-carousel-container {
         display: flex;
@@ -916,7 +960,7 @@ video {
     }
 
     .video-card {
-        flex: 0 0 80%;
+        flex: 0 0 100%;
         scroll-snap-align: start;
         margin-right: 15px;
     }
