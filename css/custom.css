@@ -818,17 +818,34 @@ a:hover {
     padding: 1rem 2rem;
 }
 
-.video-carousel-container {
+/* .video-carousel-container {
     overflow-x: auto;
     white-space: nowrap;
     scroll-behavior: smooth;
+} */
+
+.video-carousel-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-.video-card {
+/* .video-card {
     display: inline-block;
     width: 220px;
     margin-right: 16px;
     vertical-align: top;
+} */
+
+.video-card {
+    flex: 0 0 auto;
+    width: 220px;
+    margin-right: 16px;
 }
 
 .hashtag {
@@ -888,23 +905,20 @@ video {
     display: none;
 }
 
-.video-carousel-container {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
 @media (max-width: 600px) {
     .video-carousel-container {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        overflow-x: auto;
         scroll-snap-type: x mandatory;
-        padding: 0 0rem;
+        -webkit-overflow-scrolling: touch;
+        padding: 0;
     }
 
     .video-card {
-        flex: 0 0 100%;
-        margin: auto;
-        scroll-snap-align: center;
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+        margin-right: 15px;
     }
 
     .video-wrapper video {
