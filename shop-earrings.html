@@ -430,7 +430,7 @@
   <script src="js/custom.js"></script>
   <!-- MDB --><!-- MDB -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
   <script>
     const products = [
       {
@@ -2364,12 +2364,14 @@
              <source src="${img}" type="video/webm">
              Your browser does not support the video tag.
            </video>`
-              : `<img src="${img}" class="d-block w-100 modal-img-zoom" alt="Image ${i + 1
+              : `<img src="assets/img/logo/minukki_logo-color.png" data-src="${img}" class="d-block w-100 modal-img-zoom lazyload" alt="Image ${i + 1
               }">`
             }
     </div>`
         )
         .join("");
+
+      // <img src="${img}" class="d-block w-100 modal-img-zoom" alt="Image ${i + 1}">
 
       // thumbnailContainer.innerHTML = product.images.map((img, i) => `
       //     <img src="${img}" class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;"

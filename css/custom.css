@@ -165,6 +165,13 @@ a:hover {
     color: #727272;
 }
 
+.ray-video-section-desc {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    font-family: "Montserrat", sans-serif !important;
+    color: #ffffff;
+}
+
 .ray-section-subheading {
     font-size: 14px !important;
     font-weight: 600 !important;
@@ -189,8 +196,12 @@ a:hover {
 }
 
 .ray-section-bg {
-    /* background-color: #f4e4d6; */
     background-color: #f7eae0;
+}
+
+.ray-video-section-bg {
+    background-color: #421F13;
+    color: #ffffff !important;
 }
 
 .ray-card-border {
@@ -798,4 +809,117 @@ a:hover {
 
 .owl-carousel .owl-item img:hover {
     border: 2px solid #ba723f !important;
+}
+
+/* Video Carousel */
+
+.carousel-wrapper {
+    position: relative;
+    padding: 1rem 2rem;
+}
+
+.video-carousel-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.video-card {
+    display: inline-block;
+    width: 220px;
+    margin-right: 16px;
+    vertical-align: top;
+}
+
+.hashtag {
+    font-size: 14px;
+    font-weight: 500;
+    color: #cccccc;
+    margin-bottom: 5px;
+}
+
+.hashtag a:hover {
+    font-size: 14px;
+    font-weight: 500;
+    color: #DFA149 !important;
+    margin-bottom: 5px;
+}
+
+.video-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+.video-carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.video-carousel-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@media (max-width: 600px) {
+    .video-carousel-container {
+        display: flex;
+        justify-content: center;
+        scroll-snap-type: x mandatory;
+        padding: 0 0rem;
+    }
+
+    .video-card {
+        flex: 0 0 100%;
+        margin: auto;
+        scroll-snap-align: center;
+    }
+
+    .video-wrapper video {
+        width: 100%;
+        height: auto;
+    }
+
+    .scroll-btn {
+        top: unset;
+        bottom: -40px;
+        transform: translateY(0);
+    }
+
+    .carousel-wrapper {
+        position: relative;
+        padding: 1rem 1rem;
+    }
 }
