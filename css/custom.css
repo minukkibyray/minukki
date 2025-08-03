@@ -824,7 +824,7 @@ a:hover {
     object-fit: cover;
 }
 
-.owl-carousel .owl-item img:hover {
+.ray-shopbycollection .owl-carousel .owl-item img:hover {
     border: 2px solid #ba723f !important;
 }
 
@@ -1067,7 +1067,7 @@ video {
 /* Minukki Store */
 
 .parallax-section {
-    background-image: url('/assets/img/parallax-bg.png');
+    background-image: url('/assets/img/parallax-bg.jpg');
     /* height: 100vh; */
     background-attachment: fixed;
     background-position: center;
@@ -1157,13 +1157,13 @@ video {
 .menu-item .hero-section .model-img {
     height: 450px;
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
     transition: transform 0.9s ease;
 }
 
-.menu-item .hero-section .model-img:hover {
+/* .menu-item .hero-section .model-img:hover {
     transform: scale(1.2);
-}
+} */
 
 .product-details-section {
     text-align: center;
@@ -1189,4 +1189,10 @@ video {
     object-fit: contain;
     border-radius: 18px;
     padding: 5px;
+}
+
+.collection-design .owl-carousel .owl-item img {
+    width: 100% !important;
+    border-radius: 18px !important;
+    object-fit: cover;
 }
