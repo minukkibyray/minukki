@@ -1067,7 +1067,7 @@ video {
 /* Minukki Store */
 
 .parallax-section {
-    background-image: url('/assets/img/parallax-bg.jpg');
+    background-image: url('/assets/img/parallax-bg.webp');
     /* height: 100vh; */
     background-attachment: fixed;
     background-position: center;
@@ -1170,7 +1170,7 @@ video {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;
+    width: 45%;
     margin-top: -65px;
 }
 
