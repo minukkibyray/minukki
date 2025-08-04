@@ -38,9 +38,12 @@
           <img src="assets/img/logo/minukki_logo_white.png" alt="Logo" height="40" class="ms-2" />
         </a>
         <!-- Toggle button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExampleOnHover"
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExampleOnHover"
           aria-controls="navbarExampleOnHover" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars text-white"></i>
+        </button> -->
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation" id="navbarToggleBtn">
+          <i class="fas fa-bars text-white" id="navbarToggleIcon"></i>
         </button>
 
         <!-- Collapsible wrapper -->
@@ -2260,7 +2263,7 @@
              <source src="${img}" type="video/webm">
              Your browser does not support the video tag.
            </video>`
-              : `<img src="${img}" class="d-block w-100 ray-product-img" alt="">`
+              : `<img src="assets/img/icon_minukki.jpg" data-src="${img}" class="d-block w-100 ray-product-img lazyload" alt="">`
             }
     </div>`
         )
@@ -2364,7 +2367,7 @@
              <source src="${img}" type="video/webm">
              Your browser does not support the video tag.
            </video>`
-              : `<img src="assets/img/logo/minukki_logo-color.png" data-src="${img}" class="d-block w-100 modal-img-zoom lazyload" alt="Image ${i + 1
+              : `<img src="assets/img/icon_minukki.jpg" data-src="${img}" class="d-block w-100 modal-img-zoom lazyload" alt="Image ${i + 1
               }">`
             }
     </div>`
@@ -2427,6 +2430,31 @@
     }
 
     renderProducts(); // Initial load
+
+    // Navbar script
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleBtn = document.getElementById('navbarToggleBtn');
+      const toggleIcon = document.getElementById('navbarToggleIcon');
+      const collapseEl = document.getElementById('navbarExampleOnHover');
+      const bsCollapse = new bootstrap.Collapse(collapseEl, {
+        toggle: false
+      });
+
+      toggleBtn.addEventListener('click', function () {
+        const isShown = collapseEl.classList.contains('show');
+
+        if (isShown) {
+          bsCollapse.hide();
+          toggleIcon.classList.remove('fa-times');
+          toggleIcon.classList.add('fa-bars');
+        } else {
+          bsCollapse.show();
+          toggleIcon.classList.remove('fa-bars');
+          toggleIcon.classList.add('fa-times');
+        }
+      });
+    });
+
   </script>
 </body>
 

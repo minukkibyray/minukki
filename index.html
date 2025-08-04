@@ -32,8 +32,6 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
-
-
 </head>
 
 <body>
@@ -45,10 +43,13 @@
                     <img src="assets/img/logo/minukki_logo-color.png" alt="Logo" height="50" class="ms-2">
                 </a>
                 <!-- Toggle button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarExampleOnHover" aria-controls="navbarExampleOnHover" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
+                </button> -->
+                <button class="navbar-toggler" type="button" aria-label="Toggle navigation" id="navbarToggleBtn">
+                    <i class="fas fa-bars ray-star-color" id="navbarToggleIcon"></i>
                 </button>
 
                 <!-- Collapsible wrapper -->
@@ -1211,7 +1212,7 @@
                         <div class="owl-carousel collection-carousel owl-theme pt-3 mt-1">
 
                             <!-- Product 1 -->
-                            <div class="item pb-4">
+                            <div class="item pb-4 px-4 px-md-0">
                                 <a href="https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candlescdkcd"
                                     class="menu-item">
                                     <div class="hero-section shadow">
@@ -1231,7 +1232,7 @@
                                 </a>
                             </div>
                             <!-- Product 2 -->
-                            <div class="item pb-4">
+                            <div class="item pb-4 px-4 px-md-0">
                                 <a href="https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candlescdkcd"
                                     class="menu-item">
                                     <div class="hero-section shadow">
@@ -1251,7 +1252,7 @@
                                 </a>
                             </div>
                             <!-- Product 3 -->
-                            <div class="item pb-4">
+                            <div class="item pb-4 px-4 px-md-0">
                                 <a href="https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candlescdkcd"
                                     class="menu-item">
                                     <div class="hero-section shadow">
@@ -1403,6 +1404,17 @@
                     </div>
                 </div>
         </section>
+
+
+        <!-- <section class="my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 mx-auto">
+                        <img src="assets/img/minukki_loader.gif" alt="">
+                    </div>
+                </div>
+            </div>
+        </section> -->
     </main>
 
     <!-- <div class="container mt-5">
@@ -1608,11 +1620,31 @@
             }
         });
 
+        // Navbar script
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleBtn = document.getElementById('navbarToggleBtn');
+            const toggleIcon = document.getElementById('navbarToggleIcon');
+            const collapseEl = document.getElementById('navbarExampleOnHover');
+            const bsCollapse = new bootstrap.Collapse(collapseEl, {
+                toggle: false
+            });
+
+            toggleBtn.addEventListener('click', function () {
+                const isShown = collapseEl.classList.contains('show');
+
+                if (isShown) {
+                    bsCollapse.hide();
+                    toggleIcon.classList.remove('fa-times');
+                    toggleIcon.classList.add('fa-bars');
+                } else {
+                    bsCollapse.show();
+                    toggleIcon.classList.remove('fa-bars');
+                    toggleIcon.classList.add('fa-times');
+                }
+            });
+        });
+
     </script>
-
-
-    <!-- Video Player -->
-
 
 </body>
 
