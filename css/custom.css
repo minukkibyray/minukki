@@ -123,6 +123,10 @@ a {
     color: inherit !important;
 }
 
+.ray-home-navbar a:hover {
+    color: var(--primary-color) !important;
+}
+
 .category a:hover {
     color: var(--primary-color) !important;
 }
