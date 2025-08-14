@@ -107,6 +107,10 @@ html {
     font-size: 14px;
 }
 
+.f-13px {
+    font-size: 13px;
+}
+
 .f-12x {
     font-size: 12px;
 }
@@ -119,9 +123,48 @@ a {
     color: inherit !important;
 }
 
-a:hover {
+.category a:hover {
     color: var(--primary-color) !important;
 }
+
+.ray-shopbycollection a:hover {
+    color: var(--primary-color) !important;
+}
+
+.ray-footer-desc-text a:hover {
+    color: #DFA149 !important;
+}
+
+.ray-footer-heading .d-flex a:hover {
+    color: #DFA149 !important;
+}
+
+a:hover {
+    color: #DFA149 !important;
+}
+
+.ray-footer-section-bg {
+    background-color: #381509;
+    color: #ffffff !important;
+}
+
+.ray-footer-heading {
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    font-family: "Quicksand", sans-serif !important;
+    color: #F7D899;
+}
+
+.center-dark-line {
+    height: .067rem;
+    width: 100%;
+    background: linear-gradient(to right, transparent, #cba65b, transparent);
+}
+
+.ray-socal-icon-color {
+    color: #f7eae0;
+}
+
 
 /* Scrollbar */
 
@@ -217,6 +260,14 @@ a:hover {
 .ray-card-border {
     border: 1px solid rosybrown;
     border-radius: 10px;
+}
+
+.ray-footer-desc-text {
+    font-size: 12px;
+    letter-spacing: .065rem;
+    font-family: "Quicksand", sans-serif;
+    line-height: 1.4rem;
+    color: #f7eae0;
 }
 
 
