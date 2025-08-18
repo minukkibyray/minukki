@@ -300,19 +300,29 @@
           </div>
         </div>
         <div class="row mb-4 pb-3">
-          <div class="col-12 col-lg-2 mb-2 mb-lg-0">
-            <div class="ray-secondary-heading pt-lg-1">Search Filter:</div>
+          <div class="col-12 col-lg-1 mb-2 mb-lg-0">
+            <div class="ray-secondary-heading pt-lg-1">Filters:</div>
           </div>
-          <div class="col-6 col-lg-5">
+          <div class="col-6 col-lg-3">
             <input type="text" id="searchInput" class="form-control" placeholder="Search by product title..." />
           </div>
-          <div class="col-6 col-lg-5">
+          <div class="col-6 col-lg-3">
             <select id="priceRange" class="form-select">
               <option value="">All Prices</option>
-              <option value="0-499">Under ₹500</option>
-              <option value="500-999">₹500 - ₹999</option>
-              <option value="1000-2000">₹1000 - ₹2000</option>
+              <option value="0-99">Below ₹100</option>
+              <option value="100-249">₹100 - ₹249</option>
+              <option value="250-399">₹250 - ₹399</option>
             </select>
+          </div>
+          <div class="col-12 col-lg-3 mt-2 mt-lg-0">
+            <select id="sortBy" class="form-select">
+              <option value="">Sort Order</option>
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+            </select>
+          </div>
+          <div class="col-12 col-lg-2 mt-2 mt-lg-0">
+            <button id="clearFilters" class="btn ray-btn-clear btn-sm w-100">Clear Filters</button>
           </div>
         </div>
         <div class="row d-none">
@@ -375,8 +385,10 @@
 
                 <div class="row g-0">
                   <!-- Carousel Column -->
-                  <div class="col-md-8 position-relative">
+                  <div class="col-md-8 position-relative ray-carousel-indicator">
                     <div id="modalCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <!-- 🔹 Indicators go here -->
+                      <div class="carousel-indicators" id="modalCarouselIndicators"></div>
                       <div class="carousel-inner" id="modalCarouselInner"></div>
 
                       <!-- Controls -->
@@ -408,6 +420,82 @@
         </div>
       </div>
     </section>
+
+    <footer class="ray-footer-section-bg">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3 ps-0">
+            <img src="assets/img/logo/minukki_logo_white.png" alt="minukki" width="130" class="img-fluid">
+            <div class="ray-footer-desc-text ps-2 pt-2">
+              From our heart to yours. Any delays, missing orders, or questions? Write to us at
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@minukki.com" target="_blank"
+                rel="noopener noreferrer" class="text-decoration-none">
+                <b> contact@minukki.com </b>
+              </a> — our team will lovingly respond within 24 hours or less.
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="row">
+              <div class="col-12 col-md-6 mx-auto">
+                <div class="ray-footer-heading mb-3">
+                  Usefull Links
+                </div>
+                <div class="ray-footer-desc-text mb-3">
+                  <a href="https://minukki.mini.site/?path=%2F" target="_blank"> Minis Store </a>
+                </div>
+                <div class="ray-footer-desc-text mb-3">
+                  <a href="about-us.html" target="_blank"> About Us </a>
+                </div>
+                <div class="ray-footer-desc-text mb-3">
+                  <a href="contact-us.html" target="_blank"> Contact Us </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="row">
+              <div class="col-12 col-md-10 mx-auto">
+                <div class="ray-footer-heading mb-3">
+                  Customer Policies
+                </div>
+                <div class="ray-footer-desc-text mb-3">
+                  <a href=""> Terms of Service </a>
+                </div>
+                <div class="ray-footer-desc-text mb-3">
+                  <a href=""> Privacy Policy </a>
+                </div>
+                <div class="ray-footer-desc-text mb-3">
+                  <a href=""> Shipping & Delivery </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="row">
+              <div class="col-12 col-md-10 mx-auto">
+                <div class="ray-footer-heading mb-3">
+                  Follow Us on
+                </div>
+                <span class="d-flex ray-socal-icon-color">
+                  <a href="https://www.instagram.com/minukkibyray"><i
+                      class="fa-brands fa-instagram fa-lg me-2 pe-1"></i></a>
+                  <a
+                    href="https://www.facebook.com/search/top?q=minukkiby%20ray&__stsd__=eyJwcmltYXJ5Ijp7InR5cGUiOiJUWVBFQUhFQURfUEVPUExFX0VOVElUSUVTIn19"><i
+                      class="fa-brands fa-facebook-f"></i></a>
+                  <!-- <a href=""> <img src="assets/img/social_icons/fb.png" class="img-fluid me-1"
+                                                width="30" alt="facebook"></a> -->
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="center-dark-line"></div>
+      <div class="ray-footer-desc-text text-center w-100 py-3">
+        Copyright © 2025 Minukki - All Rights Reserved.
+      </div>
+    </footer>
+
   </main>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
         integrity="sha384-vLzyMw4ACv3XAvs2bk6J1VMIK/HiWBVOB/UN3GnYhTHlNDbSpjAzFkUEK8IfD4qz"
@@ -441,7 +529,7 @@
           "NEW"
         ],
         "code": "MIN-E-002",
-        "title": "Appealing Grey",
+        "title": "Appealing - Grey",
         "price": "309",
         "sellingPrice": "139",
         "offprice": "55%",
@@ -451,67 +539,67 @@
           "assets/img/products/earrings/MIN-E-002/ash/IMG_0297.JPG",
           "assets/img/products/earrings/MIN-E-002/ash/IMG_0299.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/11b127f4-a3ca-4739-b75c-78bf5da41b71?slug=minukki"
       },
       {
         "tags": [
           "NEW"
         ],
         "code": "MIN-E-002",
-        "title": "Appealing Beige",
+        "title": "Appealing - Beige",
         "price": "309",
         "sellingPrice": "139",
         "offprice": "55%",
         "images": [
-          "assets/img/products/earrings/MIN-E-002/beige/IMG_0278.JPG",
+          // "assets/img/products/earrings/MIN-E-002/beige/IMG_0278.JPG",
           "assets/img/products/earrings/MIN-E-002/beige/IMG_0279.JPG",
           "assets/img/products/earrings/MIN-E-002/beige/IMG_0280.JPG",
           "assets/img/products/earrings/MIN-E-002/beige/IMG_0281.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/a5d318f5-d9e9-4d27-b4f9-2fe567406262?slug=minukki"
       },
       {
         "tags": [
           "NEW"
         ],
         "code": "MIN-E-002",
-        "title": "Appealing Black",
+        "title": "Appealing - Black",
         "price": "309",
         "sellingPrice": "139",
         "offprice": "55%",
         "images": [
           "assets/img/products/earrings/MIN-E-002/black/IMG_0285.JPG",
           "assets/img/products/earrings/MIN-E-002/black/IMG_0286.JPG",
-          "assets/img/products/earrings/MIN-E-002/black/IMG_0287.JPG",
+          // "assets/img/products/earrings/MIN-E-002/black/IMG_0287.JPG",
           "assets/img/products/earrings/MIN-E-002/black/IMG_0288.JPG",
-          "assets/img/products/earrings/MIN-E-002/black/IMG_0289.JPG"
+          // "assets/img/products/earrings/MIN-E-002/black/IMG_0289.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/48a4fa0b-8616-440f-a1c8-c439232139e2?slug=minukki"
       },
       {
         "tags": [
           "NEW"
         ],
         "code": "MIN-E-002",
-        "title": "Appealing Chocolate",
+        "title": "Appealing - Chocolate",
         "price": "309",
         "sellingPrice": "139",
         "offprice": "55%",
         "images": [
           "assets/img/products/earrings/MIN-E-002/chocolate_brown/IMG_0249.JPG",
           "assets/img/products/earrings/MIN-E-002/chocolate_brown/IMG_0250.JPG",
-          "assets/img/products/earrings/MIN-E-002/chocolate_brown/IMG_0251.JPG",
+          // "assets/img/products/earrings/MIN-E-002/chocolate_brown/IMG_0251.JPG",
           "assets/img/products/earrings/MIN-E-002/chocolate_brown/IMG_0253.JPG",
-          "assets/img/products/earrings/MIN-E-002/chocolate_brown/IMG_0254.JPG"
+          // "assets/img/products/earrings/MIN-E-002/chocolate_brown/IMG_0254.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/2de15763-884c-444b-8fb0-f8761ea9a656?slug=minukki"
       },
       {
         "tags": [
           "NEW"
         ],
         "code": "MIN-E-002",
-        "title": "Appealing Green",
+        "title": "Appealing - Green",
         "price": "309",
         "sellingPrice": "139",
         "offprice": "55%",
@@ -520,14 +608,14 @@
           "assets/img/products/earrings/MIN-E-002/green/IMG_0276.JPG",
           "assets/img/products/earrings/MIN-E-002/green/IMG_0277.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/1327378f-07f1-4856-9109-6c844af91b00?slug=minukki"
       },
       {
         "tags": [
           "NEW"
         ],
         "code": "MIN-E-002",
-        "title": "Appealing Half White",
+        "title": "Appealing - Half White",
         "price": "309",
         "sellingPrice": "139",
         "offprice": "55%",
@@ -536,14 +624,14 @@
           "assets/img/products/earrings/MIN-E-002/half_white/IMG_0269.JPG",
           "assets/img/products/earrings/MIN-E-002/half_white/IMG_0270.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/7fd124dd-b896-497d-9095-9f924e5f732c?slug=minukki"
       },
       {
         "tags": [
           "NEW"
         ],
         "code": "MIN-E-002",
-        "title": "Appealing Orange",
+        "title": "Appealing - Peach",
         "price": "309",
         "sellingPrice": "139",
         "offprice": "55%",
@@ -552,16 +640,16 @@
           "assets/img/products/earrings/MIN-E-002/orange/IMG_0262.JPG",
           "assets/img/products/earrings/MIN-E-002/orange/IMG_0265.JPG",
           "assets/img/products/earrings/MIN-E-002/orange/IMG_0266.JPG",
-          "assets/img/products/earrings/MIN-E-002/orange/IMG_0267.JPG"
+          // "assets/img/products/earrings/MIN-E-002/orange/IMG_0267.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/2f9b83eb-9aa1-4106-a967-08ad8b611109?slug=minukki"
       },
       {
         "tags": [
           "NEW"
         ],
         "code": "MIN-E-002",
-        "title": "Appealing Red",
+        "title": "Appealing - Maroon",
         "price": "309",
         "sellingPrice": "139",
         "offprice": "55%",
@@ -569,30 +657,30 @@
           "assets/img/products/earrings/MIN-E-002/red/IMG_0255.JPG",
           "assets/img/products/earrings/MIN-E-002/red/IMG_0256.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/fa5a40a0-0604-461c-89dd-bbdebc5e2fd9?slug=minukki"
       },
       {
         "tags": [
           "NEW"
         ],
         "code": "MIN-E-002",
-        "title": "Appealing Teal",
+        "title": "Appealing - Teal",
         "price": "309",
         "sellingPrice": "139",
         "offprice": "55%",
         "images": [
+          "assets/img/products/earrings/MIN-E-002/teal/IMG_0292.JPG",
           "assets/img/products/earrings/MIN-E-002/teal/IMG_0290.JPG",
-          "assets/img/products/earrings/MIN-E-002/teal/IMG_0291.JPG",
-          "assets/img/products/earrings/MIN-E-002/teal/IMG_0292.JPG"
+          "assets/img/products/earrings/MIN-E-002/teal/IMG_0291.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/aba4705a-bbef-4904-963a-f2cc981db817?slug=minukki"
       },
       {
         "tags": [
           "NEW"
         ],
         "code": "MIN-E-002",
-        "title": "Appealing Yellow",
+        "title": "Appealing - Yellow",
         "price": "309",
         "sellingPrice": "139",
         "offprice": "55%",
@@ -600,23 +688,23 @@
           "assets/img/products/earrings/MIN-E-002/yellow/IMG_0258.JPG",
           "assets/img/products/earrings/MIN-E-002/yellow/IMG_0259.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/37b21447-4f92-4acb-b2a9-0809197affc3?slug=minukki"
       },
       {
         "tags": [
           "BEST SELLER"
         ],
         "code": "MIN-E-003",
-        "title": "Sweet - Mauvish Pink",
+        "title": "Sweet - Biscuit",
         "price": "110",
         "sellingPrice": "69",
         "offprice": "38%",
         "images": [
           "assets/img/products/earrings/MIN-E-003/baby_pink/IMG_9611.JPG",
-          "assets/img/products/earrings/MIN-E-003/baby_pink/IMG_9612.JPG",
-          "assets/img/products/earrings/MIN-E-003/baby_pink/IMG_9613.JPG"
+          "assets/img/products/earrings/MIN-E-003/baby_pink/IMG_9613.JPG",
+          "assets/img/products/earrings/MIN-E-003/baby_pink/IMG_9612.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/2cf43208-69a5-4050-8dc5-6173fd260ead?slug=minukki"
       },
       {
         "tags": [
@@ -634,7 +722,7 @@
           "assets/img/products/earrings/MIN-E-003/black/IMG_9625.JPG",
           "assets/img/products/earrings/MIN-E-003/black/IMG_9626.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/49a3bfcd-9abc-4d1d-a81c-730d460f00c9?slug=minukki"
       },
       {
         "tags": [
@@ -649,7 +737,7 @@
           "assets/img/products/earrings/MIN-E-003/blue/IMG_9627.JPG",
           "assets/img/products/earrings/MIN-E-003/blue/IMG_9628.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/d2a8a8a2-0a6a-47e9-ae20-b08aef5208ec?slug=minukki"
       },
       {
         "tags": [
@@ -662,11 +750,11 @@
         "offprice": "38%",
         "images": [
           "assets/img/products/earrings/MIN-E-003/green/IMG_9614.JPG",
-          "assets/img/products/earrings/MIN-E-003/green/IMG_9615.JPG",
+          // "assets/img/products/earrings/MIN-E-003/green/IMG_9615.JPG",
           "assets/img/products/earrings/MIN-E-003/green/IMG_9617.JPG",
           "assets/img/products/earrings/MIN-E-003/green/IMG_9618.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/107d2e5e-a06e-4b73-94c6-fe01e75a6a13?slug=minukki"
       },
       {
         "tags": [
@@ -679,10 +767,10 @@
         "offprice": "38%",
         "images": [
           "assets/img/products/earrings/MIN-E-003/half_white/IMG_2265.jpg",
-          "assets/img/products/earrings/MIN-E-003/half_white/IMG_2266.jpg",
-          "assets/img/products/earrings/MIN-E-003/half_white/IMG_2267.jpg"
+          "assets/img/products/earrings/MIN-E-003/half_white/IMG_2267.jpg",
+          "assets/img/products/earrings/MIN-E-003/half_white/IMG_2266.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/77543764-011e-4311-9a60-9df64818b139?slug=minukki"
       },
       {
         "tags": [
@@ -698,14 +786,14 @@
           "assets/img/products/earrings/MIN-E-003/light_green/IMG_9603.JPG",
           "assets/img/products/earrings/MIN-E-003/light_green/IMG_9604.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/3497ebf4-9df1-45d1-8b57-9c3f7a7497ac?slug=minukki"
       },
       {
         "tags": [
           "BEST SELLER"
         ],
         "code": "MIN-E-003",
-        "title": "Sweet - Purple",
+        "title": "Sweet - Mauvish Pink",
         "price": "110",
         "sellingPrice": "69",
         "offprice": "38%",
@@ -713,7 +801,7 @@
           "assets/img/products/earrings/MIN-E-003/purple/IMG_9619.JPG",
           "assets/img/products/earrings/MIN-E-003/purple/IMG_9621.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/65704b2d-f938-422f-b0c6-5826a2b98849?slug=minukki"
       },
       {
         "tags": [
@@ -725,116 +813,116 @@
         "sellingPrice": "69",
         "offprice": "38%",
         "images": [
+          "assets/img/products/earrings/MIN-E-003/red/IMG_9633.JPG",
           "assets/img/products/earrings/MIN-E-003/red/IMG_9630.JPG",
-          "assets/img/products/earrings/MIN-E-003/red/IMG_9631.JPG",
-          "assets/img/products/earrings/MIN-E-003/red/IMG_9632.JPG",
-          "assets/img/products/earrings/MIN-E-003/red/IMG_9633.JPG"
+          // "assets/img/products/earrings/MIN-E-003/red/IMG_9631.JPG",
+          "assets/img/products/earrings/MIN-E-003/red/IMG_9632.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/a69cb0a2-8e36-45ee-bcc9-57ab499487cc?slug=minukki"
       },
       {
         "tags": [
           "BEST SELLER"
         ],
         "code": "MIN-E-003",
-        "title": "Sweet - Yellow",
+        "title": "Sweet - Mustard",
         "price": "110",
         "sellingPrice": "69",
         "offprice": "38%",
         "images": [
           "assets/img/products/earrings/MIN-E-003/yellow/IMG_9605.JPG",
           "assets/img/products/earrings/MIN-E-003/yellow/IMG_9606.JPG",
-          "assets/img/products/earrings/MIN-E-003/yellow/IMG_9608.JPG",
-          "assets/img/products/earrings/MIN-E-003/yellow/IMG_9609.JPG",
+          // "assets/img/products/earrings/MIN-E-003/yellow/IMG_9608.JPG",
+          // "assets/img/products/earrings/MIN-E-003/yellow/IMG_9609.JPG",
           "assets/img/products/earrings/MIN-E-003/yellow/IMG_9610.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/750348e6-92bf-4def-96ce-f610806bd83b?slug=minukki"
       },
       {
         "tags": [
           "TRENDING"
         ],
         "code": "MIN-E-004",
-        "title": "Adorable- Black",
-        "price": "93",
-        "sellingPrice": "39",
-        "offprice": "58%",
+        "title": "Adorable - Black",
+        "price": "102",
+        "sellingPrice": "49",
+        "offprice": "52%",
         "images": [
           "assets/img/products/earrings/MIN-E-004/black/IMG_9583.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/40ba9369-a0c0-4fa0-8f3f-1cb6c28c504b?slug=minukki"
       },
       {
         "tags": [
           "TRENDING"
         ],
         "code": "MIN-E-004",
-        "title": "Adorable- Dark Blue",
-        "price": "93",
-        "sellingPrice": "39",
-        "offprice": "58%",
+        "title": "Adorable - Blue",
+        "price": "102",
+        "sellingPrice": "49",
+        "offprice": "52%",
         "images": [
           "assets/img/products/earrings/MIN-E-004/dark_blue/IMG_9593.JPG",
           "assets/img/products/earrings/MIN-E-004/dark_blue/IMG_9594.JPG",
           "assets/img/products/earrings/MIN-E-004/dark_blue/IMG_9596.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/f8a748d0-6e51-4aa4-9bf9-07f893abb5f3?slug=minukki"
       },
       {
         "tags": [
           "TRENDING"
         ],
         "code": "MIN-E-004",
-        "title": "Adorable- Green",
-        "price": "93",
-        "sellingPrice": "39",
-        "offprice": "58%",
+        "title": "Adorable - Green",
+        "price": "102",
+        "sellingPrice": "49",
+        "offprice": "52%",
         "images": [
           "assets/img/products/earrings/MIN-E-004/green/IMG_9587.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/f04007bf-8269-4830-9ade-b920468f2f8a?slug=minukki"
       },
       {
         "tags": [
           "TRENDING"
         ],
         "code": "MIN-E-004",
-        "title": "Adorable- Light Blue",
-        "price": "93",
-        "sellingPrice": "39",
-        "offprice": "58%",
+        "title": "Adorable - Light Blue",
+        "price": "102",
+        "sellingPrice": "49",
+        "offprice": "52%",
         "images": [
           "assets/img/products/earrings/MIN-E-004/light_blue/IMG_9590.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/d6c8d8df-4b77-43e6-ae46-750986a76269?slug=minukki"
       },
       {
         "tags": [
           "TRENDING"
         ],
         "code": "MIN-E-004",
-        "title": "Adorable- Maroon",
-        "price": "93",
-        "sellingPrice": "39",
-        "offprice": "58%",
+        "title": "Adorable - Maroon",
+        "price": "102",
+        "sellingPrice": "49",
+        "offprice": "52%",
         "images": [
           "assets/img/products/earrings/MIN-E-004/maroon/IMG_9584.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/7c3e25a6-8a3f-4d28-9a7c-971f3dd2e7f2?slug=minukki"
       },
       {
         "tags": [
           "TRENDING"
         ],
         "code": "MIN-E-004",
-        "title": "Adorable- Red",
-        "price": "93",
-        "sellingPrice": "39",
-        "offprice": "58%",
+        "title": "Adorable - Red",
+        "price": "102",
+        "sellingPrice": "49",
+        "offprice": "52%",
         "images": [
           "assets/img/products/earrings/MIN-E-004/red/IMG_9591.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/1872da64-6d37-4acb-a536-bb4f8585971c?slug=minukki"
       },
       {
         "tags": [
@@ -846,10 +934,10 @@
         "sellingPrice": "129",
         "offprice": "48%",
         "images": [
-          "assets/img/products/earrings/MIN-E-006/A/IMG_1799.jpg",
-          "assets/img/products/earrings/MIN-E-006/A/IMG_1800.jpg"
+          "assets/img/products/earrings/MIN-E-006/A/IMG_1800.jpg",
+          "assets/img/products/earrings/MIN-E-006/A/IMG_1799.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/831046ed-ea33-4e30-8810-1103568dc8b4?slug=minukki"
       },
       {
         "tags": [
@@ -864,7 +952,7 @@
           "assets/img/products/earrings/MIN-E-006/B/IMG_1803.jpg",
           "assets/img/products/earrings/MIN-E-006/B/IMG_1804.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/25b837af-3bd0-433e-9041-1880deb69edc?slug=minukki"
       },
       {
         "tags": [
@@ -879,7 +967,7 @@
           "assets/img/products/earrings/MIN-E-006/C/IMG_1805.jpg",
           "assets/img/products/earrings/MIN-E-006/C/IMG_1806.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/b4dbfde9-6210-4092-abec-ae2c66825056?slug=minukki"
       },
       {
         "tags": [
@@ -894,7 +982,7 @@
           "assets/img/products/earrings/MIN-E-006/D/IMG_1808.jpg",
           "assets/img/products/earrings/MIN-E-006/D/IMG_1809.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/b9894037-4e20-4710-b8aa-7eca55929b0c?slug=minukki"
       },
       {
         "tags": [
@@ -908,7 +996,7 @@
         "images": [
           "assets/img/products/earrings/MIN-E-006/E/IMG_1812.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/bc64e64d-1bcb-4a2d-8688-800dfa0b0a44?slug=minukki"
       },
       {
         "tags": [
@@ -921,13 +1009,13 @@
         "offprice": "33%",
         "images": [
           "assets/img/products/earrings/MIN-E-007/A/IMG_0191.jpg",
-          "assets/img/products/earrings/MIN-E-007/A/IMG_0192.jpg",
-          "assets/img/products/earrings/MIN-E-007/A/IMG_0193.jpg",
+          // "assets/img/products/earrings/MIN-E-007/A/IMG_0192.jpg",
+          // "assets/img/products/earrings/MIN-E-007/A/IMG_0193.jpg",
           "assets/img/products/earrings/MIN-E-007/A/IMG_0194.jpg",
           "assets/img/products/earrings/MIN-E-007/A/IMG_0195.jpg",
-          "assets/img/products/earrings/MIN-E-007/A/IMG_0196.jpg",
+          // "assets/img/products/earrings/MIN-E-007/A/IMG_0196.jpg",
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/1c87b233-ece9-4d3c-86b6-564c9a1fff75?slug=minukki"
       },
       {
         "tags": [
@@ -941,12 +1029,12 @@
         "images": [
           "assets/img/products/earrings/MIN-E-007/B/IMG_0199.jpg",
           "assets/img/products/earrings/MIN-E-007/B/IMG_0200.jpg",
-          "assets/img/products/earrings/MIN-E-007/B/IMG_0201.jpg",
+          // "assets/img/products/earrings/MIN-E-007/B/IMG_0201.jpg",
           "assets/img/products/earrings/MIN-E-007/B/IMG_0202.jpg",
-          "assets/img/products/earrings/MIN-E-007/B/IMG_0203.jpg",
-          "assets/img/products/earrings/MIN-E-007/B/IMG_0204.jpg",
+          // "assets/img/products/earrings/MIN-E-007/B/IMG_0203.jpg",
+          // "assets/img/products/earrings/MIN-E-007/B/IMG_0204.jpg",
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/7e40e2dc-fbdf-4d2e-b060-ee3e9d615199?slug=minukki"
       },
       {
         "tags": [
@@ -962,7 +1050,7 @@
           "assets/img/products/earrings/MIN-E-008/A/IMG_1963.jpg",
           "assets/img/products/earrings/MIN-E-008/A/IMG_0597.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/95acaef2-96fa-4854-863e-06913b97f099?slug=minukki"
       },
       {
         "tags": [
@@ -975,11 +1063,11 @@
         "offprice": "53%",
         "images": [
           "assets/img/products/earrings/MIN-E-008/B/IMG_1965.JPG",
-          "assets/img/products/earrings/MIN-E-008/B/IMG_0504.jpg",
-          "assets/img/products/earrings/MIN-E-008/B/IMG_0505.jpg",
+          // "assets/img/products/earrings/MIN-E-008/B/IMG_0504.jpg",
+          // "assets/img/products/earrings/MIN-E-008/B/IMG_0505.jpg",
           "assets/img/products/earrings/MIN-E-008/B/IMG_0515.jpg",
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/3cea1849-ebdd-48e7-8a65-6a1fdb9d4553?slug=minukki"
       },
       {
         "tags": [
@@ -992,10 +1080,10 @@
         "offprice": "53%",
         "images": [
           "assets/img/products/earrings/MIN-E-008/C/IMG_1968.JPG",
-          "assets/img/products/earrings/MIN-E-008/C/IMG_0602.jpg",
+          // "assets/img/products/earrings/MIN-E-008/C/IMG_0602.jpg",
           "assets/img/products/earrings/MIN-E-008/C/IMG_0605.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/aca2c5d1-601e-4d19-8147-d90e333f5953?slug=minukki"
       },
       {
         "tags": [
@@ -1009,11 +1097,11 @@
         "images": [
           "assets/img/products/earrings/MIN-E-008/D/IMG_1970.JPG",
           "assets/img/products/earrings/MIN-E-008/D/IMG_0525.jpg",
-          "assets/img/products/earrings/MIN-E-008/D/IMG_0532.jpg",
-          "assets/img/products/earrings/MIN-E-008/D/IMG_0548.jpg",
-          "assets/img/products/earrings/MIN-E-008/D/IMG_0549.jpg"
+          // "assets/img/products/earrings/MIN-E-008/D/IMG_0532.jpg",
+          // "assets/img/products/earrings/MIN-E-008/D/IMG_0548.jpg",
+          // "assets/img/products/earrings/MIN-E-008/D/IMG_0549.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/8c9d73c6-b80d-4681-b1ae-a3a19b87490f?slug=minukki"
       },
       {
         "tags": [
@@ -1026,11 +1114,11 @@
         "offprice": "53%",
         "images": [
           "assets/img/products/earrings/MIN-E-008/E/IMG_1972.JPG",
+          // "assets/img/products/earrings/MIN-E-008/E/IMG_0564.jpg",
           "assets/img/products/earrings/MIN-E-008/E/IMG_0564.jpg",
-          "assets/img/products/earrings/MIN-E-008/E/IMG_0564.jpg",
-          "assets/img/products/earrings/MIN-E-008/E/IMG_05691.jpg"
+          // "assets/img/products/earrings/MIN-E-008/E/IMG_05691.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/b2f9197b-2d07-4b58-a0ba-4e1802d24a79?slug=minukki"
       },
       {
         "tags": [
@@ -1043,12 +1131,12 @@
         "offprice": "53%",
         "images": [
           "assets/img/products/earrings/MIN-E-008/F/IMG_1974.JPG",
-          "assets/img/products/earrings/MIN-E-008/F/IMG_0575.jpg",
+          // "assets/img/products/earrings/MIN-E-008/F/IMG_0575.jpg",
           "assets/img/products/earrings/MIN-E-008/F/IMG_0578.jpg",
-          "assets/img/products/earrings/MIN-E-008/F/IMG_0580.jpg",
-          "assets/img/products/earrings/MIN-E-008/F/IMG_0581.jpg"
+          // "assets/img/products/earrings/MIN-E-008/F/IMG_0580.jpg",
+          // "assets/img/products/earrings/MIN-E-008/F/IMG_0581.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/6a31c30c-586b-4e2c-b7e7-e908e700eb4a?slug=minukki"
       },
       {
         "tags": [
@@ -1056,15 +1144,15 @@
         ],
         "code": "MIN-E-009",
         "title": "Charms - Beige",
-        "price": "102",
-        "sellingPrice": "49",
-        "offprice": "52%",
+        "price": "110",
+        "sellingPrice": "69",
+        "offprice": "38%",
         "images": [
           "assets/img/products/earrings/MIN-E-009/beige/IMG_0244.JPG",
-          "assets/img/products/earrings/MIN-E-009/beige/IMG_0245.JPG",
-          "assets/img/products/earrings/MIN-E-009/beige/IMG_0246.JPG"
+          "assets/img/products/earrings/MIN-E-009/beige/IMG_0246.JPG",
+          "assets/img/products/earrings/MIN-E-009/beige/IMG_0245.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/6a0f94e0-5d7e-44da-8d17-1d5859ab2baf?slug=minukki"
       },
       {
         "tags": [
@@ -1072,34 +1160,34 @@
         ],
         "code": "MIN-E-009",
         "title": "Charms - Half White",
-        "price": "102",
-        "sellingPrice": "49",
-        "offprice": "52%",
+        "price": "110",
+        "sellingPrice": "69",
+        "offprice": "38%",
         "images": [
-          "assets/img/products/earrings/MIN-E-009/half_white/IMG_0229.JPG",
-          "assets/img/products/earrings/MIN-E-009/half_white/IMG_0230.JPG",
+          // "assets/img/products/earrings/MIN-E-009/half_white/IMG_0229.JPG",
           "assets/img/products/earrings/MIN-E-009/half_white/IMG_0231.JPG",
+          "assets/img/products/earrings/MIN-E-009/half_white/IMG_0230.JPG",
           "assets/img/products/earrings/MIN-E-009/half_white/IMG_0232.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/8c44f03e-8ab9-4ac0-924d-2351d8efe4ac?slug=minukki"
       },
       {
         "tags": [
           "EXCLUSIVE"
         ],
         "code": "MIN-E-009",
-        "title": "Charms - Maroon",
-        "price": "102",
-        "sellingPrice": "49",
-        "offprice": "52%",
+        "title": "Charms - Brown",
+        "price": "110",
+        "sellingPrice": "69",
+        "offprice": "38%",
         "images": [
           "assets/img/products/earrings/MIN-E-009/maroon/IMG_0239.JPG",
           "assets/img/products/earrings/MIN-E-009/maroon/IMG_0240.JPG",
-          "assets/img/products/earrings/MIN-E-009/maroon/IMG_0241.JPG",
+          // "assets/img/products/earrings/MIN-E-009/maroon/IMG_0241.JPG",
           "assets/img/products/earrings/MIN-E-009/maroon/IMG_0242.JPG",
           "assets/img/products/earrings/MIN-E-009/maroon/IMG_0243.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/eca7e2fe-e815-425c-956a-5ff7898c3a89?slug=minukki"
       },
       {
         "tags": [
@@ -1113,17 +1201,13 @@
         "images": [
           "assets/img/products/earrings/MIN-E-010/A/IMG_1977.jpg",
           "assets/img/products/earrings/MIN-E-010/A/IMG_1979.jpg",
-          "assets/img/products/earrings/MIN-E-010/A/IMG_1981.jpg",
-          "assets/img/products/earrings/MIN-E-010/A/IMG_1985.jpg",
-          "assets/img/products/earrings/MIN-E-010/A/IMG_6114.jpg",
-          "assets/img/products/earrings/MIN-E-010/A/IMG_6117.jpg",
-          "assets/img/products/earrings/MIN-E-010/A/IMG_6120.jpg",
-          "assets/img/products/earrings/MIN-E-010/A/IMG_6123.jpg",
-          "assets/img/products/earrings/MIN-E-010/A/IMG_0004.jpg",
-          "assets/img/products/earrings/MIN-E-010/A/IMG_0009.jpg",
+          // "assets/img/products/earrings/MIN-E-010/A/IMG_6120.jpg",
+          // "assets/img/products/earrings/MIN-E-010/A/IMG_6123.jpg",
+          // "assets/img/products/earrings/MIN-E-010/A/IMG_0004.jpg",
+          // "assets/img/products/earrings/MIN-E-010/A/IMG_0009.jpg",
           "assets/img/products/earrings/MIN-E-010/A/IMG_9998.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/2a6dbded-1c32-4017-8fcc-905aa885eef3?slug=minukki"
       },
       {
         "tags": [
@@ -1136,9 +1220,6 @@
         "offprice": "51%",
         "images": [
           "assets/img/products/earrings/MIN-E-010/B/IMG_1990.jpg",
-          "assets/img/products/earrings/MIN-E-010/B/IMG_1993.jpg",
-          "assets/img/products/earrings/MIN-E-010/B/IMG_6135.jpg",
-          "assets/img/products/earrings/MIN-E-010/B/IMG_6136.jpg",
           "assets/img/products/earrings/MIN-E-010/B/IMG_6139.jpg",
           "assets/img/products/earrings/MIN-E-010/B/IMG_6141.jpg",
           "assets/img/products/earrings/MIN-E-010/B/IMG_0022.jpg",
@@ -1146,14 +1227,14 @@
           "assets/img/products/earrings/MIN-E-010/B/IMG_0024.jpg",
           "assets/img/products/earrings/MIN-E-010/B/IMG_0025.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/fd1bebc3-7249-4f43-be8e-c7f89f4c5409?slug=minukki"
       },
       {
         "tags": [
           "TRENDING"
         ],
         "code": "MIN-E-010-C",
-        "title": "Allure - Grassy",
+        "title": "Allure - Grads",
         "price": "448",
         "sellingPrice": "219",
         "offprice": "51%",
@@ -1167,14 +1248,14 @@
           "assets/img/products/earrings/MIN-E-010/C/IMG_0086.jpg",
           "assets/img/products/earrings/MIN-E-010/C/IMG_0090.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/68a954a8-8119-4d2d-bbdf-369531c8eeee?slug=minukki"
       },
       {
         "tags": [
           "TRENDING"
         ],
         "code": "MIN-E-010-D",
-        "title": "Allure - Sassea",
+        "title": "Allure - Grads",
         "price": "448",
         "sellingPrice": "219",
         "offprice": "51%",
@@ -1186,7 +1267,7 @@
           "assets/img/products/earrings/MIN-E-010/D/IMG_0115.jpg",
           "assets/img/products/earrings/MIN-E-010/D/IMG_0116.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/f9cc2aa1-938d-46b6-acf8-92496611283b?slug=minukki"
       },
       {
         "tags": [
@@ -1202,7 +1283,57 @@
           "assets/img/products/earrings/MIN-E-010/E/IMG_0130.jpg",
           "assets/img/products/earrings/MIN-E-010/E/IMG_0132.jpg",
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/678b5349-df15-496d-abae-ed54e915c23e?slug=minukki"
+      },
+      {
+        "tags": [
+          "TRENDING"
+        ],
+        "code": "MIN-E-010-F",
+        "title": "Allure - Trio",
+        "price": "448",
+        "sellingPrice": "219",
+        "offprice": "51%",
+        "images": [
+          "assets/img/products/earrings/MIN-E-010/F/IMG_1981.jpg",
+          "assets/img/products/earrings/MIN-E-010/F/IMG_1985.jpg",
+          "assets/img/products/earrings/MIN-E-010/F/IMG_6114.jpg",
+          "assets/img/products/earrings/MIN-E-010/F/IMG_6117.jpg",
+        ],
+        "shopnow": "https://minukki.mini.site/products/643f3352-26e6-48c4-b801-9f91a9d24bbe?slug=minukki"
+      },
+
+      {
+        "tags": [
+          "TRENDING"
+        ],
+        "code": "MIN-E-010-G",
+        "title": "Allure - Sassea",
+        "price": "448",
+        "sellingPrice": "219",
+        "offprice": "51%",
+        "images": [
+          "assets/img/products/earrings/MIN-E-010/G/IMG_2902.webp",
+          "assets/img/products/earrings/MIN-E-010/G/IMG_2892.webp",
+        ],
+        "shopnow": "https://minukki.mini.site/products/38144ead-4232-4ef9-af05-51fc77644d1b?slug=minukki"
+      },
+
+      {
+        "tags": [
+          "TRENDING"
+        ],
+        "code": "MIN-E-010-H",
+        "title": "Allure - Milky",
+        "price": "448",
+        "sellingPrice": "219",
+        "offprice": "51%",
+        "images": [
+          "assets/img/products/earrings/MIN-E-010/H/IMG_1993.jpg",
+          "assets/img/products/earrings/MIN-E-010/H/IMG_6135.jpg",
+          "assets/img/products/earrings/MIN-E-010/H/IMG_6136.jpg",
+        ],
+        "shopnow": "https://minukki.mini.site/products/fd1bebc3-7249-4f43-be8e-c7f89f4c5409?slug=minukki"
       },
       {
         "tags": [
@@ -1223,7 +1354,7 @@
           "assets/img/products/earrings/MIN-E-011/IMG_9870.jpg",
           "assets/img/products/earrings/MIN-E-011/IMG_9875.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/d4cc6b08-f89b-40cf-b394-02ac86f17d5c?slug=minukki"
       },
       {
         "tags": [
@@ -1240,7 +1371,7 @@
           "assets/img/products/earrings/MIN-E-015/A/IMG_0218.jpg",
           "assets/img/products/earrings/MIN-E-015/A/IMG_0219.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/afaca3ce-98f1-4c89-9f24-b5118de5fd50?slug=minukki"
       },
       {
         "tags": [
@@ -1258,15 +1389,15 @@
           "assets/img/products/earrings/MIN-E-015/B/IMG_0225.jpg",
           "assets/img/products/earrings/MIN-E-015/B/IMG_0226.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/8e65be5b-bf35-45d1-9d63-baea9256a27f?slug=minukki"
       },
       {
         "tags": [
           "LIMITED"
         ],
         "code": "MIN-E-017",
-        "title": "Appealing Golden",
-        "price": "139",
+        "title": "Golden Day",
+        "price": "171",
         "sellingPrice": "79",
         "offprice": "43%",
         "images": [
@@ -1276,14 +1407,14 @@
           "assets/img/products/earrings/MIN-E-017/IMG_9538.JPG",
           "assets/img/products/earrings/MIN-E-017/IMG_9539.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/eb890d87-451a-4abc-a363-8905bec74780?slug=minukki"
       },
       {
         "tags": [
           "NEW"
         ],
         "code": "MIN-E-018",
-        "title": "Appealing Silver",
+        "title": "Silver Day",
         "price": "171",
         "sellingPrice": "79",
         "offprice": "54%",
@@ -1299,7 +1430,7 @@
           "assets/img/products/earrings/MIN-E-018/IMG_9533.JPG",
           "assets/img/products/earrings/MIN-E-018/IMG_9534.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/2873edd6-276e-465a-93d8-d347ba2ac94d?slug=minukki"
       },
       {
         "tags": [
@@ -1307,15 +1438,15 @@
         ],
         "code": "MIN-E-019",
         "title": "Target Silver - Black",
-        "price": "109",
-        "sellingPrice": "49",
-        "offprice": "55%",
+        "price": "90",
+        "sellingPrice": "59",
+        "offprice": "34%",
         "images": [
           "assets/img/products/earrings/MIN-E-019/black/IMG_0207.JPG",
           "assets/img/products/earrings/MIN-E-019/black/IMG_0208.JPG",
           "assets/img/products/earrings/MIN-E-019/black/IMG_0209.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/685d5bba-261f-4036-b31c-e8054ca3d178?slug=minukki"
       },
       {
         "tags": [
@@ -1323,16 +1454,16 @@
         ],
         "code": "MIN-E-019",
         "title": "Target Silver - White",
-        "price": "109",
-        "sellingPrice": "49",
-        "offprice": "55%",
+        "price": "90",
+        "sellingPrice": "59",
+        "offprice": "34%",
         "images": [
           "assets/img/products/earrings/MIN-E-019/white/IMG_0212.JPG",
           "assets/img/products/earrings/MIN-E-019/white/IMG_0213.JPG",
           "assets/img/products/earrings/MIN-E-019/white/IMG_0214.JPG",
           "assets/img/products/earrings/MIN-E-019/white/IMG_0215.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/c1553c61-770c-4bb7-aa5d-4dab3d8f4f96?slug=minukki"
       },
       {
         "tags": [
@@ -1349,7 +1480,7 @@
           "assets/img/products/earrings/MIN-E-020/black/IMG_9433.JPG",
           "assets/img/products/earrings/MIN-E-020/black/IMG_9434.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/72f36b7c-1a73-4538-a277-e77b8278c880?slug=minukki"
       },
       {
         "tags": [
@@ -1364,7 +1495,7 @@
           "assets/img/products/earrings/MIN-E-020/blue/IMG_9480.JPG",
           "assets/img/products/earrings/MIN-E-020/blue/IMG_9481.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/1a2cbfac-3b20-4fdf-b3b8-9b58a686758d?slug=minukki"
       },
       {
         "tags": [
@@ -1380,7 +1511,7 @@
           "assets/img/products/earrings/MIN-E-020/green/IMG_9474.JPG",
           "assets/img/products/earrings/MIN-E-020/green/IMG_9475.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/c353d963-c500-452a-a61a-c93da74c96cb?slug=minukki"
       },
       {
         "tags": [
@@ -1398,7 +1529,7 @@
           "assets/img/products/earrings/MIN-E-020/half_white/IMG_9471.JPG",
           "assets/img/products/earrings/MIN-E-020/half_white/IMG_9472.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/7c22a712-9424-46b1-b0a4-55c1678181eb?slug=minukki"
       },
       {
         "tags": [
@@ -1415,7 +1546,7 @@
           "assets/img/products/earrings/MIN-E-020/orange/IMG_9448.JPG",
           "assets/img/products/earrings/MIN-E-020/orange/IMG_9449.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/cb3e513f-cb37-4cc3-9db4-779042e55351?slug=minukki"
       },
       {
         "tags": [
@@ -1432,7 +1563,7 @@
           "assets/img/products/earrings/MIN-E-020/red/IMG_9464.JPG",
           "assets/img/products/earrings/MIN-E-020/red/IMG_9465.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/ed3fb055-c678-4918-8c78-6e2cb014b4f3?slug=minukki"
       },
       {
         "tags": [
@@ -1450,7 +1581,7 @@
           "assets/img/products/earrings/MIN-E-020/rose/IMG_9442.JPG",
           "assets/img/products/earrings/MIN-E-020/rose/IMG_9443.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/9776a87b-efaa-4898-933b-fd041fd8088c?slug=minukki"
       },
       {
         "tags": [
@@ -1466,7 +1597,7 @@
           "assets/img/products/earrings/MIN-E-020/sky_blue/IMG_9451.JPG",
           "assets/img/products/earrings/MIN-E-020/sky_blue/IMG_9452.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/96298171-aa88-4323-82af-973f4391681a?slug=minukki"
       },
       {
         "tags": [
@@ -1482,7 +1613,7 @@
           "assets/img/products/earrings/MIN-E-020/yellow/IMG_9457.JPG",
           "assets/img/products/earrings/MIN-E-020/yellow/IMG_9458.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/0c486f4f-913d-4642-9ce9-31e2f28b0aa7?slug=minukki"
       },
       {
         "tags": [
@@ -1490,7 +1621,7 @@
         ],
         "code": "MIN-E-021",
         "title": "Pearly Golden",
-        "price": "142",
+        "price": "183",
         "sellingPrice": "99",
         "offprice": "30%",
         "images": [
@@ -1498,7 +1629,7 @@
           "assets/img/products/earrings/MIN-E-021/IMG_9490.JPG",
           "assets/img/products/earrings/MIN-E-021/IMG_9491.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/31b56b99-87f8-4137-9024-3e8f2581e7a3?slug=minukki"
       },
       {
         "tags": [
@@ -1514,7 +1645,7 @@
           "assets/img/products/earrings/MIN-E-022/IMG_9483.JPG",
           "assets/img/products/earrings/MIN-E-022/IMG_9484.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/5c327c55-d53a-47b9-aadd-c4b68c6e6e21?slug=minukki"
       },
       {
         "tags": [
@@ -1533,7 +1664,7 @@
           "assets/img/products/earrings/MIN-E-023/IMG_9511.JPG",
           "assets/img/products/earrings/MIN-E-023/IMG_9512.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/eff1786e-3b4b-4b2c-a2b5-565ddd481678?slug=minukki"
       },
       {
         "tags": [
@@ -1555,7 +1686,7 @@
           "assets/img/products/earrings/MIN-E-024/IMG_9520.JPG",
           "assets/img/products/earrings/MIN-E-024/IMG_9521.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "http://minukki.mini.site/products/3620b75d-6e0c-4dc4-8e19-fe3fdc5f1b1c?slug=minukki"
       },
       {
         "tags": [
@@ -1581,7 +1712,7 @@
           "assets/img/products/earrings/MIN-E-025/IMG_9766.jpg",
           "assets/img/products/earrings/MIN-E-025/IMG_9768.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/1431ce1f-8445-4924-a032-033eecb14616?slug=minukki"
       },
       {
         "tags": [
@@ -1597,7 +1728,7 @@
           "assets/img/products/earrings/MIN-E-028/A/IMG_5776.jpg",
           "assets/img/products/earrings/MIN-E-028/A/IMG_5780.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/132a6b18-74a8-4ce8-bb0e-2d5be541dce3?slug=minukki"
       },
       {
         "tags": [
@@ -1612,7 +1743,7 @@
           "assets/img/products/earrings/MIN-E-028/B/IMG_5610.jpg",
           "assets/img/products/earrings/MIN-E-028/B/IMG_5621.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/c332eea6-4e51-41e2-aa7c-8b58927d4be7?slug=minukki"
       },
       {
         "tags": [
@@ -1628,7 +1759,7 @@
           "assets/img/products/earrings/MIN-E-028/C/IMG_5628.jpg",
           "assets/img/products/earrings/MIN-E-028/C/IMG_5630.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/c64c8741-495b-4174-918f-14437edbf9ad?slug=minukki"
       },
       {
         "tags": [
@@ -1643,7 +1774,7 @@
           "assets/img/products/earrings/MIN-E-028/D/IMG_5643.jpg",
           "assets/img/products/earrings/MIN-E-028/D/IMG_5649.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/b42c92a0-8c08-4c52-9c8d-87edec9d9b74?slug=minukki"
       },
       {
         "tags": [
@@ -1658,7 +1789,7 @@
           "assets/img/products/earrings/MIN-E-028/E/IMG_5651.jpg",
           "assets/img/products/earrings/MIN-E-028/E/IMG_5654.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/8644cd11-726f-4945-bca5-0e7603e7d6a3?slug=minukki"
       },
       {
         "tags": [
@@ -1674,7 +1805,7 @@
           "assets/img/products/earrings/MIN-E-028/F/IMG_5672.jpg",
           "assets/img/products/earrings/MIN-E-028/F/IMG_0793.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/d840dc63-9e8e-480d-b103-a52cf68f4f15?slug=minukki"
       },
       {
         "tags": [
@@ -1690,7 +1821,7 @@
           "assets/img/products/earrings/MIN-E-028/G/IMG_5725.jpg",
           "assets/img/products/earrings/MIN-E-028/G/IMG_0754.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/bd61bbba-f2b1-4a19-a732-1490649e29a3?slug=minukki"
       },
       {
         "tags": [
@@ -1705,7 +1836,7 @@
           "assets/img/products/earrings/MIN-E-028/H/IMG_5738.jpg",
           "assets/img/products/earrings/MIN-E-028/H/IMG_5740.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/f8d47337-bb70-4135-80db-c8fe7ae61022?slug=minukki"
       },
       {
         "tags": [
@@ -1723,7 +1854,7 @@
           "assets/img/products/earrings/MIN-E-028/I/IMG_0714.jpg",
           "assets/img/products/earrings/MIN-E-028/I/IMG_0829.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/0d0e0a54-2367-426a-adb6-90f6c7cac8b6?slug=minukki"
       },
       {
         "tags": [
@@ -1740,7 +1871,7 @@
           "assets/img/products/earrings/MIN-E-028/J/IMG_2167.jpg",
           "assets/img/products/earrings/MIN-E-028/J/IMG_0619.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/5e82c024-5414-461a-8986-dec3b7d2b748?slug=minukki"
       },
       {
         "tags": [
@@ -1757,7 +1888,7 @@
           "assets/img/products/earrings/MIN-E-030/A/IMG_9543.jpg",
           "assets/img/products/earrings/MIN-E-030/A/IMG_9544.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/3a607673-b368-4b30-b14f-391740638a82?slug=minukki"
       },
       {
         "tags": [
@@ -1771,7 +1902,7 @@
         "images": [
           "assets/img/products/earrings/MIN-E-030/B/IMG_9547.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/1403128c-7e4f-4d5d-99e1-b9543b5b9d31?slug=minukki"
       },
       {
         "tags": [
@@ -1786,7 +1917,7 @@
           "assets/img/products/earrings/MIN-E-030/C/IMG_9549.jpg",
           "assets/img/products/earrings/MIN-E-030/C/IMG_9550.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/59d42549-b07e-466b-a969-f76c6b157761?slug=minukki"
       },
       {
         "tags": [
@@ -1803,7 +1934,7 @@
           "assets/img/products/earrings/MIN-E-030/D/IMG_9554.jpg",
           "assets/img/products/earrings/MIN-E-030/D/IMG_9555.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/8123eca5-83c8-4051-9982-9e7e777e4751?slug=minukki"
       },
       {
         "tags": [
@@ -1819,7 +1950,7 @@
           "assets/img/products/earrings/MIN-E-030/E/IMG_9559.jpg",
           "assets/img/products/earrings/MIN-E-030/E/IMG_9560.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/9e8faa60-f8a8-4387-bf57-cd83001ae9fb?slug=minukki"
       },
       {
         "tags": [
@@ -1837,7 +1968,7 @@
           "assets/img/products/earrings/MIN-E-030/F/IMG_9565.jpg",
           "assets/img/products/earrings/MIN-E-030/F/IMG_9566.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/3ccbb9d8-e8a0-4ab3-acdb-eb253233d655?slug=minukki"
       },
       {
         "tags": [
@@ -1853,7 +1984,7 @@
           "assets/img/products/earrings/MIN-E-030/G/IMG_9570.jpg",
           "assets/img/products/earrings/MIN-E-030/G/IMG_9571.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/a900ab82-cb77-42ea-b10f-2ba88748c9b6?slug=minukki"
       },
       {
         "tags": [
@@ -1867,7 +1998,7 @@
         "images": [
           "assets/img/products/earrings/MIN-E-030/H/IMG_9572.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/0c2887bd-6429-4212-bc2a-a19bb8dde805?slug=minukki"
       },
       {
         "tags": [
@@ -1886,7 +2017,7 @@
           "assets/img/products/earrings/MIN-E-030/I/IMG_9577.jpg",
           "assets/img/products/earrings/MIN-E-030/I/IMG_9578.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/6b828672-a74c-43b4-8226-3421ebfa24fa?slug=minukki"
       },
       {
         "tags": [
@@ -1903,7 +2034,7 @@
           "assets/img/products/earrings/MIN-E-031/biscuit/IMG_3178.webp",
           "assets/img/products/earrings/MIN-E-031/biscuit/IMG_3180.webp"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/b31a5ac3-203c-42d4-b994-cc76d11c044d?slug=minukki"
       },
       {
         "tags": [
@@ -1921,7 +2052,7 @@
           "assets/img/products/earrings/MIN-E-031/cream/IMG_1790.jpg",
           "assets/img/products/earrings/MIN-E-031/cream/IMG_3316.webp"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/09fa90fc-0240-4269-817d-9e045e3d41e0?slug=minukki"
       },
       {
         "tags": [
@@ -1940,7 +2071,7 @@
           "assets/img/products/earrings/MIN-E-031/grey/IMG_3168.webp",
           "assets/img/products/earrings/MIN-E-031/grey/IMG_3170.webp"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/11b127f4-a3ca-4739-b75c-78bf5da41b71?slug=minukki"
       },
       {
         "tags": [
@@ -1955,7 +2086,7 @@
           "assets/img/products/earrings/MIN-E-031/pearl_white/IMG_1776.JPG",
           "assets/img/products/earrings/MIN-E-031/pearl_white/IMG_3158.webp"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/ddf84035-b0ed-4d78-8e36-40427b564555?slug=minukki"
       },
       {
         "tags": [
@@ -1971,7 +2102,7 @@
           "assets/img/products/earrings/MIN-E-031/rose/IMG_1784.jpg",
           "assets/img/products/earrings/MIN-E-031/rose/IMG_3136.webp"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/fd8932ff-e19b-42b0-aeee-0873ac13e0c2?slug=minukki"
       },
       {
         "tags": [
@@ -1986,7 +2117,7 @@
           "assets/img/products/earrings/MIN-E-031/sandal/IMG_1780.jpg",
           "assets/img/products/earrings/MIN-E-031/sandal/IMG_1781.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/031be2ac-cf2f-4baa-89b6-69deee7a7833?slug=minukki"
       },
       {
         "tags": [
@@ -2002,7 +2133,7 @@
           "assets/img/products/earrings/MIN-E-031/sea_blue/IMG_3123.webp",
           "assets/img/products/earrings/MIN-E-031/sea_blue/IMG_3125.webp"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/29465af6-30d1-4d27-b875-eceb9a49fd67?slug=minukki"
       },
       {
         "tags": [
@@ -2020,7 +2151,7 @@
           "assets/img/products/earrings/MIN-E-032/IMG_3049.webp",
           "assets/img/products/earrings/MIN-E-032/IMG_3057.webp"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/346a6a1d-2fc1-46e3-8efa-d77c42512d4f?slug=minukki"
       },
       {
         "tags": [
@@ -2040,7 +2171,7 @@
           "assets/img/products/earrings/MIN-E-037/IMG_2970.webp",
           "assets/img/products/earrings/MIN-E-037/IMG_2969.webp"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/ff24d40b-5c97-483b-9594-f6ccbd56f26d?slug=minukki"
       },
       {
         "tags": [
@@ -2066,7 +2197,7 @@
           "assets/img/products/earrings/MIN-E-039/IMG_9830.jpg",
           "assets/img/products/earrings/MIN-E-039/IMG_9843.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/d512166d-e4fe-4191-8911-35d0d4728168?slug=minukki"
       },
       {
         "tags": [
@@ -2088,7 +2219,7 @@
           "assets/img/products/earrings/MIN-E-040/IMG_9967.jpg",
           "assets/img/products/earrings/MIN-E-040/IMG_9969.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/d0909e16-394f-429c-ae98-25cc1266f67f?slug=minukki"
       },
       {
         "tags": [
@@ -2096,14 +2227,14 @@
         ],
         "code": "MIN-E-041",
         "title": "Playful Silver",
-        "price": "412",
+        "price": "416",
         "sellingPrice": "249",
         "offprice": "40%",
         "images": [
           "assets/img/products/earrings/MIN-E-041/IMG_5830.jpg",
           "assets/img/products/earrings/MIN-E-041/IMG_5831.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/50731edb-28db-4acf-9b25-e9ef908313b2?slug=minukki"
       },
       {
         "tags": [
@@ -2122,7 +2253,7 @@
           "assets/img/products/earrings/MIN-E-042/IMG_3071.webp",
           "assets/img/products/earrings/MIN-E-042/IMG_3072.webp"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/ca4a4adb-1435-4d24-9d95-b87bc4b4dfe2?slug=minukki"
       },
       {
         "tags": [
@@ -2138,14 +2269,14 @@
           "assets/img/products/earrings/MIN-E-043/IMG_3214.webp",
           "assets/img/products/earrings/MIN-E-043/IMG_3220.webp"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/52bdcbef-c0ee-4fb5-a1b1-48dfe95afe04?slug=minukki"
       },
       {
         "tags": [
           "NEW"
         ],
         "code": "MIN-E-044",
-        "title": "Droplets - Double butterfly",
+        "title": "Droplets - Double Butterfly",
         "price": "382",
         "sellingPrice": "229",
         "offprice": "40%",
@@ -2156,7 +2287,7 @@
           "assets/img/products/earrings/MIN-E-044/IMG_3188.webp",
           "assets/img/products/earrings/MIN-E-044/IMG_3189.webp"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/71210c0c-96ae-48ec-83d7-6fb0c0d045bc?slug=minukki"
       },
       {
         "tags": [
@@ -2172,7 +2303,7 @@
           "assets/img/products/earrings/MIN-E-045/IMG_1815.JPG",
           "assets/img/products/earrings/MIN-E-045/IMG_3197.webp"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/fc179404-d3ce-489c-9944-1f9861bc3232?slug=minukki"
       },
       {
         "tags": [
@@ -2187,7 +2318,7 @@
           "assets/img/products/earrings/MIN-E-046/IMG_1823.JPG",
           "assets/img/products/earrings/MIN-E-046/IMG_1824.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/2893dd2f-f60b-4419-9404-26e46c837691?slug=minukki"
       },
       {
         "tags": [
@@ -2208,7 +2339,7 @@
           "assets/img/products/earrings/MIN-E-047/IMG_9898.jpg",
           "assets/img/products/earrings/MIN-E-047/IMG_9910.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/d04a9169-4515-4d69-880f-a573306b55b7?slug=minukki"
       },
       {
         "tags": [
@@ -2228,7 +2359,7 @@
           "assets/img/products/earrings/MIN-E-048/IMG_0040.jpg",
           "assets/img/products/earrings/MIN-E-048/IMG_0041.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/33bcac47-4d3d-4ca5-97e2-88d16a6f43b4?slug=minukki"
       },
       {
         "tags": [
@@ -2248,7 +2379,7 @@
           "assets/img/products/earrings/MIN-E-049/IMG_0070.jpg",
           "assets/img/products/earrings/MIN-E-049/IMG_0074.jpg"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/7e9372f5-587d-481d-bc02-922921d58478?slug=minukki"
       },
       {
         "tags": [
@@ -2256,9 +2387,9 @@
         ],
         "code": "MIN-E-052",
         "title": "Pearl Drops",
-        "price": "106",
-        "sellingPrice": "49",
-        "offprice": "54%",
+        "price": "90",
+        "sellingPrice": "59",
+        "offprice": "34%",
         "images": [
           "assets/img/products/earrings/MIN-E-052/IMG_0324.JPG",
           "assets/img/products/earrings/MIN-E-052/IMG_0325.JPG",
@@ -2266,7 +2397,7 @@
           "assets/img/products/earrings/MIN-E-052/IMG_0327.JPG",
           "assets/img/products/earrings/MIN-E-052/IMG_0328.JPG"
         ],
-        "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+        "shopnow": "https://minukki.mini.site/products/9b2618fd-1551-48fd-b468-3a2b4fdf3fb5?slug=minukki"
       }
     ];
 
@@ -2351,18 +2482,36 @@
       const searchTerm = searchInput ? searchInput.value.toLowerCase() : "";
       const priceRange = priceRangeInput ? priceRangeInput.value : "";
 
-      const filtered = products.filter((product) => {
-        const matchTitle = product.title.toLowerCase().includes(searchTerm);
+      // let filtered = products.filter((product) => {
+      //   const matchTitle = product.title.toLowerCase().includes(searchTerm);
+      //   let matchPrice = true;
+
+      //   if (priceRange) {
+      //     const [min, max] = priceRange.split("-").map(Number);
+      //     matchPrice =
+      //       product.sellingPrice >= min && product.sellingPrice <= max;
+      //   }
+
+      //   return matchTitle && matchPrice;
+      // });
+      let filtered = products.filter(product => {
+        const matchTitleOrCodeOrTags =
+          product.title.toLowerCase().includes(searchTerm) ||
+          product.code.toLowerCase().includes(searchTerm) ||
+          product.tags.some(tag => tag.toLowerCase().includes(searchTerm)); // ✅ search in tags too
+
         let matchPrice = true;
 
         if (priceRange) {
           const [min, max] = priceRange.split("-").map(Number);
-          matchPrice =
-            product.sellingPrice >= min && product.sellingPrice <= max;
+          matchPrice = product.sellingPrice >= min && product.sellingPrice <= max;
         }
 
-        return matchTitle && matchPrice;
+        return matchTitleOrCodeOrTags && matchPrice;
       });
+
+      // ✅ Apply sorting here
+      filtered = sortProducts(filtered);
 
       renderProducts(filtered);
     }
@@ -2371,12 +2520,45 @@
     const priceRangeInput = document.getElementById("priceRange");
 
     if (searchInput) searchInput.addEventListener("input", filterProducts);
-    if (priceRangeInput)
-      priceRangeInput.addEventListener("change", filterProducts);
+    if (priceRangeInput) priceRangeInput.addEventListener("change", filterProducts);
+
+    function sortProducts(productsToSort) {
+      const sortInput = document.getElementById("sortBy");
+      const sortValue = sortInput ? sortInput.value : "";
+
+      let sortedProducts = [...productsToSort]; // copy so original not mutated
+
+      if (sortValue === "low-high") {
+        sortedProducts.sort((a, b) => Number(a.sellingPrice) - Number(b.sellingPrice));
+      } else if (sortValue === "high-low") {
+        sortedProducts.sort((a, b) => Number(b.sellingPrice) - Number(a.sellingPrice));
+      }
+
+      return sortedProducts;
+    }
+
+    const sortInput = document.getElementById("sortBy");
+    if (sortInput) sortInput.addEventListener("change", filterProducts);
+
+    const clearBtn = document.getElementById("clearFilters");
+
+    if (clearBtn) {
+      clearBtn.addEventListener("click", () => {
+        // Reset inputs
+        if (searchInput) searchInput.value = "";
+        if (priceRangeInput) priceRangeInput.value = "";
+        const sortInput = document.getElementById("sortBy");
+        if (sortInput) sortInput.value = "";
+
+        // Re-render all products
+        renderProducts(products);
+      });
+    }
 
     function openModal(index) {
       const product = currentRenderedProducts[index]; // ✅ Now uses filtered list
       const modalInner = document.getElementById("modalCarouselInner");
+      const indicators = document.getElementById("modalCarouselIndicators");
       // const thumbnailContainer = document.getElementById("modalThumbnails");
       const productDetails = document.getElementById("modalProductDetails");
 
@@ -2398,6 +2580,18 @@
               }">`
             }
     </div>`
+        )
+        .join("");
+
+      indicators.innerHTML = product.images
+        .map(
+          (_, i) => `
+        <button type="button" data-bs-target="#modalCarousel" 
+                data-bs-slide-to="${i}" 
+                class="${i === 0 ? "active" : ""}" 
+                aria-current="${i === 0 ? "true" : "false"}" 
+                aria-label="Slide ${i + 1}">
+        </button>`
         )
         .join("");
 

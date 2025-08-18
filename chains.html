@@ -321,22 +321,30 @@
                     </div>
                 </div>
                 <div class="row mb-4 pb-3">
-                    <div class="col-12 col-lg-2 mb-2 mb-lg-0">
-                        <div class="ray-secondary-heading pt-lg-1">
-                            Search Filter:
-                        </div>
+                    <div class="col-12 col-lg-1 mb-2 mb-lg-0">
+                        <div class="ray-secondary-heading pt-lg-1">Filters:</div>
                     </div>
-                    <div class="col-6 col-lg-5">
+                    <div class="col-6 col-lg-3">
                         <input type="text" id="searchInput" class="form-control"
                             placeholder="Search by product title...">
                     </div>
-                    <div class="col-6 col-lg-5">
+                    <div class="col-6 col-lg-3">
                         <select id="priceRange" class="form-select">
                             <option value="">All Prices</option>
-                            <option value="0-499">Under ₹500</option>
-                            <option value="500-999">₹500 - ₹999</option>
-                            <option value="1000-2000">₹1000 - ₹2000</option>
+                            <option value="0-199">Below ₹200</option>
+                            <option value="200-299">₹200 - ₹299</option>
+                            <!-- <option value="1000-2000">₹1000 - ₹2000</option> -->
                         </select>
+                    </div>
+                    <div class="col-12 col-lg-3 mt-2 mt-lg-0">
+                        <select id="sortBy" class="form-select">
+                            <option value="">Sort Order</option>
+                            <option value="low-high">Price: Low to High</option>
+                            <option value="high-low">Price: High to Low</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-lg-2 mt-2 mt-lg-0">
+                        <button id="clearFilters" class="btn ray-btn-clear btn-sm w-100">Clear Filters</button>
                     </div>
                 </div>
                 <div class="row d-none">
@@ -395,8 +403,10 @@
 
                                 <div class="row g-0">
                                     <!-- Carousel Column -->
-                                    <div class="col-md-8 position-relative">
+                                    <div class="col-md-8 position-relative ray-carousel-indicator">
                                         <div id="modalCarousel" class="carousel slide" data-bs-ride="carousel">
+                                            <!-- 🔹 Indicators go here -->
+                                            <div class="carousel-indicators" id="modalCarouselIndicators"></div>
                                             <div class="carousel-inner" id="modalCarouselInner"></div>
 
                                             <!-- Controls -->
@@ -427,6 +437,81 @@
                 </div>
             </div>
         </section>
+        <footer class="ray-footer-section-bg">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3 ps-0">
+                        <img src="assets/img/logo/minukki_logo_white.png" alt="minukki" width="130" class="img-fluid">
+                        <div class="ray-footer-desc-text ps-2 pt-2">
+                            From our heart to yours. Any delays, missing orders, or questions? Write to us at
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@minukki.com" target="_blank"
+                                rel="noopener noreferrer" class="text-decoration-none">
+                                <b> contact@minukki.com </b>
+                            </a> — our team will lovingly respond within 24 hours or less.
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="row">
+                            <div class="col-12 col-md-6 mx-auto">
+                                <div class="ray-footer-heading mb-3">
+                                    Usefull Links
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href="https://minukki.mini.site/?path=%2F" target="_blank"> Minis Store </a>
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href="about-us.html" target="_blank"> About Us </a>
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href="contact-us.html" target="_blank"> Contact Us </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="row">
+                            <div class="col-12 col-md-10 mx-auto">
+                                <div class="ray-footer-heading mb-3">
+                                    Customer Policies
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href=""> Terms of Service </a>
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href=""> Privacy Policy </a>
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href=""> Shipping & Delivery </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="row">
+                            <div class="col-12 col-md-10 mx-auto">
+                                <div class="ray-footer-heading mb-3">
+                                    Follow Us on
+                                </div>
+                                <span class="d-flex ray-socal-icon-color">
+                                    <a href="https://www.instagram.com/minukkibyray"><i
+                                            class="fa-brands fa-instagram fa-lg me-2 pe-1"></i></a>
+                                    <a
+                                        href="https://www.facebook.com/search/top?q=minukkiby%20ray&__stsd__=eyJwcmltYXJ5Ijp7InR5cGUiOiJUWVBFQUhFQURfUEVPUExFX0VOVElUSUVTIn19"><i
+                                            class="fa-brands fa-facebook-f"></i></a>
+                                    <!-- <a href=""> <img src="assets/img/social_icons/fb.png" class="img-fluid me-1"
+                                                    width="30" alt="facebook"></a> -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-dark-line"></div>
+            <div class="ray-footer-desc-text text-center w-100 py-3">
+                Copyright © 2025 Minukki - All Rights Reserved.
+            </div>
+        </footer>
+
     </main>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
         integrity="sha384-vLzyMw4ACv3XAvs2bk6J1VMIK/HiWBVOB/UN3GnYhTHlNDbSpjAzFkUEK8IfD4qz"
@@ -476,7 +561,7 @@
                     "assets/img/products/chains/MIN-C-007/IMG_2396.jpg",
                     "assets/img/products/chains/MIN-C-007/IMG_2395.jpg"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/d0321542-63ee-4372-b8d9-edeeb2718851?slug=minukki"
             },
             {
                 "tags": [
@@ -495,7 +580,7 @@
                     "assets/img/products/chains/MIN-C-008/IMG_3292.webp",
                     "assets/img/products/chains/MIN-C-008/IMG_3291.webp"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/b8dbaaa6-d044-4200-bdc6-7b6a3ffa7930?slug=minukki"
             },
             {
                 "tags": [
@@ -510,7 +595,7 @@
                     "assets/img/products/chains/MIN-C-009/IMG_3282.webp",
                     "assets/img/products/chains/MIN-C-009/IMG_1894.JPG"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/561edae2-9f1b-47a5-97f2-9dcc1685596c?slug=minukki"
             },
             {
                 "tags": [
@@ -525,7 +610,7 @@
                     "assets/img/products/chains/MIN-C-010/IMG_3281.webp",
                     "assets/img/products/chains/MIN-C-010/IMG_1893.JPG"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/fd3bfaab-7da4-455f-9a95-c1943c71c0e3?slug=minukki"
             },
             {
                 "tags": [
@@ -541,7 +626,7 @@
                     "assets/img/products/chains/MIN-C-011/IMG_3289.webp",
                     "assets/img/products/chains/MIN-C-011/IMG_1862.JPG"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/1bcbcb77-e52a-4442-8fe2-61c8b1818689?slug=minukki"
             },
             {
                 "tags": [
@@ -557,7 +642,7 @@
                     "assets/img/products/chains/MIN-C-012/IMG_1832.JPG",
                     "assets/img/products/chains/MIN-C-012/IMG_1834.JPG"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/0414e48b-cbb6-4b05-8bb9-ca637e47410d?slug=minukki"
             },
             {
                 "tags": [
@@ -574,7 +659,7 @@
                     "assets/img/products/chains/MIN-C-013/IMG_1859.JPG",
                     "assets/img/products/chains/MIN-C-013/IMG_1860.JPG"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/089adbb4-7257-406d-a63e-c370ea89eeed?slug=minukki"
             },
             {
                 "tags": [
@@ -590,7 +675,7 @@
                     "assets/img/products/chains/MIN-C-014/IMG_3296.webp",
                     "assets/img/products/chains/MIN-C-014/IMG_1909.JPG"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/c2b5991f-f262-4325-a337-70924ff6410f?slug=minukki"
             },
             {
                 "tags": [
@@ -609,7 +694,7 @@
                     "assets/img/products/chains/MIN-C-016/IMG_1848.JPG",
                     "assets/img/products/chains/MIN-C-016/IMG_1849.JPG"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/3b8100af-214c-4ae7-a114-8958e6274dbf?slug=minukki"
             },
             {
                 "tags": [
@@ -626,7 +711,7 @@
                     "assets/img/products/chains/MIN-C-017/IMG_1837.JPG",
                     "assets/img/products/chains/MIN-C-017/IMG_1839.JPG"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/8afe705a-11c0-4eec-9a23-8d1ca59d3d8c?slug=minukki"
             },
             {
                 "tags": [
@@ -641,7 +726,7 @@
                     "assets/img/products/chains/MIN-C-018/IMG_3283.webp",
                     "assets/img/products/chains/MIN-C-018/IMG_1841.JPG"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/d9d34fcc-5525-4907-bf28-f783f5125bae?slug=minukki"
             },
             {
                 "tags": [
@@ -656,7 +741,7 @@
                     "assets/img/products/chains/MIN-C-019/IMG_1855.JPG",
                     "assets/img/products/chains/MIN-C-019/IMG_3293.webp"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/b73711f6-91a4-49eb-ac32-353d08e31788?slug=minukki"
             },
             {
                 "tags": [
@@ -671,7 +756,7 @@
                     "assets/img/products/chains/MIN-C-020/IMG_1830.JPG",
                     "assets/img/products/chains/MIN-C-020/IMG_3295.webp"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/d2efa116-a6b6-4976-a26e-a0885a98e00c?slug=minukki"
             },
             {
                 "tags": [
@@ -687,8 +772,27 @@
                     "assets/img/products/chains/MIN-C-021/IMG_1853.JPG",
                     "assets/img/products/chains/MIN-C-021/IMG_3286.webp"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            }
+                "shopnow": "https://minukki.mini.site/products/3122f184-ccc9-4a55-b4f4-c657cdaba76c?slug=minukki"
+            },
+
+            {
+                "tags": [
+                    "BEST SELLER"
+                ],
+                "code": "MIN-C-015",
+                "title": "Silver Love Only",
+                "price": "453",
+                "sellingPrice": "299",
+                "offprice": "34%",
+                "images": [
+                    "assets/img/products/chains/MIN-C-015/IMG_2380.webp",
+                    "assets/img/products/chains/MIN-C-015/IMG_2388.webp",
+                    "assets/img/products/chains/MIN-C-015/IMG_2384.webp",
+                    "assets/img/products/chains/MIN-C-015/IMG_2382.webp",
+                    "assets/img/products/chains/MIN-C-015/IMG_2228.webp",
+                ],
+                "shopnow": "https://minukki.mini.site/products/fe8f4be0-9805-4163-966a-207fa940c7ba?slug=minukki"
+            },
         ];
 
         const container = document.getElementById("product-container");
@@ -758,8 +862,23 @@
             const searchTerm = searchInput ? searchInput.value.toLowerCase() : "";
             const priceRange = priceRangeInput ? priceRangeInput.value : "";
 
-            const filtered = products.filter(product => {
-                const matchTitle = product.title.toLowerCase().includes(searchTerm);
+            // let filtered = products.filter(product => {
+            //     const matchTitle = product.title.toLowerCase().includes(searchTerm);
+            //     let matchPrice = true;
+
+            //     if (priceRange) {
+            //         const [min, max] = priceRange.split("-").map(Number);
+            //         matchPrice = product.sellingPrice >= min && product.sellingPrice <= max;
+            //     }
+
+            //     return matchTitle && matchPrice;
+            // });
+            let filtered = products.filter(product => {
+                const matchTitleOrCodeOrTags =
+                    product.title.toLowerCase().includes(searchTerm) ||
+                    product.code.toLowerCase().includes(searchTerm) ||
+                    product.tags.some(tag => tag.toLowerCase().includes(searchTerm)); // ✅ search in tags too
+
                 let matchPrice = true;
 
                 if (priceRange) {
@@ -767,8 +886,11 @@
                     matchPrice = product.sellingPrice >= min && product.sellingPrice <= max;
                 }
 
-                return matchTitle && matchPrice;
+                return matchTitleOrCodeOrTags && matchPrice;
             });
+
+            // ✅ Apply sorting here
+            filtered = sortProducts(filtered);
 
             renderProducts(filtered);
         }
@@ -779,9 +901,43 @@
         if (searchInput) searchInput.addEventListener("input", filterProducts);
         if (priceRangeInput) priceRangeInput.addEventListener("change", filterProducts);
 
+        function sortProducts(productsToSort) {
+            const sortInput = document.getElementById("sortBy");
+            const sortValue = sortInput ? sortInput.value : "";
+
+            let sortedProducts = [...productsToSort]; // copy so original not mutated
+
+            if (sortValue === "low-high") {
+                sortedProducts.sort((a, b) => Number(a.sellingPrice) - Number(b.sellingPrice));
+            } else if (sortValue === "high-low") {
+                sortedProducts.sort((a, b) => Number(b.sellingPrice) - Number(a.sellingPrice));
+            }
+
+            return sortedProducts;
+        }
+
+        const sortInput = document.getElementById("sortBy");
+        if (sortInput) sortInput.addEventListener("change", filterProducts);
+
+        const clearBtn = document.getElementById("clearFilters");
+
+        if (clearBtn) {
+            clearBtn.addEventListener("click", () => {
+                // Reset inputs
+                if (searchInput) searchInput.value = "";
+                if (priceRangeInput) priceRangeInput.value = "";
+                const sortInput = document.getElementById("sortBy");
+                if (sortInput) sortInput.value = "";
+
+                // Re-render all products
+                renderProducts(products);
+            });
+        }
+
         function openModal(index) {
             const product = currentRenderedProducts[index]; // ✅ Now uses filtered list
             const modalInner = document.getElementById("modalCarouselInner");
+            const indicators = document.getElementById("modalCarouselIndicators");
             // const thumbnailContainer = document.getElementById("modalThumbnails");
             const productDetails = document.getElementById("modalProductDetails");
 
@@ -797,8 +953,20 @@
              <source src="${img}" type="video/webm">
              Your browser does not support the video tag.
            </video>`
-                    : `<img src="assets/img/logominukki_icon_loader.gif" data-src="${img}" class="d-block w-100 modal-img-zoom lazyload" alt="Image ${i + 1}">`}
+                    : `<img src="assets/img/minukki_icon_loader.gif" data-src="${img}" class="d-block w-100 modal-img-zoom lazyload" alt="Image ${i + 1}">`}
     </div>`).join("");
+
+            indicators.innerHTML = product.images
+                .map(
+                    (_, i) => `
+        <button type="button" data-bs-target="#modalCarousel" 
+                data-bs-slide-to="${i}" 
+                class="${i === 0 ? "active" : ""}" 
+                aria-current="${i === 0 ? "true" : "false"}" 
+                aria-label="Slide ${i + 1}">
+        </button>`
+                )
+                .join("");
 
             // thumbnailContainer.innerHTML = product.images.map((img, i) => `
             //     <img src="${img}" class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;"

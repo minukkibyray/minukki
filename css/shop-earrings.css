@@ -177,6 +177,11 @@
   /* Position can be adjusted as needed */
 }
 
+.ray-carousel-indicator .carousel-indicators .active {
+  opacity: 1;
+  background-color: #bb704b !important;
+}
+
 .ray-modal-logo-img {
   height: 80px;
 }
@@ -239,6 +244,11 @@
 
 .social:hover {
   color: #f3d294 !important;
+}
+
+.ray-btn-clear {
+  background-color: #C26518;
+  color: #ffffff;
 }
 
 @media (min-width: 576px) {

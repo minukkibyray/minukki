@@ -321,64 +321,31 @@
                     </div>
                 </div>
                 <div class="row mb-4 pb-3">
-                    <div class="col-12 col-lg-2 mb-2 mb-lg-0">
+                    <div class="col-12 col-lg-1 mb-2 mb-lg-0">
                         <div class="ray-secondary-heading pt-lg-1">
-                            Search Filter:
+                            Filters:
                         </div>
                     </div>
-                    <div class="col-6 col-lg-5">
+                    <div class="col-6 col-lg-3">
                         <input type="text" id="searchInput" class="form-control"
-                            placeholder="Search by product title...">
+                            placeholder="Search by product title, code, trend...">
                     </div>
-                    <div class="col-6 col-lg-5">
+                    <div class="col-6 col-lg-3">
                         <select id="priceRange" class="form-select">
                             <option value="">All Prices</option>
-                            <option value="0-499">Under ₹500</option>
-                            <option value="500-999">₹500 - ₹999</option>
-                            <option value="1000-2000">₹1000 - ₹2000</option>
+                            <option value="0-199">Below ₹200</option>
+                            <option value="200-299">Below ₹300</option>
                         </select>
                     </div>
-                </div>
-                <div class="row d-none">
-                    <div class="col-md-3">
-                        <div class="card ray-product-card position-relative">
-                            <!-- Wishlist Icon -->
-                            <!-- <div class="wishlist-icon">
-                            <i class="bi bi-heart"></i>
-                        </div> -->
-                            <!-- Carousel -->
-                            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="d-block w-100 ray-product-img" alt="Product 1">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://images.unsplash.com/photo-1633934542430-0905ccb5f050?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="d-block w-100 ray-product-img" alt="Product 2">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </button>
-                            </div>
-                            <!-- Product Info -->
-                            <div class="card-body p-2">
-                                <span class="tag">BESTSELLER</span>
-                                <span class="tag1">Preminum Collection</span>
-                                <div class="ray-card-title mt-2">Minukki - Minimal Earring</div>
-                                <div class="ray-card-text mt-1 mb-2"> <span class="fw-bold">Code:</span>
-                                    MIN-E-001
-                                </div>
-                                <span class="mb-0 text-decoration-line-through f-14px">₹499</span> <span
-                                    class="ray-selling-price-text ps-1">₹349</span>
-                            </div>
-                        </div>
+                    <div class="col-12 col-lg-3 mt-2 mt-lg-0">
+                        <select id="sortBy" class="form-select">
+                            <option value="">Sort Order</option>
+                            <option value="low-high">Price: Low to High</option>
+                            <option value="high-low">Price: High to Low</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-lg-2 mt-2 mt-lg-0">
+                        <button id="clearFilters" class="btn ray-btn-clear btn-sm w-100">Clear Filters</button>
                     </div>
                 </div>
                 <div class="row" id="product-container">
@@ -395,8 +362,10 @@
 
                                 <div class="row g-0">
                                     <!-- Carousel Column -->
-                                    <div class="col-md-8 position-relative">
+                                    <div class="col-md-8 position-relative ray-carousel-indicator">
                                         <div id="modalCarousel" class="carousel slide" data-bs-ride="carousel">
+                                            <!-- 🔹 Indicators go here -->
+                                            <div class="carousel-indicators" id="modalCarouselIndicators"></div>
                                             <div class="carousel-inner" id="modalCarouselInner"></div>
 
                                             <!-- Controls -->
@@ -427,6 +396,82 @@
                 </div>
             </div>
         </section>
+
+        <footer class="ray-footer-section-bg">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3 ps-0">
+                        <img src="assets/img/logo/minukki_logo_white.png" alt="minukki" width="130" class="img-fluid">
+                        <div class="ray-footer-desc-text ps-2 pt-2">
+                            From our heart to yours. Any delays, missing orders, or questions? Write to us at
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@minukki.com" target="_blank"
+                                rel="noopener noreferrer" class="text-decoration-none">
+                                <b> contact@minukki.com </b>
+                            </a> — our team will lovingly respond within 24 hours or less.
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="row">
+                            <div class="col-12 col-md-6 mx-auto">
+                                <div class="ray-footer-heading mb-3">
+                                    Usefull Links
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href="https://minukki.mini.site/?path=%2F" target="_blank"> Minis Store </a>
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href="about-us.html" target="_blank"> About Us </a>
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href="contact-us.html" target="_blank"> Contact Us </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="row">
+                            <div class="col-12 col-md-10 mx-auto">
+                                <div class="ray-footer-heading mb-3">
+                                    Customer Policies
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href=""> Terms of Service </a>
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href=""> Privacy Policy </a>
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href=""> Shipping & Delivery </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="row">
+                            <div class="col-12 col-md-10 mx-auto">
+                                <div class="ray-footer-heading mb-3">
+                                    Follow Us on
+                                </div>
+                                <span class="d-flex ray-socal-icon-color">
+                                    <a href="https://www.instagram.com/minukkibyray"><i
+                                            class="fa-brands fa-instagram fa-lg me-2 pe-1"></i></a>
+                                    <a
+                                        href="https://www.facebook.com/search/top?q=minukkiby%20ray&__stsd__=eyJwcmltYXJ5Ijp7InR5cGUiOiJUWVBFQUhFQURfUEVPUExFX0VOVElUSUVTIn19"><i
+                                            class="fa-brands fa-facebook-f"></i></a>
+                                    <!-- <a href=""> <img src="assets/img/social_icons/fb.png" class="img-fluid me-1"
+                                                    width="30" alt="facebook"></a> -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-dark-line"></div>
+            <div class="ray-footer-desc-text text-center w-100 py-3">
+                Copyright © 2025 Minukki - All Rights Reserved.
+            </div>
+        </footer>
+
     </main>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
         integrity="sha384-vLzyMw4ACv3XAvs2bk6J1VMIK/HiWBVOB/UN3GnYhTHlNDbSpjAzFkUEK8IfD4qz"
@@ -454,143 +499,120 @@
 
     <script>
         const products = [
-            {
-                "tags": [
-                    "NEW"
-                ],
-                "code": "MIN-E-SAMPLE",
-                "title": "Luster - Single Layer - Gold",
-                "price": "90",
-                "sellingPrice": "59",
-                "offprice": "34%",
-                "images": [
-                    "assets/img/sample/IMG_1799.JPG",
-                    "assets/img/sample/IMG_1800.JPG",
-                    "assets/img/sample/IMG_1803.JPG",
-                    "assets/img/sample/IMG_1804.JPG",
-                    "assets/img/sample/IMG_1805.JPG",
-                    "assets/img/sample/IMG_1806.JPG",
-                    "assets/img/sample/IMG_1808.JPG",
-                    "assets/img/sample/IMG_1809.JPG",
-                    "assets/img/sample/IMG_1812.JPG",
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-
-            {
-                "tags": [
-                    "NEW"
-                ],
-                "code": "MIN-B-001-A",
-                "title": "Luster - Single Layer - Gold",
-                "price": "90",
-                "sellingPrice": "59",
-                "offprice": "34%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-001/gold/A/IMG_0342.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/A/IMG_0343.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/A/IMG_0344.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/A/IMG_0345.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "NEW"
-                ],
-                "code": "MIN-B-001-B",
-                "title": "Luster - Single Layer - Gold",
-                "price": "90",
-                "sellingPrice": "59",
-                "offprice": "34%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-001/gold/B/IMG_0352.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/B/IMG_0353.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/B/IMG_0354.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/B/IMG_0355.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "NEW"
-                ],
-                "code": "MIN-B-001-C",
-                "title": "Luster - Single Layer - Gold",
-                "price": "90",
-                "sellingPrice": "59",
-                "offprice": "34%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-001/gold/C/IMG_0356.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/C/IMG_0357.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/C/IMG_0362.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/C/IMG_0369.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "NEW"
-                ],
-                "code": "MIN-B-001-D",
-                "title": "Luster - Single Layer - Gold",
-                "price": "90",
-                "sellingPrice": "59",
-                "offprice": "34%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-001/gold/D/IMG_0370.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/D/IMG_0371.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "NEW"
-                ],
-                "code": "MIN-B-001-E",
-                "title": "Luster - Single Layer - Gold",
-                "price": "90",
-                "sellingPrice": "59",
-                "offprice": "34%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-001/gold/E/IMG_0377.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/E/IMG_0378.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/E/IMG_0379.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/gold/E/IMG_0380.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "NEW"
-                ],
-                "code": "MIN-B-001",
-                "title": "Luster - Single Layer - Silver",
-                "price": "90",
-                "sellingPrice": "59",
-                "offprice": "34%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-001/silver/IMG_0385.JPG",
-                    "assets/img/products/bracelets/MIN-B-001/silver/IMG_0386.JPG",
-                    "assets/img/products/bracelets/MIN-B-001/silver/IMG_0387.JPG",
-                    "assets/img/products/bracelets/MIN-B-001/silver/IMG_0388.JPG",
-                    "assets/img/products/bracelets/MIN-B-001/silver/IMG_0389.JPG",
-                    "assets/img/products/bracelets/MIN-B-001/silver/IMG_0390.JPG",
-                    "assets/img/products/bracelets/MIN-B-001/silver/IMG_0391.JPG",
-                    "assets/img/products/bracelets/MIN-B-001/silver/IMG_0392.JPG",
-                    "assets/img/products/bracelets/MIN-B-001/silver/IMG_0393.JPG",
-                    "assets/img/products/bracelets/MIN-B-001/silver/IMG_2370.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/silver/IMG_2376.jpg",
-                    "assets/img/products/bracelets/MIN-B-001/silver/IMG_2371.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
+            // {
+            //     "tags": [
+            //         "NEW"
+            //     ],
+            //     "code": "MIN-B-001-A",
+            //     "title": "Luster - Single Layer - Gold",
+            //     "price": "110",
+            //     "sellingPrice": "69",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-001/gold/A/IMG_0342.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/A/IMG_0343.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/A/IMG_0344.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/A/IMG_0345.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "NEW"
+            //     ],
+            //     "code": "MIN-B-001-B",
+            //     "title": "Luster - Single Layer - Gold",
+            //     "price": "110",
+            //     "sellingPrice": "69",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-001/gold/B/IMG_0352.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/B/IMG_0353.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/B/IMG_0354.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/B/IMG_0355.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "NEW"
+            //     ],
+            //     "code": "MIN-B-001-C",
+            //     "title": "Luster - Single Layer - Gold",
+            //     "price": "110",
+            //     "sellingPrice": "69",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-001/gold/C/IMG_0356.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/C/IMG_0357.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/C/IMG_0362.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/C/IMG_0369.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "NEW"
+            //     ],
+            //     "code": "MIN-B-001-D",
+            //     "title": "Luster - Single Layer - Gold",
+            //     "price": "110",
+            //     "sellingPrice": "69",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-001/gold/D/IMG_0370.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/D/IMG_0371.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "NEW"
+            //     ],
+            //     "code": "MIN-B-001-E",
+            //     "title": "Luster - Single Layer - Gold",
+            //     "price": "110",
+            //     "sellingPrice": "69",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-001/gold/E/IMG_0377.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/E/IMG_0378.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/E/IMG_0379.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/gold/E/IMG_0380.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "NEW"
+            //     ],
+            //     "code": "MIN-B-001",
+            //     "title": "Luster - Single Layer - Silver",
+            //     "price": "110",
+            //     "sellingPrice": "69",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-001/silver/IMG_0385.JPG",
+            //         "assets/img/products/bracelets/MIN-B-001/silver/IMG_0386.JPG",
+            //         "assets/img/products/bracelets/MIN-B-001/silver/IMG_0387.JPG",
+            //         "assets/img/products/bracelets/MIN-B-001/silver/IMG_0388.JPG",
+            //         "assets/img/products/bracelets/MIN-B-001/silver/IMG_0389.JPG",
+            //         "assets/img/products/bracelets/MIN-B-001/silver/IMG_0390.JPG",
+            //         "assets/img/products/bracelets/MIN-B-001/silver/IMG_0391.JPG",
+            //         "assets/img/products/bracelets/MIN-B-001/silver/IMG_0392.JPG",
+            //         "assets/img/products/bracelets/MIN-B-001/silver/IMG_0393.JPG",
+            //         "assets/img/products/bracelets/MIN-B-001/silver/IMG_2370.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/silver/IMG_2376.jpg",
+            //         "assets/img/products/bracelets/MIN-B-001/silver/IMG_2371.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
             {
                 "tags": [
                     "LIMITED"
                 ],
                 "code": "MIN-B-002-A",
-                "title": "Luster - Double Layer",
+                "title": "Evil Eye - Double Layer",
                 "price": "387",
                 "sellingPrice": "249",
                 "offprice": "36%",
@@ -598,29 +620,28 @@
                     "assets/img/products/bracelets/MIN-B-002/A/IMG_3276.webp",
                     "assets/img/products/bracelets/MIN-B-002/A/IMG_1901.JPG"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/b190f532-bdc6-48db-96ea-c9b1f93a28e7?slug=minukki"
             },
             {
                 "tags": [
                     "LIMITED"
                 ],
                 "code": "MIN-B-002-B",
-                "title": "Luster - Double Layer",
+                "title": "Hallow Fly - Double Layer",
                 "price": "387",
                 "sellingPrice": "249",
                 "offprice": "36%",
                 "images": [
-                    "assets/img/products/bracelets/MIN-B-002/B/IMG_3278.webp",
                     "assets/img/products/bracelets/MIN-B-002/B/IMG_1904.JPG"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/969453f2-702b-481c-ac52-1a566f876920?slug=minukki"
             },
             {
                 "tags": [
                     "LIMITED"
                 ],
                 "code": "MIN-B-002-C",
-                "title": "Luster - Double Layer",
+                "title": "Bling Stars - Double Layer",
                 "price": "387",
                 "sellingPrice": "249",
                 "offprice": "36%",
@@ -628,7 +649,7 @@
                     "assets/img/products/bracelets/MIN-B-002/C/IMG_1905.jpg",
                     "assets/img/products/bracelets/MIN-B-002/C/IMG_1906.jpg"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/78520371-810e-4049-94cc-eecbc45208af?slug=minukki"
             },
             {
                 "tags": [
@@ -645,14 +666,14 @@
                     "assets/img/products/bracelets/MIN-B-004/A/IMG_0977.jpg",
                     "assets/img/products/bracelets/MIN-B-004/A/IMG_0978.jpg"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/52a80064-c988-49a8-9200-247d77e4da93?slug=minukki"
             },
             {
                 "tags": [
                     "NEW"
                 ],
                 "code": "MIN-B-004-B",
-                "title": "Glimmer - Gold",
+                "title": "Glam Eye - Gold",
                 "price": "459",
                 "sellingPrice": "299",
                 "offprice": "35%",
@@ -662,14 +683,14 @@
                     "assets/img/products/bracelets/MIN-B-004/B/IMG_0981.jpg",
                     "assets/img/products/bracelets/MIN-B-004/B/IMG_0982.jpg"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/3eabf577-1edd-4dbe-a36c-e8c26918261e?slug=minukki"
             },
             {
                 "tags": [
                     "NEW"
                 ],
                 "code": "MIN-B-004-C",
-                "title": "Glimmer - Gold",
+                "title": "Railing - Gold",
                 "price": "459",
                 "sellingPrice": "299",
                 "offprice": "35%",
@@ -678,266 +699,266 @@
                     "assets/img/products/bracelets/MIN-B-004/C/IMG_3275.webp",
                     "assets/img/products/bracelets/MIN-B-004/C/IMG_0987.jpg"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/fb4207eb-8fbb-4057-a490-890a28095054?slug=minukki"
             },
-            {
-                "tags": [
-                    "EXCLUSIVE"
-                ],
-                "code": "MIN-B-005-A",
-                "title": "Rose Golden - (XS)",
-                "price": "154",
-                "sellingPrice": "99",
-                "offprice": "36%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-005/A/IMG_8613.jpg",
-                    "assets/img/products/bracelets/MIN-B-005/A/IMG_8614.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "EXCLUSIVE"
-                ],
-                "code": "MIN-B-005-B",
-                "title": "Rose Golden - (XS)",
-                "price": "154",
-                "sellingPrice": "99",
-                "offprice": "36%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-005/B/IMG_8618.JPG"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "EXCLUSIVE"
-                ],
-                "code": "MIN-B-005-C",
-                "title": "Rose Golden - (XS)",
-                "price": "154",
-                "sellingPrice": "99",
-                "offprice": "36%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-005/C/IMG_8625.JPG"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "EXCLUSIVE"
-                ],
-                "code": "MIN-B-005-D",
-                "title": "Rose Golden - (XS)",
-                "price": "154",
-                "sellingPrice": "99",
-                "offprice": "36%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-005/D/IMG_8631.jpg",
-                    "assets/img/products/bracelets/MIN-B-005/D/IMG_8632.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
+            // {
+            //     "tags": [
+            //         "EXCLUSIVE"
+            //     ],
+            //     "code": "MIN-B-005-A",
+            //     "title": "Rose Golden - (XS)",
+            //     "price": "154",
+            //     "sellingPrice": "99",
+            //     "offprice": "36%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-005/A/IMG_8613.jpg",
+            //         "assets/img/products/bracelets/MIN-B-005/A/IMG_8614.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "EXCLUSIVE"
+            //     ],
+            //     "code": "MIN-B-005-B",
+            //     "title": "Rose Golden - (XS)",
+            //     "price": "154",
+            //     "sellingPrice": "99",
+            //     "offprice": "36%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-005/B/IMG_8618.JPG"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "EXCLUSIVE"
+            //     ],
+            //     "code": "MIN-B-005-C",
+            //     "title": "Rose Golden - (XS)",
+            //     "price": "154",
+            //     "sellingPrice": "99",
+            //     "offprice": "36%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-005/C/IMG_8625.JPG"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "EXCLUSIVE"
+            //     ],
+            //     "code": "MIN-B-005-D",
+            //     "title": "Rose Golden - (XS)",
+            //     "price": "154",
+            //     "sellingPrice": "99",
+            //     "offprice": "36%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-005/D/IMG_8631.jpg",
+            //         "assets/img/products/bracelets/MIN-B-005/D/IMG_8632.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
 
-            {
-                "tags": [
-                    "BEST SELLER"
-                ],
-                "code": "MIN-B-006",
-                "title": "Silver (XS)",
-                "price": "161",
-                "sellingPrice": "99",
-                "offprice": "39%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-006/IMG_8818.jpg",
-                    "assets/img/products/bracelets/MIN-B-006/IMG_8819.jpg",
-                    "assets/img/products/bracelets/MIN-B-006/IMG_8820.jpg",
-                    "assets/img/products/bracelets/MIN-B-006/IMG_8821.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
+            // {
+            //     "tags": [
+            //         "BEST SELLER"
+            //     ],
+            //     "code": "MIN-B-006",
+            //     "title": "Silver (XS)",
+            //     "price": "161",
+            //     "sellingPrice": "99",
+            //     "offprice": "39%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-006/IMG_8818.jpg",
+            //         "assets/img/products/bracelets/MIN-B-006/IMG_8819.jpg",
+            //         "assets/img/products/bracelets/MIN-B-006/IMG_8820.jpg",
+            //         "assets/img/products/bracelets/MIN-B-006/IMG_8821.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
 
-            {
-                "tags": [
-                    "TRENDING"
-                ],
-                "code": "MIN-B-010-A",
-                "title": "Lunch Date",
-                "price": "193",
-                "sellingPrice": "119",
-                "offprice": "38%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-010/A/IMG_8668.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/A/IMG_8669.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/A/IMG_8672.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/A/IMG_8673.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/A/IMG_8676.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "TRENDING"
-                ],
-                "code": "MIN-B-010-B",
-                "title": "Lunch Date",
-                "price": "193",
-                "sellingPrice": "119",
-                "offprice": "38%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-010/B/IMG_8677.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/B/IMG_8678.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/B/IMG_8679.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/B/IMG_8680.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "TRENDING"
-                ],
-                "code": "MIN-B-010-C",
-                "title": "Lunch Date",
-                "price": "193",
-                "sellingPrice": "119",
-                "offprice": "38%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-010/C/IMG_8688.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/C/IMG_8689.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/C/IMG_8692.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/C/IMG_8694.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "TRENDING"
-                ],
-                "code": "MIN-B-010-D",
-                "title": "Lunch Date",
-                "price": "193",
-                "sellingPrice": "119",
-                "offprice": "38%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-010/D/IMG_8695.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/D/IMG_8697.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "TRENDING"
-                ],
-                "code": "MIN-B-010-E",
-                "title": "Lunch Date",
-                "price": "193",
-                "sellingPrice": "119",
-                "offprice": "38%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-010/E/IMG_8703.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/E/IMG_8704.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/E/IMG_8705.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "TRENDING"
-                ],
-                "code": "MIN-B-010-F",
-                "title": "Lunch Date",
-                "price": "193",
-                "sellingPrice": "119",
-                "offprice": "38%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-010/F/IMG_8724.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/F/IMG_8725.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/F/IMG_8726.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/F/IMG_8727.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "TRENDING"
-                ],
-                "code": "MIN-B-010-G",
-                "title": "Lunch Date",
-                "price": "193",
-                "sellingPrice": "119",
-                "offprice": "38%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-010/G/IMG_8728.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/G/IMG_8729.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/G/IMG_8730.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "TRENDING"
-                ],
-                "code": "MIN-B-010-H",
-                "title": "Lunch Date",
-                "price": "193",
-                "sellingPrice": "119",
-                "offprice": "38%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-010/H/IMG_8732.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/H/IMG_8733.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/H/IMG_8743.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/H/IMG_8744.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "TRENDING"
-                ],
-                "code": "MIN-B-010-I",
-                "title": "Lunch Date",
-                "price": "193",
-                "sellingPrice": "119",
-                "offprice": "38%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-010/I/IMG_8752.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/I/IMG_8754.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/I/IMG_8755.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "TRENDING"
-                ],
-                "code": "MIN-B-010-J",
-                "title": "Lunch Date",
-                "price": "193",
-                "sellingPrice": "119",
-                "offprice": "38%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-010/J/IMG_8756.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/J/IMG_8757.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/J/IMG_8758.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
-            {
-                "tags": [
-                    "TRENDING"
-                ],
-                "code": "MIN-B-010-K",
-                "title": "Lunch Date",
-                "price": "193",
-                "sellingPrice": "119",
-                "offprice": "38%",
-                "images": [
-                    "assets/img/products/bracelets/MIN-B-010/K/IMG_8766.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/K/IMG_8767.jpg",
-                    "assets/img/products/bracelets/MIN-B-010/K/IMG_8768.jpg"
-                ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
-            },
+            // {
+            //     "tags": [
+            //         "TRENDING"
+            //     ],
+            //     "code": "MIN-B-010-A",
+            //     "title": "Lunch Date",
+            //     "price": "193",
+            //     "sellingPrice": "119",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-010/A/IMG_8668.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/A/IMG_8669.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/A/IMG_8672.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/A/IMG_8673.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/A/IMG_8676.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "TRENDING"
+            //     ],
+            //     "code": "MIN-B-010-B",
+            //     "title": "Lunch Date",
+            //     "price": "193",
+            //     "sellingPrice": "119",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-010/B/IMG_8677.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/B/IMG_8678.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/B/IMG_8679.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/B/IMG_8680.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "TRENDING"
+            //     ],
+            //     "code": "MIN-B-010-C",
+            //     "title": "Lunch Date",
+            //     "price": "193",
+            //     "sellingPrice": "119",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-010/C/IMG_8688.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/C/IMG_8689.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/C/IMG_8692.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/C/IMG_8694.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "TRENDING"
+            //     ],
+            //     "code": "MIN-B-010-D",
+            //     "title": "Lunch Date",
+            //     "price": "193",
+            //     "sellingPrice": "119",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-010/D/IMG_8695.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/D/IMG_8697.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "TRENDING"
+            //     ],
+            //     "code": "MIN-B-010-E",
+            //     "title": "Lunch Date",
+            //     "price": "193",
+            //     "sellingPrice": "119",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-010/E/IMG_8703.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/E/IMG_8704.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/E/IMG_8705.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "TRENDING"
+            //     ],
+            //     "code": "MIN-B-010-F",
+            //     "title": "Lunch Date",
+            //     "price": "193",
+            //     "sellingPrice": "119",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-010/F/IMG_8724.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/F/IMG_8725.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/F/IMG_8726.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/F/IMG_8727.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "TRENDING"
+            //     ],
+            //     "code": "MIN-B-010-G",
+            //     "title": "Lunch Date",
+            //     "price": "193",
+            //     "sellingPrice": "119",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-010/G/IMG_8728.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/G/IMG_8729.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/G/IMG_8730.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "TRENDING"
+            //     ],
+            //     "code": "MIN-B-010-H",
+            //     "title": "Lunch Date",
+            //     "price": "193",
+            //     "sellingPrice": "119",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-010/H/IMG_8732.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/H/IMG_8733.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/H/IMG_8743.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/H/IMG_8744.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "TRENDING"
+            //     ],
+            //     "code": "MIN-B-010-I",
+            //     "title": "Lunch Date",
+            //     "price": "193",
+            //     "sellingPrice": "119",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-010/I/IMG_8752.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/I/IMG_8754.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/I/IMG_8755.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "TRENDING"
+            //     ],
+            //     "code": "MIN-B-010-J",
+            //     "title": "Lunch Date",
+            //     "price": "193",
+            //     "sellingPrice": "119",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-010/J/IMG_8756.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/J/IMG_8757.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/J/IMG_8758.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
+            // {
+            //     "tags": [
+            //         "TRENDING"
+            //     ],
+            //     "code": "MIN-B-010-K",
+            //     "title": "Lunch Date",
+            //     "price": "193",
+            //     "sellingPrice": "119",
+            //     "offprice": "38%",
+            //     "images": [
+            //         "assets/img/products/bracelets/MIN-B-010/K/IMG_8766.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/K/IMG_8767.jpg",
+            //         "assets/img/products/bracelets/MIN-B-010/K/IMG_8768.jpg"
+            //     ],
+            //     "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+            // },
 
             {
                 "tags": [
@@ -949,11 +970,12 @@
                 "sellingPrice": "149",
                 "offprice": "37%",
                 "images": [
+                    "assets/img/products/bracelets/MIN-B-002/B/IMG_3278.webp",
                     "assets/img/products/bracelets/MIN-B-011/IMG_1897.jpg",
                     "assets/img/products/bracelets/MIN-B-011/IMG_1898.jpg",
                     "assets/img/products/bracelets/MIN-B-011/IMG_1900.jpg"
                 ],
-                "shopnow": "https://kaku-candles.mini.site/products/ad3cc849-9217-4f1b-8af1-96e7f7bcdd6c?slug=kaku-candles"
+                "shopnow": "https://minukki.mini.site/products/00052e94-a664-48b3-bd26-9c20e0ab311f?slug=minukki"
             }
         ];
 
@@ -1024,8 +1046,23 @@
             const searchTerm = searchInput ? searchInput.value.toLowerCase() : "";
             const priceRange = priceRangeInput ? priceRangeInput.value : "";
 
-            const filtered = products.filter(product => {
-                const matchTitle = product.title.toLowerCase().includes(searchTerm);
+            // let filtered = products.filter(product => {
+            //     const matchTitle = product.title.toLowerCase().includes(searchTerm);
+            //     let matchPrice = true;
+
+            //     if (priceRange) {
+            //         const [min, max] = priceRange.split("-").map(Number);
+            //         matchPrice = product.sellingPrice >= min && product.sellingPrice <= max;
+            //     }
+
+            //     return matchTitle && matchPrice;
+            // });
+            let filtered = products.filter(product => {
+                const matchTitleOrCodeOrTags =
+                    product.title.toLowerCase().includes(searchTerm) ||
+                    product.code.toLowerCase().includes(searchTerm) ||
+                    product.tags.some(tag => tag.toLowerCase().includes(searchTerm)); // ✅ search in tags too
+
                 let matchPrice = true;
 
                 if (priceRange) {
@@ -1033,8 +1070,11 @@
                     matchPrice = product.sellingPrice >= min && product.sellingPrice <= max;
                 }
 
-                return matchTitle && matchPrice;
+                return matchTitleOrCodeOrTags && matchPrice;
             });
+
+            // ✅ Apply sorting here
+            filtered = sortProducts(filtered);
 
             renderProducts(filtered);
         }
@@ -1045,9 +1085,43 @@
         if (searchInput) searchInput.addEventListener("input", filterProducts);
         if (priceRangeInput) priceRangeInput.addEventListener("change", filterProducts);
 
+        function sortProducts(productsToSort) {
+            const sortInput = document.getElementById("sortBy");
+            const sortValue = sortInput ? sortInput.value : "";
+
+            let sortedProducts = [...productsToSort]; // copy so original not mutated
+
+            if (sortValue === "low-high") {
+                sortedProducts.sort((a, b) => Number(a.sellingPrice) - Number(b.sellingPrice));
+            } else if (sortValue === "high-low") {
+                sortedProducts.sort((a, b) => Number(b.sellingPrice) - Number(a.sellingPrice));
+            }
+
+            return sortedProducts;
+        }
+
+        const sortInput = document.getElementById("sortBy");
+        if (sortInput) sortInput.addEventListener("change", filterProducts);
+
+        const clearBtn = document.getElementById("clearFilters");
+
+        if (clearBtn) {
+            clearBtn.addEventListener("click", () => {
+                // Reset inputs
+                if (searchInput) searchInput.value = "";
+                if (priceRangeInput) priceRangeInput.value = "";
+                const sortInput = document.getElementById("sortBy");
+                if (sortInput) sortInput.value = "";
+
+                // Re-render all products
+                renderProducts(products);
+            });
+        }
+
         function openModal(index) {
             const product = currentRenderedProducts[index]; // ✅ Now uses filtered list
             const modalInner = document.getElementById("modalCarouselInner");
+            const indicators = document.getElementById("modalCarouselIndicators");
             // const thumbnailContainer = document.getElementById("modalThumbnails");
             const productDetails = document.getElementById("modalProductDetails");
 
@@ -1063,8 +1137,20 @@
              <source src="${img}" type="video/webm">
              Your browser does not support the video tag.
            </video>`
-                    : `<img src="assets/img/logo/minukki_icon_loader.gif" data-src="${img}" class="d-block w-100 modal-img-zoom lazyload" alt="Image ${i + 1}">`}
+                    : `<img src="assets/img/minukki_icon_loader.gif" data-src="${img}" class="d-block w-100 modal-img-zoom lazyload" alt="Image ${i + 1}">`}
     </div>`).join("");
+
+            indicators.innerHTML = product.images
+                .map(
+                    (_, i) => `
+        <button type="button" data-bs-target="#modalCarousel" 
+                data-bs-slide-to="${i}" 
+                class="${i === 0 ? "active" : ""}" 
+                aria-current="${i === 0 ? "true" : "false"}" 
+                aria-label="Slide ${i + 1}">
+        </button>`
+                )
+                .join("");
 
             // thumbnailContainer.innerHTML = product.images.map((img, i) => `
             //     <img src="${img}" class="img-thumbnail border-0" style="width: 60px; height: 60px; cursor: pointer; object-fit: cover;"
