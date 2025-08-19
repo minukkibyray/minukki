@@ -274,10 +274,13 @@ a:hover {
     color: #f7eae0;
 }
 
+.font-weight-500 {
+    font-weight: 500;
+}
 
 @media (min-width: 300px) {
     .ray-banner-carousal-img {
-        height: 250px;
+        height: 230px;
         object-fit: cover;
     }
 

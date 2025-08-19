@@ -22,13 +22,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/contact-us.css">
     <link rel="stylesheet" href="css/shop-earrings.css">
-    <style>
+    <!-- <style>
         .glass-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -38,7 +42,7 @@
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             color: #fff;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -315,26 +319,107 @@
         </nav>
     </header>
 
-    <main
-        style="background-image: url('/assets/img/contact-us-bg.jpg'); background-repeat: no-repeat; background-size: cover; height: 100vh;  display: flex; justify-content:center; align-items:center">
+    <!-- <main style="background-image: url('/assets/img/contact-us-bg.jpg'); background-repeat: no-repeat; background-size: cover; height: 100vh;  display: flex; justify-content:center; align-items:center"> -->
+    <main>
         <section>
-            <div class="container py-5 d-none">
+            <div class="container py-5">
                 <div class="row">
                     <div class="col-11 col-md-10 col-lg-8 mx-auto">
                         <div class="py-2">
-                            <div class="ray-main-heading"> Contact Us </div>
-
-                            <div class="ray-desc-text pb-4">
-                                At Minukki, our mission is simple — to make elegance accessible to everyone.
-                                We believe that being classy should be effortless, and you shouldn’t have to choose
-                                between style, quality, and
-                                affordability.
+                            <div class="ray-main-heading mb-3"> Contact Us </div>
+                            <div class="ray-sub-heading pb-2">Customer Support Email</div>
+                            <div class="ray-desc-text pb-1">
+                                In case you are not able to reach us on our customer care number, pls write to us at
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@minukki.com"
+                                    target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                    <span class="font-weight-500">contact@minukki.com</span>
+                                </a>
+                            </div>
+                            <div class="ray-desc-text">
+                                Our team will get back to you within 24 working hours or less.
+                            </div>
+                            <div class="ray-sub-heading pb-2 mt-4">Customer Feedback & Review</div>
+                            <div class="ray-desc-text">
+                                Liked our products? Do share a review over DM on Instagram <a
+                                    href="https://www.instagram.com/minukkibyray"> <span
+                                        class="font-weight-500">@minukkibyray</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="row my-4 pt-3">
+                    <div class="col-11 col-md-10 col-lg-8 mx-auto">
+                        <form id="contactForm" action="https://formsubmit.co/contact@minukki.com" method="POST">
+                            <!-- Disable captcha -->
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <input type="hidden" name="_subject" value="false">
+
+                            <div class="row g-4">
+                                <!-- Name (required) -->
+                                <div class="col-md-6">
+                                    <div class="underline-field">
+                                        <span class="icon bi bi-person"></span>
+                                        <input type="text" id="name" name="Name" class="form-control"
+                                            placeholder="Name *" required>
+                                    </div>
+                                </div>
+
+                                <!-- Email (required) -->
+                                <div class="col-md-6 pt-4 pt-md-0">
+                                    <div class="underline-field">
+                                        <span class="icon bi bi-envelope"></span>
+                                        <input type="email" id="email" name="Email" class="form-control"
+                                            placeholder="Email *" required>
+                                    </div>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="col-12 pt-4">
+                                    <div class="underline-field">
+                                        <span class="icon bi bi-telephone"></span>
+                                        <input type="tel" id="phone" name="Phone" class="form-control"
+                                            placeholder="Phone Number">
+                                    </div>
+                                </div>
+
+                                <!-- Message -->
+                                <div class="col-12 ray-textarea pt-3">
+                                    <div class="underline-field">
+                                        <span class="icon bi bi-chat-dots"></span>
+                                        <textarea id="message" name="Message" class="form-control"
+                                            placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="col-12 text-end">
+                                    <button type="submit" class="btn ray-btn-clear px-4">Send</button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <!-- Toast -->
+                        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1055">
+                            <div id="formToast" class="toast align-items-center text-bg-success border-0" role="alert"
+                                aria-live="assertive" aria-atomic="true">
+                                <div class="d-flex">
+                                    <div class="toast-body" id="toastMessage">
+                                        ✅ Message sent successfully!
+                                    </div>
+                                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                                        data-bs-dismiss="toast" aria-label="Close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="card glass-card p-3" style="max-width: 550px;">
+
+            <!-- Glass Card -->
+            <div class="card glass-card p-3 d-none" style="max-width: 550px;">
                 <div class="ray-main-heading">Contact Us</div>
                 <div class="ray-sub-heading py-2">Customer Support Email</div>
                 <div class="ray-desc-text pb-1">
@@ -348,88 +433,91 @@
                 <div class="ray-desc-text">
                     Liked our products? Do share a review over Dm on Instagram @minukkibyray
                 </div>
-                <!-- <button class="btn btn-light">Read More</button> -->
             </div>
+
         </section>
-    </main>
-    <footer class="ray-footer-section-bg">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-3 ps-0">
-                    <img src="assets/img/logo/minukki_logo_white.png" alt="minukki" width="130" class="img-fluid">
-                    <div class="ray-footer-desc-text ps-2 pt-2">
-                        From our heart to yours. Any delays, missing orders, or questions? Write to us at
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@minukki.com" target="_blank"
-                            rel="noopener noreferrer" class="text-decoration-none">
-                            <b> contact@minukki.com </b>
-                        </a> — our team will lovingly respond within 24 hours or less.
+
+        <footer class="ray-footer-section-bg">
+            <div class="container py-4 py-md-5">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3 ps-md-0 mb-4 mb-lg-0">
+                        <img src="assets/img/logo/minukki_logo_white.png" alt="minukki" width="130" class="img-fluid">
+                        <div class="ray-footer-desc-text ps-2 pt-2">
+                            From our heart to yours. Any delays, missing orders, or questions? Write to us at
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@minukki.com" target="_blank"
+                                rel="noopener noreferrer" class="text-decoration-none">
+                                <b> contact@minukki.com </b>
+                            </a> — our team will lovingly respond within 24 hours or less.
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="row">
-                        <div class="col-12 col-md-6 mx-auto">
-                            <div class="ray-footer-heading mb-3">
-                                Usefull Links
-                            </div>
-                            <div class="ray-footer-desc-text mb-3">
-                                <a href="https://minukki.mini.site/?path=%2F" target="_blank"> Minis Store </a>
-                            </div>
-                            <div class="ray-footer-desc-text mb-3">
-                                <a href="about-us.html" target="_blank"> About Us </a>
-                            </div>
-                            <div class="ray-footer-desc-text mb-3">
-                                <a href="contact-us.html" target="_blank"> Contact Us </a>
+                    <div class="col-6 col-lg-3 mb-3 mb-md-4 mb-lg-0 px-4">
+                        <div class="row">
+                            <div class="col-12 col-md-6 mx-auto">
+                                <div class="ray-footer-heading mb-3">
+                                    Useful Links
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href="https://minukki.mini.site/?path=%2F" target="_blank"> Minis Store </a>
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href="about-us.html" target="_blank"> About Us </a>
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href="contact-us.html" target="_blank"> Contact Us </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <div class="ray-footer-heading mb-3">
-                                Customer Policies
-                            </div>
-                            <div class="ray-footer-desc-text mb-3">
-                                <a href=""> Terms of Service </a>
-                            </div>
-                            <div class="ray-footer-desc-text mb-3">
-                                <a href=""> Privacy Policy </a>
-                            </div>
-                            <div class="ray-footer-desc-text mb-3">
-                                <a href=""> Shipping & Delivery </a>
+                    <div class="col-6 col-lg-3 px-4 px-md-2">
+                        <div class="row">
+                            <div class="col-12 col-lg-10 mx-auto">
+                                <div class="ray-footer-heading mb-3">
+                                    Customer Policies
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href=""> Terms of Service </a>
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href="privacy-policy.html"> Privacy Policy </a>
+                                </div>
+                                <div class="ray-footer-desc-text mb-3">
+                                    <a href=""> Shipping & Delivery </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto">
-                            <div class="ray-footer-heading mb-3">
-                                Follow Us on
+                    <div class="col-12 col-md-6 col-lg-3 px-4">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-10 mx-auto">
+                                <div class="ray-footer-heading mb-3">
+                                    Follow us on
+                                </div>
+                                <span class="d-flex ray-socal-icon-color">
+                                    <a href="https://www.instagram.com/minukkibyray"><i
+                                            class="fa-brands fa-instagram fa-lg me-2 pe-1"></i></a>
+                                    <a
+                                        href="https://www.facebook.com/search/top?q=minukkiby%20ray&__stsd__=eyJwcmltYXJ5Ijp7InR5cGUiOiJUWVBFQUhFQURfUEVPUExFX0VOVElUSUVTIn19"><i
+                                            class="fa-brands fa-facebook-f"></i></a>
+                                </span>
                             </div>
-                            <span class="d-flex ray-socal-icon-color">
-                                <a href="https://www.instagram.com/minukkibyray"><i
-                                        class="fa-brands fa-instagram fa-lg me-2 pe-1"></i></a>
-                                <a
-                                    href="https://www.facebook.com/search/top?q=minukkiby%20ray&__stsd__=eyJwcmltYXJ5Ijp7InR5cGUiOiJUWVBFQUhFQURfUEVPUExFX0VOVElUSUVTIn19"><i
-                                        class="fa-brands fa-facebook-f"></i></a>
-                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="center-dark-line"></div>
-        <div class="ray-footer-desc-text text-center w-100 py-3">
-            Copyright © 2025 Minukki - All Rights Reserved.
-        </div>
-    </footer>
+            <div class="center-dark-line"></div>
+            <div class="ray-footer-desc-text text-center w-100 py-3">
+                Copyright © 2025 Minukki - All Rights Reserved.
+            </div>
+        </footer>
+
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
         integrity="sha384-vLzyMw4ACv3XAvs2bk6J1VMIK/HiWBVOB/UN3GnYhTHlNDbSpjAzFkUEK8IfD4qz"
         crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/custom.js"></script>
     <!-- MDB --><!-- MDB -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"></script>
 
@@ -457,6 +545,38 @@
                     toggleIcon.classList.remove('fa-bars');
                     toggleIcon.classList.add('fa-times');
                 }
+            });
+        });
+
+        const form = document.getElementById("contactForm");
+        const toastEl = document.getElementById("formToast");
+        const toastMessage = document.getElementById("toastMessage");
+        const toast = new bootstrap.Toast(toastEl);
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            fetch(this.action, {
+                method: "POST",
+                body: new FormData(this),
+            }).then(response => {
+                if (response.ok) {
+                    toastMessage.textContent = "✅ Message sent successfully!";
+                    toastEl.classList.remove("text-bg-danger");
+                    toastEl.classList.add("text-bg-success");
+                    toast.show();
+                    this.reset();
+                } else {
+                    toastMessage.textContent = "❌ Something went wrong. Please try again.";
+                    toastEl.classList.remove("text-bg-success");
+                    toastEl.classList.add("text-bg-danger");
+                    toast.show();
+                }
+            }).catch(() => {
+                toastMessage.textContent = "❌ Network error. Please try again.";
+                toastEl.classList.remove("text-bg-success");
+                toastEl.classList.add("text-bg-danger");
+                toast.show();
             });
         });
 

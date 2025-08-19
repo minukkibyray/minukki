@@ -1,11 +1,11 @@
 .ray-main-heading {
-    font-size: 30px !important;
+    font-size: 32px !important;
     font-weight: bolder;
     font-family: "Quicksand", sans-serif !important;
 }
 
 .ray-sub-heading {
-    color: #F7D899;
+    color: #DFA149;
     font-size: 16px !important;
     font-weight: 600;
     font-family: "Quicksand", sans-serif !important;
@@ -14,8 +14,86 @@
 }
 
 .ray-desc-text {
-    font-size: 13px !important;
+    font-size: 15px !important;
     font-weight: 400 !important;
     font-family: "Montserrat", sans-serif !important;
-    color: #eeeeee;
+    color: #4a4a4a;
+}
+
+.ray-desc-text a:hover {
+    color: #783413 !important;
+}
+
+
+.underline-field {
+    position: relative;
+}
+
+.underline-field .icon {
+    position: absolute;
+    left: 0.25rem;
+    top: 0px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    opacity: .65;
+    font-size: 1.1rem;
+    width: 1.75rem;
+    /* reserved icon width */
+    justify-content: start !important;
+    color: #783413 !important;
+}
+
+.ray-textarea .underline-field .icon {
+    position: absolute;
+    left: 0.25rem;
+    top: 15px !important;
+    bottom: 0;
+    display: flex;
+    align-items: start !important;
+    pointer-events: none;
+    opacity: .65;
+    font-size: 1.1rem;
+    width: 1.75rem;
+    /* reserved icon width */
+    justify-content: start !important;
+    color: #783413 !important;
+}
+
+/* Force padding so placeholder never overlaps the icon */
+.underline-field>.form-control,
+.underline-field>textarea.form-control {
+    padding-left: 2rem !important;
+    /* make room for icon */
+    border: 0 !important;
+    border-bottom: 1px solid #b4b5b5 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    /* height: 44px; */
+    /* comfortable touch target */
+}
+
+/* Textarea tweaks */
+.underline-field>textarea.form-control {
+    min-height: 100px;
+    height: auto;
+    padding-top: .75rem !important;
+}
+
+/* Focus/hover states */
+.underline-field>.form-control:focus,
+.underline-field>textarea.form-control:focus {
+    border-bottom: 1.5px solid #783413 !important;
+    outline: 0;
+}
+
+.underline-field>.form-control:hover,
+.underline-field>textarea.form-control:hover {
+    border-bottom-color: #adb5bd !important;
+}
+
+.ray-btn-clear {
+    background-color: #C26518;
+    color: #ffffff;
 }

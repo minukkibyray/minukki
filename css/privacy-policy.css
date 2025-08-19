@@ -1,0 +1,20 @@
+.ray-main-heading {
+    font-size: 32px !important;
+    font-weight: bolder;
+    font-family: "Quicksand", sans-serif !important;
+}
+
+.ray-sub-heading {
+    color: #565555;
+    font-size: 17px !important;
+    font-weight: 800;
+    font-family: "Quicksand", sans-serif !important;
+}
+
+.ray-desc-text {
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    font-family: "Montserrat", sans-serif !important;
+    color: #4a4a4a;
+    line-height: 26px;
+}
